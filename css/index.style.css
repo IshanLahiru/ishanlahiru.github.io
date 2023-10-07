@@ -1,0 +1,35 @@
+.side1{
+    position: fixed;
+    bottom: 0;
+    left: 80%;
+    top: 20vh;
+}
+.side2{
+    position: fixed;
+    bottom: 0;
+    left: 80%;
+    top: 25vh;
+}
+.side3{
+    position: fixed;
+    bottom: 0;
+    left: 80%;
+    top: 32vh;
+}
+.side4{
+    position: fixed;
+    bottom: 0;
+    left: 80%;
+    top: 39vh;}
+.side5{
+    position: fixed;
+    bottom: 0;
+    left: 80%;
+    top: 46vh;
+}
+.side6{
+    position: fixed;
+    bottom: 0;
+    left: 80%;
+    top: 53vh;
+}
