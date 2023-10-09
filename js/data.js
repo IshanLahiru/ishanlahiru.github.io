@@ -1,4 +1,4 @@
-const token = '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';
+const token = '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';
 
 fetch('https://api.github.com/repos/IshanLahiru/ishanlahiru.github.io/contents/data.md', {
   method: 'GET',
@@ -14,7 +14,7 @@ fetch('https://api.github.com/repos/IshanLahiru/ishanlahiru.github.io/contents/d
     console.log(data);
     let parsedData = JSON.parse(atob(data.content));
     console.log(parsedData);
-    siteName.item(0).innerHTML = `${parsedData.fname} ${parsedData.lname}`;
+    siteName.item(0).innerHTML = `${parsedData[0].fname} ${parsedData[0].lname}`;
   })
   .catch(error => {
     // Handle any errors that occurred during the fetch
