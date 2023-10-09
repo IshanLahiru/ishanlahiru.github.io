@@ -1,4 +1,4 @@
-const token = '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';
+const token = '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';
 
 fetch('https://api.github.com/repos/IshanLahiru/ishanlahiru.github.io/contents/data.md', {
   method: 'GET',
@@ -13,8 +13,9 @@ fetch('https://api.github.com/repos/IshanLahiru/ishanlahiru.github.io/contents/d
     console.log(siteName);
     console.log(data);
     let parsedData = JSON.parse(atob(data.content));
-    console.log(parsedData);
-    siteName.item(0).innerHTML = `${parsedData[0].fname} ${parsedData[0].lname}`;
+    console.log(parsedData[0]);
+    let theData = parsedData[0];
+    siteName.item(0).innerHTML = `${theData.heroSection.fname} ${theData.heroSection.lname}`;
   })
   .catch(error => {
     console.error('Error:', error);
