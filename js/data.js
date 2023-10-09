@@ -1,9 +1,9 @@
-const token = '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';
+const token = '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';
 
 fetch('https://api.github.com/repos/IshanLahiru/ishanlahiru.github.io/contents/data.md', {
   method: 'GET',
   headers: {
-    'Authorization': `Bearer ${token}`
+    'Authorization': `token ${token}`
   }
 })
   .then(response => response.json())
@@ -17,6 +17,5 @@ fetch('https://api.github.com/repos/IshanLahiru/ishanlahiru.github.io/contents/d
     siteName.item(0).innerHTML = `${parsedData[0].fname} ${parsedData[0].lname}`;
   })
   .catch(error => {
-    // Handle any errors that occurred during the fetch
     console.error('Error:', error);
   });
