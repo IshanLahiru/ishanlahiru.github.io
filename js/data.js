@@ -2,10 +2,7 @@ const token = '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';
 let theData = {};
 
 fetch('https://api.github.com/repos/IshanLahiru/ishanlahiru.github.io/contents/data.md', {
-  method: 'GET',
-  headers: {
-    'Authorization': `token ${token}`
-  }
+  method: 'GET'
 })
   .then(response => response.json())
   .then(data => {
