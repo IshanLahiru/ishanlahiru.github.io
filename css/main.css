@@ -7,7 +7,7 @@ body {
 
 .app {
   display: grid;
-  grid-template-rows: 100vh 100vh;
+  grid-template-rows: 100vh 100vh 100vh 50vh 50vh;
 }
 
 .mASection {
@@ -28,17 +28,17 @@ body {
   text-align: left;
   color: #ffffff;
   font-family: 'Kanit', sans-serif;
-  border: 1px solid yellow;
+  /* border: 1px solid yellow; */
 }
 
 .h5 {
   font-size: 2em;
   color: aqua;
-  border: 1px solid white;
+  /* border: 1px solid white; */
 }
 
 .h1 {
-  border: 1px solid white;
+  /* border: 1px solid white; */
 }
 
 .introduction {
@@ -56,6 +56,43 @@ body {
   margin-left: auto;
   margin-right: auto;
   width: 20px;
+}
+.about-content{
+  display: grid;
+  grid-template-columns: 20vw 20vw 20vw 20vw 20vw;
+  grid-template-rows: 10vh 40vh 30vh 20vh;
+}
+.comp{
+  border: 1px solid black;
+}
+.a-m-main-heading{
+  grid-column: 1/6;
+  grid-row: 0.5;
+}
+.a-m-pro-photo{
+  background-color: aqua;
+}
+.a-m-description{
+  grid-column: 2/4;
+  grid-row: 2/4;
+}
+.a-m-main-prev-exp{
+  grid-column:5;
+  grid-row: 2;
+
+}
+.a-m-p-interests{
+  grid-column: 1;
+  grid-row: 3;
+
+}
+.a-m-p-skills{
+  grid-column: 4/6;
+  grid-row: 2/4;
+}
+.my-expectation{
+  grid-column: 1/6;
+  grid-row: 4;
 }
 
 /* Add your additional styles for the rest of the content here */
