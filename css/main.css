@@ -60,7 +60,7 @@ body {
 .about-content{
   display: grid;
   grid-template-columns: 20vw 20vw 20vw 20vw 20vw;
-  grid-template-rows: 10vh 40vh 30vh 20vh;
+  grid-template-rows: 10vh 20vw 30vh 20vh;
 }
 .comp{
   border: 1px solid black;
@@ -93,6 +93,11 @@ body {
 .my-expectation{
   grid-column: 1/6;
   grid-row: 4;
+}
+.circle{
+  width: 20vw;
+  height: 20vw;
+  border-radius: 50%;
 }
 
 /* Add your additional styles for the rest of the content here */

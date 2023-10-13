@@ -1,62 +1,35 @@
-<!doctype html>
-<html lang="en">
-
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="utf-8">
-  <title>Page Not Found</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    * {
-      line-height: 1.2;
-      margin: 0;
-    }
-
-    html {
-      color: #888;
-      display: table;
-      font-family: sans-serif;
-      height: 100%;
-      text-align: center;
-      width: 100%;
-    }
-
-    body {
-      display: table-cell;
-      vertical-align: middle;
-      margin: 2em auto;
-    }
-
-    h1 {
-      color: #555;
-      font-size: 2em;
-      font-weight: 400;
-    }
-
-    p {
-      margin: 0 auto;
-      width: 280px;
-    }
-
-    @media only screen and (max-width: 280px) {
-
-      body,
-      p {
-        width: 95%;
-      }
-
-      h1 {
-        font-size: 1.5em;
-        margin: 0 0 0.3em;
-      }
-
-    }
-  </style>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .fixed-section {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #f0f0f0; /* Set the background color as desired */
+            z-index: 1;
+        }
+        .scrolling-section {
+            margin-top: 100px; /* Adjust this value to leave space for the fixed section */
+            padding: 20px;
+            background-color: #ffffff; /* Set the background color as desired */
+        }
+    </style>
 </head>
-
 <body>
-  <h1>Page Not Found</h1>
-  <p>Sorry, but the page you were trying to view does not exist.</p>
+    <div class="fixed-section">
+        <h1>Fixed Section</h1>
+        <p>This section stays fixed at the top while the content below scrolls.</p>
+    </div>
+    <div class="scrolling-section">
+        <h2>Scrolling Section</h2>
+        <p>This is the content that will scroll below the fixed section. You can add your content here.</p>
+        <!-- Add more content here -->
+    </div>
 </body>
-
 </html>
-<!-- IE needs 512+ bytes: https://docs.microsoft.com/archive/blogs/ieinternals/friendly-http-error-pages -->
