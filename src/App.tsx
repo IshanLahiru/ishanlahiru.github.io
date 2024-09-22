@@ -1,19 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Home from './pages/homepage/homepage';
+import InvalidSection from './pages/404/404';
+import Projects from './pages/projects/projects';
+import Recommendations from './pages/recommendations/recommendations';
+import Certificates from './pages/certificates/certificates';
+import Contact from './pages/contact/contact';
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route index element={<Navigate replace to="home"/>}/>
-        <Route path="/" element={<div/>}></Route>
-          <Route path="home" element={<div>the home</div>}/>
-          <Route path="about" element={<div>the about section</div>}/>
-          <Route path="projects" element={<div>the projects section</div>}/>
-          <Route path="certificates" element={<div>the certificates section</div>}/>
-          <Route path="contact" element={<div>the contact section</div>}/>
+        <Route path="/" element={<Home />} />
+        <Route path="projects" element={<Projects/>} />
+        <Route path="certificates" element={<Certificates/>} />
+        <Route path="Recommendations" element={<Recommendations/>} />
+        <Route path="contact" element={<Contact/>} />
+        <Route path="*" element={<InvalidSection />} />
       </Routes>
     </BrowserRouter>
   );
