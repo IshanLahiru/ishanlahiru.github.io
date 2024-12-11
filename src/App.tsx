@@ -1,5 +1,5 @@
 import React from 'react';
-import './index.css'; // Ensure Tailwind is imported in your CSS
+import './App.css';
 
 const App: React.FC = () => {
   return (
