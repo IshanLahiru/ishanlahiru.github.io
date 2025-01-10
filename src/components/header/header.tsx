@@ -7,7 +7,7 @@ const NavigationBar: React.FC = () => {
   const { isDarkMode, toggleTheme } = useThemeAndLanguage();
 
   return (
-    <header className="dark:bg-[#08090d] bg-slate-600 text-white p-4 sm:mt-4 mt-0 sm:rounded-xl rounded-none">
+    <header className="dark:bg-zinc-800 bg-slate-500 text-white p-4 sm:mt-4 mt-0 sm:rounded-xl rounded-none">
       <div className="container mx-auto flex justify-between items-center">
         <h1 className="text-xl font-bold">ishanlahiru.me</h1>
         <nav>
