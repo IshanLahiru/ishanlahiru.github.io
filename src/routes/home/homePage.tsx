@@ -24,7 +24,7 @@ const HomePage: React.FC = () => {
         </div>
         <div className="flex justify-start mt-4 ">
           <button className="flex bg-gray-600 dark:bg-gray-200 p-2 rounded-md">
-            <p className='text-slate-200 dark:text-gray-950'>About</p>
+            <p className='text-slate-200 dark:text-gray-950 ml-4'>About</p>
             <span style={{ margin: '0 3px' }}/>
             <p className='text-slate-200 dark:text-gray-950'>Ishan Lahiru</p>
             <span style={{ margin: '0 3px' }}/>
