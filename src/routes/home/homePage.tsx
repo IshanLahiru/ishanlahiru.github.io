@@ -4,7 +4,7 @@ import NavigationBar from '../../components/header/header';
 
 const HomePage: React.FC = () => {
   return (
-    <BaseContainer>
+    <BaseContainer >
       <NavigationBar />
       <header className="text-center">
         <h1 className="text-4xl font-bold text-blue-500">Welcome to</h1>
