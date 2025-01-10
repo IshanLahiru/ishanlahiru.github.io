@@ -2,7 +2,13 @@
 export default {
   content: ['./index.html', './src/**/*.{js,jsx,ts,tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['Ubuntu'],
+        sansMono: ['Ubuntu Sans Mono'],
+        mono: ['Ubuntu Mono', 'monospace'],
+      },
+    },
     screens: {
       sm: '640px',
       md: '768px',
