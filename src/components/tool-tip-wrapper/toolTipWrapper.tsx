@@ -1,4 +1,4 @@
-import React, { ReactNode, CSSProperties } from 'react';
+import React, { ReactNode } from 'react';
 
 interface ToolTipWrapperProps {
   children: ReactNode;
