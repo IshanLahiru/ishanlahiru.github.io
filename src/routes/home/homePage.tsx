@@ -3,11 +3,8 @@ import BaseContainer from '../../components/base-container/baseContainer';
 import NavigationBar from '../../components/header/header';
 import { ArrowLongRightIcon } from '@heroicons/react/16/solid';
 import ToolTipWrapper from '../../components/tool-tip-wrapper/toolTipWrapper';
-import { Contact } from 'lucide-react';
-import { SocialIcon } from 'react-social-icons/component';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faGithub, faInstagram, faLinkedin, faThreads, faTiktok, faTwitter, faWeixin, faXTwitter } from '@fortawesome/free-brands-svg-icons';
-import { faX } from '@fortawesome/free-solid-svg-icons';
+import { faFacebook, faGithub, faInstagram, faLinkedin, faThreads, faTiktok, faWeixin, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 
 const HomePage: React.FC = () => {
   return (
