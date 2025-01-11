@@ -75,7 +75,8 @@ const ProjectCard = ({ title, description, techStack, link }: any) => {
         {techStack.map((tech: string, index: number) => (
           <span
             key={index}
-            className="rounded-full bg-gray-200 px-2 py-1 text-xs text-gray-800 dark:bg-gray-700 dark:text-gray-200">
+            className="rounded-full bg-gray-200 px-2 py-1 text-xs text-gray-800 dark:bg-gray-700 dark:text-gray-200"
+          >
             {tech}
           </span>
         ))}
@@ -84,7 +85,8 @@ const ProjectCard = ({ title, description, techStack, link }: any) => {
         href={link}
         target="_blank"
         rel="noopener noreferrer"
-        className="text-sm text-blue-600 hover:underline dark:text-blue-400">
+        className="text-sm text-blue-600 hover:underline dark:text-blue-400"
+      >
         View Project
       </a>
     </div>
@@ -101,7 +103,8 @@ const BlogCard = ({ title, description, date, link }: any) => {
         href={link}
         target="_blank"
         rel="noopener noreferrer"
-        className="text-sm text-blue-600 hover:underline dark:text-blue-400">
+        className="text-sm text-blue-600 hover:underline dark:text-blue-400"
+      >
         Read More
       </a>
     </div>
@@ -117,7 +120,8 @@ const HomePage: React.FC = () => {
           <ToolTipWrapper
             tooltipText="A technophile is a person who has a strong enthusiasm for or interest in technology, particularly new or emerging technologies. They are often early adopters of gadgets, software, or innovations and enjoy exploring how technology can improve daily life or solve problems."
             tooltipWidth="600px"
-            direction="bottom">
+            direction="bottom"
+          >
             <p className="text-dark font-sansMono font-semibold dark:text-white">Technophile</p>
           </ToolTipWrapper>
           <span style={{ margin: '0 10px' }}></span>
@@ -131,9 +135,9 @@ const HomePage: React.FC = () => {
             creativity meets logic to shape a future brimming with possibilities.{' '}
           </p>
         </div>
-        <div className="flex flex-col sm:flex-row  items-start">
-          <button className="mt-4 flex rounded-md bg-gray-600 p-2 pt-3 dark:bg-gray-200 w-56">
-            <p className="ml-4 text-slate-400 dark:text-gray-750">About</p>
+        <div className="flex flex-col items-start sm:flex-row">
+          <button className="mt-4 flex w-56 rounded-md bg-gray-600 p-2 pt-3 dark:bg-gray-200">
+            <p className="dark:text-gray-750 ml-4 text-slate-400">About</p>
             <span style={{ margin: '0 3px' }} />
             <p className="text-slate-200 dark:text-gray-950">Ishan Lahiru</p>
             <span style={{ margin: '0 3px' }} />
@@ -152,7 +156,7 @@ const HomePage: React.FC = () => {
             <span style={{ margin: '0 4px' }}></span>
           </button>
 
-          <section className="mt-4 ml-4 flex flex-row items-start">
+          <section className="ml-4 mt-4 flex flex-row items-start">
             <FontAwesomeIcon
               className="mr-4 translate-y-2 rounded-lg bg-white p-0.5 text-xl transition-all duration-300 hover:scale-110 hover:shadow-lg"
               icon={faGithub}
@@ -196,7 +200,6 @@ const HomePage: React.FC = () => {
             <ProjectCard key={project.id} {...project} />
           ))}
         </div>
-        
       </section>
       <section>
         <section>
