@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import PageNotFound from './pageNotFound';
 import HomePage from './home/homePage';
 
