@@ -137,7 +137,7 @@ const HomePage: React.FC = () => {
         </div>
         <div className="flex flex-col items-start sm:flex-row">
           <button className="mt-4 flex w-56 rounded-md bg-gray-600 p-2 pt-3 dark:bg-gray-200">
-            <p className="dark:text-gray-750 ml-4 text-slate-400">About</p>
+            <p className="dark:text-gray-750 ml-4 text-slate-400 dark:text-slate-600">About</p>
             <span style={{ margin: '0 3px' }} />
             <p className="text-slate-200 dark:text-gray-950">Ishan Lahiru</p>
             <span style={{ margin: '0 3px' }} />
