@@ -68,7 +68,7 @@ const blogs = [
 
 const ProjectCard = ({ title, description, techStack, link }: any) => {
   return (
-    <div className="mb-4 rounded-lg bg-white p-6 shadow-md dark:bg-gray-800">
+    <div className="mb-4 rounded-lg bg-white p-6 shadow-md dark:bg-neutral-900">
       <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100">{title}</h3>
       <p className="my-2 text-sm text-gray-600 dark:text-gray-400">{description}</p>
       <div className="my-2 flex flex-wrap gap-2">
@@ -95,7 +95,7 @@ const ProjectCard = ({ title, description, techStack, link }: any) => {
 
 const BlogCard = ({ title, description, date, link }: any) => {
   return (
-    <div className="mb-4 rounded-lg bg-white p-6 shadow-md dark:bg-gray-800">
+    <div className="mb-4 rounded-lg bg-white p-6 shadow-md dark:bg-neutral-900">
       <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100">{title}</h3>
       <p className="my-2 text-sm text-gray-500 dark:text-gray-400">{date}</p>
       <p className="my-2 text-sm text-gray-600 dark:text-gray-400">{description}</p>
