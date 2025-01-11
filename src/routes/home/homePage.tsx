@@ -68,7 +68,7 @@ const blogs = [
 
 const ProjectCard = ({ title, description, techStack, link }: any) => {
   return (
-    <div className="mb-4 rounded-lg bg-white p-6 shadow-md dark:bg-neutral-900">
+    <div className="mb-4 rounded-lg bg-white border border-neutral-900 dark:border-gray-400 p-6 shadow-md dark:bg-neutral-950">
       <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100">{title}</h3>
       <p className="my-2 text-sm text-gray-600 dark:text-gray-400">{description}</p>
       <div className="my-2 flex flex-wrap gap-2">
@@ -95,7 +95,7 @@ const ProjectCard = ({ title, description, techStack, link }: any) => {
 
 const BlogCard = ({ title, description, date, link }: any) => {
   return (
-    <div className="mb-4 rounded-lg bg-white p-6 shadow-md dark:bg-neutral-900">
+    <div className="mb-4 rounded-lg bg-white border border-neutral-900 dark:border-gray-400 p-6 shadow-md dark:bg-neutral-950">
       <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100">{title}</h3>
       <p className="my-2 text-sm text-gray-500 dark:text-gray-400">{date}</p>
       <p className="my-2 text-sm text-gray-600 dark:text-gray-400">{description}</p>
@@ -193,7 +193,7 @@ const HomePage: React.FC = () => {
         </div>
       </main>
       <section>
-        <hr className="border-t-0.5 mt-4 text-gray-950 dark:border-gray-500" />
+        <hr className="border-t-0.5 mt-4 text-gray-950 dark:border-gray-800" />
         <h2 className="my-4 text-xl font-semibold text-gray-900 dark:text-gray-100">Projects</h2>
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {projects.map((project) => (
@@ -203,14 +203,13 @@ const HomePage: React.FC = () => {
       </section>
       <section>
         <section>
-          <hr className="border-t-0.5 mt-4 text-gray-950 dark:border-gray-500" />
+          <hr className="border-t-0.5 mt-4 text-gray-950 dark:border-gray-800" />
           <h2 className="my-4 text-xl font-semibold text-gray-900 dark:text-gray-100">Blogs</h2>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {blogs.map((blog) => (
               <BlogCard key={blog.id} {...blog} />
             ))}
           </div>
-          <hr className="border-t-0.5 mt-4 text-gray-950 dark:border-gray-500" />
         </section>
       </section>
       <Footer />
