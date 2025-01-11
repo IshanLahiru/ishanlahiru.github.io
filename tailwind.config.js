@@ -6,8 +6,8 @@ export default {
       fontFamily: {
         sans: ['Ubuntu'],
         sansMono: ['Ubuntu Sans Mono'],
-        mono: ['Ubuntu Mono', 'monospace'],
-      },
+        mono: ['Ubuntu Mono', 'monospace']
+      }
     },
     screens: {
       sm: '640px',

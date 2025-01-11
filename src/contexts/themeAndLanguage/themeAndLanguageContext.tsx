@@ -7,7 +7,9 @@ interface ThemeAndLanguageContextProps {
   setLanguage: (lang: string) => void;
 }
 
-export const ThemeAndLanguageContext = createContext<ThemeAndLanguageContextProps | undefined>(undefined);
+export const ThemeAndLanguageContext = createContext<ThemeAndLanguageContextProps | undefined>(
+  undefined
+);
 
 export const ThemeAndLanguageProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [isDarkMode, setIsDarkMode] = useState(false);

@@ -2,9 +2,7 @@ import React from 'react';
 import Router from './routes/router';
 
 const App: React.FC = () => {
-  return (
-    <Router/>
-  );
+  return <Router />;
 };
 
 export default App;
