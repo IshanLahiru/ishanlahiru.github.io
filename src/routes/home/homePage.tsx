@@ -68,15 +68,14 @@ const blogs = [
 
 const ProjectCard = ({ title, description, techStack, link }: any) => {
   return (
-    <div className="mb-4 rounded-lg bg-white border border-neutral-600 dark:border-gray-400 p-6 shadow-md dark:bg-neutral-950">
+    <div className="mb-4 rounded-lg border border-neutral-600 bg-white p-6 shadow-md dark:border-gray-400 dark:bg-neutral-950">
       <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100">{title}</h3>
       <p className="my-2 text-sm text-gray-600 dark:text-gray-400">{description}</p>
       <div className="my-2 flex flex-wrap gap-2">
         {techStack.map((tech: string, index: number) => (
           <span
             key={index}
-            className="rounded-full bg-gray-200 px-2 py-1 text-xs text-gray-800 dark:bg-gray-700 dark:text-gray-200"
-          >
+            className="rounded-full bg-gray-200 px-2 py-1 text-xs text-gray-800 dark:bg-gray-700 dark:text-gray-200">
             {tech}
           </span>
         ))}
@@ -85,8 +84,7 @@ const ProjectCard = ({ title, description, techStack, link }: any) => {
         href={link}
         target="_blank"
         rel="noopener noreferrer"
-        className="text-sm text-blue-600 hover:underline dark:text-blue-400"
-      >
+        className="text-sm text-blue-600 hover:underline dark:text-blue-400">
         View Project
       </a>
     </div>
@@ -95,7 +93,7 @@ const ProjectCard = ({ title, description, techStack, link }: any) => {
 
 const BlogCard = ({ title, description, date, link }: any) => {
   return (
-    <div className="mb-4 rounded-lg bg-white border border-neutral-600 dark:border-gray-400 p-6 shadow-md dark:bg-neutral-950">
+    <div className="mb-4 rounded-lg border border-neutral-600 bg-white p-6 shadow-md dark:border-gray-400 dark:bg-neutral-950">
       <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100">{title}</h3>
       <p className="my-2 text-sm text-gray-500 dark:text-gray-400">{date}</p>
       <p className="my-2 text-sm text-gray-600 dark:text-gray-400">{description}</p>
@@ -103,8 +101,7 @@ const BlogCard = ({ title, description, date, link }: any) => {
         href={link}
         target="_blank"
         rel="noopener noreferrer"
-        className="text-sm text-blue-600 hover:underline dark:text-blue-400"
-      >
+        className="text-sm text-blue-600 hover:underline dark:text-blue-400">
         Read More
       </a>
     </div>
@@ -120,19 +117,26 @@ const HomePage: React.FC = () => {
           <ToolTipWrapper
             tooltipText="A technophile is a person who has a strong enthusiasm for or interest in technology, particularly new or emerging technologies. They are often early adopters of gadgets, software, or innovations and enjoy exploring how technology can improve daily life or solve problems."
             tooltipWidth="600px"
-            direction="bottom"
-          >
+            direction="bottom">
             <p className="text-dark font-sansMono font-semibold dark:text-white">Technophile</p>
           </ToolTipWrapper>
           <span style={{ margin: '0 10px' }}></span>
           <p className="text-dark font-sansMono font-normal dark:text-gray-400">Sri Lanka</p>
           <br />
         </div>
+        <div className="flex items-center text-start">
+          <img
+            src="/public/og.jpeg"
+            alt="Ishan Lahiru"
+            className="ml-4 mt-4 h-48 w-48 rounded-full"
+          />
+        </div>
+
         <div className="flex text-start">
           <p className="text-dark ml-4 mt-4 font-sansMono font-extralight dark:text-gray-400">
             Exploring the realm of tech, the journey unfolds with crafting innovative solutions,
             unraveling complex systems, and embracing the ever-evolving digital landscape, where
-            creativity meets logic to shape a future brimming with possibilities.{' '}
+            creativity meets logic to shape a future brimming with possibilities.
           </p>
         </div>
         <div className="flex flex-col items-start sm:flex-row">
