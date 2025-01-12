@@ -11,8 +11,9 @@ const NavigationBar: React.FC = () => {
       <div className="container mx-auto flex items-center justify-between">
         <h1 className="text-xl font-bold text-gray-950 dark:text-slate-200">ishanlahiru.me</h1>
         <nav>
-          <ul className="flex space-x-4">
+          <ul className="flex flex-col space-x-4">
             <li>
+              
               <a href="#contact" className="flex items-center hover:underline">
                 <ToolTipWrapper tooltipText="Change Language" direction="bottom">
                   <LanguageIcon className="mr-2 h-5 w-5 text-gray-600 dark:text-gray-300" />
