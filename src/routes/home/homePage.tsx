@@ -126,7 +126,7 @@ const HomePage: React.FC = () => {
         </div>
         <div className="flex items-center text-start">
           <img
-            src="/public/og.jpeg"
+            src="https://avatars.githubusercontent.com/u/50785933?v=4"
             alt="Ishan Lahiru"
             className="ml-4 mt-4 h-48 w-48 rounded-full"
           />
