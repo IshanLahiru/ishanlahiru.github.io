@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, ReactNode } from 'react';
+import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react';
 
 interface ThemeAndLanguageContextProps {
   isDarkMode: boolean;
@@ -15,7 +15,37 @@ export const ThemeAndLanguageProvider: React.FC<{ children: ReactNode }> = ({ ch
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [language, setLanguage] = useState('en');
 
-  const toggleTheme = () => setIsDarkMode((prev) => !prev);
+  const toggleTheme = () => {
+    setIsDarkMode((prev) => {
+      const newMode = !prev;
+      localStorage.setItem('theme', newMode ? 'dark' : 'light');
+      return newMode;
+    });
+  };
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      setIsDarkMode(savedTheme === 'dark');
+    } else {
+      const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      setIsDarkMode(prefersDarkMode);
+      localStorage.setItem('theme', prefersDarkMode ? 'dark' : 'light');
+    }
+
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    const handleChange = (e: MediaQueryListEvent) => {
+      const prefersDark = e.matches;
+      setIsDarkMode(prefersDark);
+      localStorage.setItem('theme', prefersDark ? 'dark' : 'light');
+    };
+
+    mediaQuery.addEventListener('change', handleChange);
+
+    return () => {
+      mediaQuery.removeEventListener('change', handleChange);
+    };
+  }, []);
 
   return (
     <ThemeAndLanguageContext.Provider value={{ isDarkMode, toggleTheme, language, setLanguage }}>
