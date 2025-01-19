@@ -9,7 +9,7 @@ const NavigationBar: React.FC = () => {
   return (
     <header className="mt-4 bg-gray-200 p-4 text-white dark:bg-neutral-900 rounded-xl">
       <div className="container mx-auto flex items-center justify-between">
-        <h1 className="text-xl font-bold text-gray-950 dark:text-slate-200">ishanlahiru.me</h1>
+        <h1 className="text-xl font-bold text-gray-950 dark:text-slate-200">Ishan Lahiru</h1>
         <nav>
           <ul className="flex flex-col space-x-4">
             <li>
