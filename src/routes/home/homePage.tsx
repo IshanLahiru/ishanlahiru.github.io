@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import BaseContainer from '../../components/base-container/baseContainer';
 import NavigationBar from '../../components/header/header';
 import ToolTipWrapper from '../../components/tool-tip-wrapper/toolTipWrapper';
@@ -34,10 +35,10 @@ const projects = [
   },
   {
     id: 3,
-    title: 'Online Course Platform',
-    description: 'A responsive web platform for selling and managing courses.',
-    techStack: ['React', 'TypeScript', 'Storybook'],
-    link: '#'
+    title: 'DeckDrill',
+    description: 'A card counting and training simulator application.',
+    techStack: ['Flutter', 'Riverpod'],
+    internalLink: '/projects/deckdrill'
   }
 ];
 
@@ -66,7 +67,7 @@ const blogs = [
   }
 ];
 
-const ProjectCard = ({ title, description, techStack, link }: any) => {
+const ProjectCard = ({ title, description, techStack, link, internalLink }: any) => {
   return (
     <div className="mb-4 rounded-lg border border-neutral-600 bg-white p-6 shadow-md dark:border-gray-400 dark:bg-neutral-950">
       <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100">{title}</h3>
@@ -80,13 +81,21 @@ const ProjectCard = ({ title, description, techStack, link }: any) => {
           </span>
         ))}
       </div>
-      <a
-        href={link}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-sm text-blue-600 hover:underline dark:text-blue-400">
-        View Project
-      </a>
+      {internalLink ? (
+        <Link
+          to={internalLink}
+          className="text-sm text-blue-600 hover:underline dark:text-blue-400">
+          View Details
+        </Link>
+      ) : (
+        <a
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-sm text-blue-600 hover:underline dark:text-blue-400">
+          View Project
+        </a>
+      )}
     </div>
   );
 };
