@@ -71,6 +71,11 @@ const DeckDrillPage: React.FC = () => {
 
         <div className="mb-4 flex gap-4 text-xs">
           <Link
+            to="/projects/deckdrill/support"
+            className="text-blue-600 hover:underline dark:text-blue-400">
+            Support
+          </Link>
+          <Link
             to="/projects/deckdrill/privacy-policy"
             className="text-blue-600 hover:underline dark:text-blue-400">
             Privacy Policy

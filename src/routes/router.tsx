@@ -5,6 +5,7 @@ import HomePage from './home/homePage';
 import DeckDrillPage from './projects/deckdrillPage';
 import DeckDrillPrivacyPolicyPage from './projects/deckdrillPrivacyPolicyPage';
 import DeckDrillTermsPage from './projects/deckdrillTermsPage';
+import DeckDrillSupportPage from './projects/deckdrillSupportPage';
 
 interface RouterProps {
   children?: ReactNode;
@@ -19,6 +20,7 @@ const Router: React.FC<RouterProps> = ({ children }) => {
         <Route path="/projects/deckdrill" element={<DeckDrillPage />} />
         <Route path="/projects/deckdrill/privacy-policy" element={<DeckDrillPrivacyPolicyPage />} />
         <Route path="/projects/deckdrill/terms" element={<DeckDrillTermsPage />} />
+        <Route path="/projects/deckdrill/support" element={<DeckDrillSupportPage />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </BrowserRouter>
