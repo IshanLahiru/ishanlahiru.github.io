@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import BaseContainer from '../../components/base-container/baseContainer';
-import NavigationBar from '../../components/header/header';
-import Footer from '../../components/footer/footer';
+import BaseContainer from '../../../components/base-container/baseContainer';
+import NavigationBar from '../../../components/header/header';
+import Footer from '../../../components/footer/footer';
 
 const SUPPORT_EMAIL = 'support.ishanvithanage@gmail.com';
 

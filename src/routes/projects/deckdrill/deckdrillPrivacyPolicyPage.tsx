@@ -1,5 +1,5 @@
 import React from 'react';
-import LegalPageLayout, { H2, P, UL } from '../../components/legal-page-layout/legalPageLayout';
+import LegalPageLayout, { H2, P, UL } from '../../../components/legal-page-layout/legalPageLayout';
 
 const DeckDrillPrivacyPolicyPage: React.FC = () => {
   return (
