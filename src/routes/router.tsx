@@ -2,10 +2,15 @@ import React, { ReactNode } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import PageNotFound from './pageNotFound';
 import HomePage from './home/homePage';
-import DeckDrillPage from './projects/deckdrillPage';
-import DeckDrillPrivacyPolicyPage from './projects/deckdrillPrivacyPolicyPage';
-import DeckDrillTermsPage from './projects/deckdrillTermsPage';
-import DeckDrillSupportPage from './projects/deckdrillSupportPage';
+import AboutPage from './about/aboutPage';
+import DeckDrillPage from './projects/deckdrill/deckdrillPage';
+import DeckDrillPrivacyPolicyPage from './projects/deckdrill/deckdrillPrivacyPolicyPage';
+import DeckDrillTermsPage from './projects/deckdrill/deckdrillTermsPage';
+import DeckDrillSupportPage from './projects/deckdrill/deckdrillSupportPage';
+import DriftAndDirectPage from './projects/drift-and-direct/driftAndDirectPage';
+import DriftAndDirectPrivacyPolicyPage from './projects/drift-and-direct/driftAndDirectPrivacyPolicyPage';
+import DriftAndDirectTermsPage from './projects/drift-and-direct/driftAndDirectTermsPage';
+import DriftAndDirectSupportPage from './projects/drift-and-direct/driftAndDirectSupportPage';
 
 interface RouterProps {
   children?: ReactNode;
@@ -17,10 +22,18 @@ const Router: React.FC<RouterProps> = ({ children }) => {
       {children}
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
         <Route path="/projects/deckdrill" element={<DeckDrillPage />} />
         <Route path="/projects/deckdrill/privacy-policy" element={<DeckDrillPrivacyPolicyPage />} />
         <Route path="/projects/deckdrill/terms" element={<DeckDrillTermsPage />} />
         <Route path="/projects/deckdrill/support" element={<DeckDrillSupportPage />} />
+        <Route path="/projects/drift-and-direct" element={<DriftAndDirectPage />} />
+        <Route
+          path="/projects/drift-and-direct/privacy-policy"
+          element={<DriftAndDirectPrivacyPolicyPage />}
+        />
+        <Route path="/projects/drift-and-direct/terms" element={<DriftAndDirectTermsPage />} />
+        <Route path="/projects/drift-and-direct/support" element={<DriftAndDirectSupportPage />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </BrowserRouter>
