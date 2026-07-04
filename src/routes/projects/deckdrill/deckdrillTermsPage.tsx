@@ -1,5 +1,5 @@
 import React from 'react';
-import LegalPageLayout, { H2, P, UL } from '../../components/legal-page-layout/legalPageLayout';
+import LegalPageLayout, { H2, P, UL } from '../../../components/legal-page-layout/legalPageLayout';
 
 const DeckDrillTermsPage: React.FC = () => {
   return (
@@ -17,6 +17,14 @@ const DeckDrillTermsPage: React.FC = () => {
       <P>
         By downloading or using the Application, you agree to these Terms and Conditions. You
         should read them carefully before using the Application.
+      </P>
+
+      <H2>Age Requirement</H2>
+      <P>
+        Given its blackjack/gambling-adjacent training content, the Application is rated 18+ and
+        is not intended for use by anyone under the age of 18, or such higher minimum age as
+        required in your jurisdiction. If you are below the applicable minimum age, do not use the
+        Application.
       </P>
 
       <H2>License to use the Application</H2>
@@ -55,12 +63,6 @@ const DeckDrillTermsPage: React.FC = () => {
       <P>
         Upon termination, your right to use the Application will end and you must delete all
         copies from your devices.
-      </P>
-      <P>
-        By accessing and using this Application, you represent that you are legally permitted to
-        use it in your jurisdiction. You must be at least 18 years of age (the age of digital
-        consent in your jurisdiction) to use the Application. If you are below 18, a parent or
-        legal guardian must review and accept these Terms on your behalf.
       </P>
       <P>
         Unauthorized copying, modification of the Application, any part of the Application, or the
