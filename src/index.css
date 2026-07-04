@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-dm-enamel font-mono text-dm-dark dark:bg-dm-carbon dark:text-dm-cement;
+  }
+
+  ::selection {
+    @apply bg-dm-dark text-dm-enamel;
+  }
+
+  .dark ::selection {
+    @apply bg-dm-cement text-dm-carbon;
+  }
+}
