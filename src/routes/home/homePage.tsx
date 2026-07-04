@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import BaseContainer from '../../components/base-container/baseContainer';
+import { CornerMarks, LineArt } from '../../components/decorative/decorativeSvgs';
 import NavigationBar from '../../components/header/header';
 import ToolTipWrapper from '../../components/tool-tip-wrapper/toolTipWrapper';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -15,15 +16,18 @@ import {
   faXTwitter
 } from '@fortawesome/free-brands-svg-icons';
 import Footer from '../../components/footer/footer';
+import sriLanka from '@svg-maps/sri-lanka';
 
 const projects = [
   {
     id: 1,
-    title: 'Draggable People Manager',
+    title: 'Drift & Direct',
     description:
-      'A React-based application for managing employees with drag-and-drop functionality.',
-    techStack: ['React', 'Ant Design', 'React DnD'],
-    link: '#'
+      'A swiping-mechanism based mobile focus game, designed to help players relax and stay in the moment.',
+    techStack: ['Flutter', 'Bloc', 'Firebase', 'Firebase Functions', 'Firebase Auth', 'Game Center', 'RevenueCat'],
+    internalLink: '/projects/drift-and-direct',
+    logo: '/projects/drift-and-direct/icon.png',
+    visual: 'drift'
   },
   {
     id: 2,
@@ -31,16 +35,95 @@ const projects = [
     description:
       'A dynamic dashboard to display election results using SVG maps and detailed statistics.',
     techStack: ['JavaScript', 'SVG', 'React'],
-    link: '#'
+    link: '#',
+    visual: 'map'
   },
   {
     id: 3,
     title: 'DeckDrill',
     description: 'A card counting and training simulator application.',
     techStack: ['Flutter', 'Riverpod'],
-    internalLink: '/projects/deckdrill'
+    internalLink: '/projects/deckdrill',
+    logo: '/projects/deckdrill/icon.png',
+    visual: 'cards'
   }
 ];
+
+const DriftWave = () => (
+  <div className="relative h-12 w-16 overflow-hidden rounded border border-dm-aluminum dark:border-dm-dark">
+    <svg
+      viewBox="0 0 160 48"
+      preserveAspectRatio="none"
+      className="absolute inset-0 h-full w-[160px] animate-wave">
+      <path
+        d="M0 30 Q10 20 20 30 T40 30 T60 30 T80 30 L80 48 L0 48 Z"
+        className="fill-dm-accent2/30 dark:fill-dm-accent/30"
+      />
+      <path
+        d="M80 30 Q90 20 100 30 T120 30 T140 30 T160 30 L160 48 L80 48 Z"
+        className="fill-dm-accent2/30 dark:fill-dm-accent/30"
+      />
+    </svg>
+    <span className="absolute left-1/2 top-2 h-2 w-2 -translate-x-1/2 animate-bob rounded-full bg-dm-accent2 dark:bg-dm-accent" />
+  </div>
+);
+
+const districtResults = (sriLanka.locations as { id: string; name: string; path: string }[]).map(
+  (loc, index) => ({
+    id: loc.id,
+    name: loc.name,
+    path: loc.path,
+    result: `${index % 2 === 0 ? 'Party A' : 'Party B'} ${55 + ((index * 7) % 20)}%`
+  })
+);
+
+const MiniMap = () => {
+  const [hovered, setHovered] = useState<string | null>(null);
+  const active = districtResults.find((d) => d.id === hovered);
+
+  return (
+    <div className="relative h-12 w-[27px]">
+      <svg viewBox={sriLanka.viewBox} className="h-12 w-[27px]">
+        {districtResults.map((d) => (
+          <path
+            key={d.id}
+            d={d.path}
+            onMouseEnter={() => setHovered(d.id)}
+            onMouseLeave={() => setHovered(null)}
+            strokeWidth={2}
+            className={`cursor-pointer stroke-dm-enamel transition-colors duration-150 dark:stroke-dm-carbon ${
+              hovered === d.id
+                ? 'fill-dm-accent2 dark:fill-dm-accent'
+                : 'fill-dm-aluminum dark:fill-dm-dark'
+            }`}
+          />
+        ))}
+      </svg>
+      {active && (
+        <div className="absolute left-1/2 top-0 z-10 -translate-x-1/2 -translate-y-full whitespace-nowrap rounded border border-dm-aluminum bg-dm-enamel px-1.5 py-0.5 text-[9px] text-dm-dark shadow-sm dark:border-dm-dark dark:bg-dm-carbon dark:text-dm-cement">
+          {active.name} &middot; {active.result}
+        </div>
+      )}
+    </div>
+  );
+};
+
+const CardFan = () => (
+  <div className="group/cards flex h-12 items-center">
+    <div className="-rotate-6 flex h-9 w-6 flex-col items-center justify-between rounded-sm border border-dm-aluminum bg-white px-0.5 py-0.5 text-[8px] font-bold text-black shadow-sm transition-transform duration-300 group-hover/cards:-translate-y-1 dark:border-dm-dark">
+      <span>A</span>
+      <span className="text-xs">&spades;</span>
+    </div>
+    <div className="-ml-3 z-10 flex h-9 w-6 flex-col items-center justify-between rounded-sm border border-dm-aluminum bg-white px-0.5 py-0.5 text-[8px] font-bold text-red-600 shadow-sm transition-transform duration-300 group-hover/cards:-translate-y-1.5 dark:border-dm-dark">
+      <span>10</span>
+      <span className="text-xs">&hearts;</span>
+    </div>
+    <div className="-ml-3 rotate-6 flex h-9 w-6 flex-col items-center justify-between rounded-sm border border-dm-aluminum bg-white px-0.5 py-0.5 text-[8px] font-bold text-red-600 shadow-sm transition-transform duration-300 group-hover/cards:-translate-y-1 dark:border-dm-dark">
+      <span>K</span>
+      <span className="text-xs">&diams;</span>
+    </div>
+  </div>
+);
 
 const blogs = [
   {
@@ -67,33 +150,60 @@ const blogs = [
   }
 ];
 
-const ProjectCard = ({ title, description, techStack, link, internalLink }: any) => {
+const SectionHeader = ({ label }: { label: string }) => (
+  <div className="relative mb-8 mt-16 border-t border-dm-aluminum pt-6 dark:border-dm-dark">
+    <LineArt className="pointer-events-none absolute inset-x-0 -top-10 -z-10 h-10 w-full text-dm-dark/10 dark:text-dm-cement/10" />
+    <span className="text-xs uppercase tracking-widest text-dm-ash dark:text-dm-ash">
+      {label}
+    </span>
+  </div>
+);
+
+const ProjectCard = ({ title, description, techStack, link, internalLink, logo, delay, visual }: any) => {
   return (
-    <div className="mb-4 rounded-lg border border-neutral-600 bg-white p-6 shadow-md dark:border-gray-400 dark:bg-neutral-950">
-      <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100">{title}</h3>
-      <p className="my-2 text-sm text-gray-600 dark:text-gray-400">{description}</p>
-      <div className="my-2 flex flex-wrap gap-2">
-        {techStack.map((tech: string, index: number) => (
-          <span
-            key={index}
-            className="rounded-full bg-gray-200 px-2 py-1 text-xs text-gray-800 dark:bg-gray-700 dark:text-gray-200">
-            {tech}
-          </span>
-        ))}
+    <div
+      style={{ animationDelay: `${delay}ms` }}
+      className="group flex animate-fade-in-up flex-col justify-between border border-dm-aluminum p-8 opacity-0 transition-all duration-300 hover:-translate-y-1 hover:border-dm-accent2 dark:border-dm-dark dark:hover:border-dm-accent">
+      <div>
+        <div className="flex items-center gap-4">
+          {logo && (
+            <img
+              src={logo}
+              alt={`${title} logo`}
+              className="h-12 w-12 rounded-md border border-dm-aluminum dark:border-dm-dark"
+            />
+          )}
+          <h3 className="text-xl font-bold text-dm-dark dark:text-dm-cement">{title}</h3>
+          <div className="ml-auto">
+            {visual === 'drift' && <DriftWave />}
+            {visual === 'map' && <MiniMap />}
+            {visual === 'cards' && <CardFan />}
+          </div>
+        </div>
+        <p className="my-4 text-base text-dm-ash dark:text-dm-ash">{description}</p>
+        <div className="mb-6 flex flex-wrap gap-2">
+          {techStack.map((tech: string, index: number) => (
+            <span
+              key={index}
+              className="border border-dm-aluminum px-3 py-1 text-xs uppercase tracking-wide text-dm-ash dark:border-dm-dark dark:text-dm-ash">
+              {tech}
+            </span>
+          ))}
+        </div>
       </div>
       {internalLink ? (
         <Link
           to={internalLink}
-          className="text-sm text-blue-600 hover:underline dark:text-blue-400">
-          View Details
+          className="text-base text-dm-dark transition-colors group-hover:text-dm-accent2 dark:text-dm-cement dark:group-hover:text-dm-accent">
+          &gt; View Details
         </Link>
       ) : (
         <a
           href={link}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-sm text-blue-600 hover:underline dark:text-blue-400">
-          View Project
+          className="text-base text-dm-dark transition-colors group-hover:text-dm-accent2 dark:text-dm-cement dark:group-hover:text-dm-accent">
+          &gt; View Project
         </a>
       )}
     </div>
@@ -102,16 +212,18 @@ const ProjectCard = ({ title, description, techStack, link, internalLink }: any)
 
 const BlogCard = ({ title, description, date, link }: any) => {
   return (
-    <div className="mb-4 rounded-lg border border-neutral-600 bg-white p-6 shadow-md dark:border-gray-400 dark:bg-neutral-950">
-      <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100">{title}</h3>
-      <p className="my-2 text-sm text-gray-500 dark:text-gray-400">{date}</p>
-      <p className="my-2 text-sm text-gray-600 dark:text-gray-400">{description}</p>
+    <div className="flex flex-col justify-between border border-dm-aluminum p-5 transition-all duration-300 hover:-translate-y-1 hover:border-dm-accent2 dark:border-dm-dark dark:hover:border-dm-accent">
+      <div>
+        <h3 className="text-base font-bold text-dm-dark dark:text-dm-cement">{title}</h3>
+        <p className="mt-1 text-xs text-dm-ash dark:text-dm-ash">{date}</p>
+        <p className="my-3 text-sm text-dm-ash dark:text-dm-ash">{description}</p>
+      </div>
       <a
         href={link}
         target="_blank"
         rel="noopener noreferrer"
-        className="text-sm text-blue-600 hover:underline dark:text-blue-400">
-        Read More
+        className="text-sm text-dm-dark transition-colors hover:text-dm-accent2 dark:text-dm-cement dark:hover:text-dm-accent">
+        &gt; Read More
       </a>
     </div>
   );
@@ -121,110 +233,103 @@ const HomePage: React.FC = () => {
   return (
     <BaseContainer>
       <NavigationBar />
-      <main className="text-center">
-        <div className="ml-4 mt-4 flex">
+      <main className="pt-10 text-start">
+        <div
+          style={{ animationDelay: '0ms' }}
+          className="flex animate-fade-in-up flex-wrap items-center gap-2 text-xs uppercase tracking-widest text-dm-ash opacity-0 dark:text-dm-ash">
           <ToolTipWrapper
             tooltipText="A technophile is a person who has a strong enthusiasm for or interest in technology, particularly new or emerging technologies. They are often early adopters of gadgets, software, or innovations and enjoy exploring how technology can improve daily life or solve problems."
-            tooltipWidth="600px"
+            tooltipWidth="320px"
             direction="bottom">
-            <p className="text-dark font-sansMono font-semibold dark:text-white">Technophile</p>
+            <span className="cursor-default border-b border-dotted border-dm-ash dark:border-dm-ash">
+              Technophile
+            </span>
           </ToolTipWrapper>
-          <span style={{ margin: '0 10px' }}></span>
-          <p className="text-dark font-sansMono font-normal dark:text-gray-400">Sri Lanka</p>
-          <br />
+          <span>&middot;</span>
+          <span>Sri Lanka</span>
         </div>
-        <div className="flex items-center text-start">
+
+        <div
+          style={{ animationDelay: '100ms' }}
+          className="relative mt-6 w-fit animate-fade-in-up opacity-0">
+          <CornerMarks className="pointer-events-none absolute -right-6 -top-6 -z-10 h-16 w-16 text-dm-accent2/30 dark:text-dm-accent/30" />
           <img
             src="https://avatars.githubusercontent.com/u/50785933?v=4"
             alt="Ishan Lahiru"
-            className="ml-4 mt-4 h-48 w-48 rounded-full"
+            className="h-24 w-24 rounded-md border border-dm-aluminum object-cover dark:border-dm-dark"
           />
         </div>
 
-        <div className="flex text-start">
-          <p className="text-dark ml-4 mt-4 font-sansMono font-extralight dark:text-gray-400">
-            Exploring the realm of tech, the journey unfolds with crafting innovative solutions,
-            unraveling complex systems, and embracing the ever-evolving digital landscape, where
-            creativity meets logic to shape a future brimming with possibilities.
-          </p>
-        </div>
-        <div className="flex flex-col items-start sm:flex-row">
-          <button className="mt-4 flex w-56 rounded-md bg-gray-600 p-2 pt-3 dark:bg-gray-200">
-            <p className="dark:text-gray-750 ml-4 text-slate-400 dark:text-slate-600">About</p>
-            <span style={{ margin: '0 3px' }} />
-            <p className="text-slate-200 dark:text-gray-950">Ishan Lahiru</p>
-            <span style={{ margin: '0 3px' }} />
-            <picture className="translate-y-0">
-              <source
-                srcSet="https://fonts.gstatic.com/s/e/notoemoji/latest/1f680/512.webp"
-                type="image/webp"
-              />
-              <img
-                src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f680/512.gif"
-                alt="🚀"
-                width="32"
-                height="32"
-              />
-            </picture>
-            <span style={{ margin: '0 4px' }}></span>
-          </button>
+        <p
+          style={{ animationDelay: '200ms' }}
+          className="mt-4 animate-fade-in-up text-base font-bold text-dm-dark opacity-0 dark:text-dm-cement">
+          A person who understands code.
+        </p>
 
-          <section className="ml-4 mt-4 flex flex-row items-start">
+        <div
+          style={{ animationDelay: '300ms' }}
+          className="mt-6 flex animate-fade-in-up flex-wrap items-center gap-6 opacity-0">
+          <Link
+            to="/about"
+            className="border border-dm-aluminum px-4 py-2 text-xs uppercase tracking-widest text-dm-dark transition-colors hover:border-dm-accent2 hover:text-dm-accent2 dark:border-dm-dark dark:text-dm-cement dark:hover:border-dm-accent dark:hover:text-dm-accent">
+            About Ishan Lahiru
+          </Link>
+
+          <div className="flex items-center gap-4 text-lg text-dm-ash dark:text-dm-cement">
             <FontAwesomeIcon
-              className="mr-4 translate-y-2 rounded-lg bg-white p-0.5 text-xl transition-all duration-300 hover:scale-110 hover:shadow-lg"
+              className="cursor-pointer transition-all duration-300 hover:scale-125 hover:text-dm-accent2 dark:hover:text-dm-accent"
               icon={faGithub}
             />
             <FontAwesomeIcon
-              className="mr-4 translate-y-2 text-xl text-green-600 transition-all duration-300 hover:scale-110 hover:text-green-400"
+              className="cursor-pointer transition-all duration-300 hover:scale-125 hover:text-dm-accent2 dark:hover:text-dm-accent"
               icon={faWeixin}
             />
             <FontAwesomeIcon
-              className="mr-4 translate-y-2 text-xl text-blue-600 transition-all duration-300 hover:scale-110 hover:text-blue-400"
+              className="cursor-pointer transition-all duration-300 hover:scale-125 hover:text-dm-accent2 dark:hover:text-dm-accent"
               icon={faFacebook}
             />
             <FontAwesomeIcon
-              className="mr-4 translate-y-2 rounded-lg bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 p-0.5 text-xl transition-all duration-300 hover:scale-110 hover:brightness-110"
+              className="cursor-pointer transition-all duration-300 hover:scale-125 hover:text-dm-accent2 dark:hover:text-dm-accent"
               icon={faInstagram}
             />
             <FontAwesomeIcon
-              className="mr-4 translate-y-2 rounded-lg bg-white p-0.5 text-xl transition-all duration-300 hover:scale-110 hover:shadow-lg"
+              className="cursor-pointer transition-all duration-300 hover:scale-125 hover:text-dm-accent2 dark:hover:text-dm-accent"
               icon={faTiktok}
             />
             <FontAwesomeIcon
-              className="mr-4 translate-y-2 rounded-lg bg-white p-0.5 text-xl transition-all duration-300 hover:scale-110 hover:shadow-lg"
+              className="cursor-pointer transition-all duration-300 hover:scale-125 hover:text-dm-accent2 dark:hover:text-dm-accent"
               icon={faXTwitter}
             />
             <FontAwesomeIcon
-              className="mr-4 translate-y-2 text-xl text-blue-700 transition-all duration-300 hover:scale-110 hover:text-blue-500"
+              className="cursor-pointer transition-all duration-300 hover:scale-125 hover:text-dm-accent2 dark:hover:text-dm-accent"
               icon={faLinkedin}
             />
             <FontAwesomeIcon
-              className="mr-4 translate-y-2 rounded-lg bg-white p-0.5 text-xl transition-all duration-300 hover:scale-110 hover:shadow-lg"
+              className="cursor-pointer transition-all duration-300 hover:scale-125 hover:text-dm-accent2 dark:hover:text-dm-accent"
               icon={faThreads}
             />
-          </section>
+          </div>
         </div>
       </main>
+
       <section>
-        <hr className="border-t-0.5 mt-4 text-gray-950 dark:border-gray-800" />
-        <h2 className="my-4 text-xl font-semibold text-gray-900 dark:text-gray-100">Projects</h2>
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {projects.map((project) => (
-            <ProjectCard key={project.id} {...project} />
+        <SectionHeader label="Projects" />
+        <div className="grid grid-cols-1 gap-6">
+          {projects.map((project, index) => (
+            <ProjectCard key={project.id} {...project} delay={index * 120} />
           ))}
         </div>
       </section>
+
       <section>
-        <section>
-          <hr className="border-t-0.5 mt-4 text-gray-950 dark:border-gray-800" />
-          <h2 className="my-4 text-xl font-semibold text-gray-900 dark:text-gray-100">Blogs</h2>
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {blogs.map((blog) => (
-              <BlogCard key={blog.id} {...blog} />
-            ))}
-          </div>
-        </section>
+        <SectionHeader label="Blogs" />
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          {blogs.map((blog) => (
+            <BlogCard key={blog.id} {...blog} />
+          ))}
+        </div>
       </section>
+
       <Footer />
     </BaseContainer>
   );
