@@ -35,7 +35,7 @@ const projects = [
     description:
       'A dynamic dashboard to display election results using SVG maps and detailed statistics.',
     techStack: ['JavaScript', 'SVG', 'React'],
-    link: '#',
+    link: 'https://ishanlahiru.github.io/election-map-site/',
     visual: 'map'
   },
   {
