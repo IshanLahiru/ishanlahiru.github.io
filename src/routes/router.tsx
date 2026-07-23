@@ -11,6 +11,8 @@ import DriftAndDirectPage from './projects/drift-and-direct/driftAndDirectPage';
 import DriftAndDirectPrivacyPolicyPage from './projects/drift-and-direct/driftAndDirectPrivacyPolicyPage';
 import DriftAndDirectTermsPage from './projects/drift-and-direct/driftAndDirectTermsPage';
 import DriftAndDirectSupportPage from './projects/drift-and-direct/driftAndDirectSupportPage';
+import OmiClashPrivacyPolicyPage from './projects/omi-clash/omiClashPrivacyPolicyPage';
+import OmiClashTermsPage from './projects/omi-clash/omiClashTermsPage';
 
 interface RouterProps {
   children?: ReactNode;
@@ -34,6 +36,8 @@ const Router: React.FC<RouterProps> = ({ children }) => {
         />
         <Route path="/projects/drift-and-direct/terms" element={<DriftAndDirectTermsPage />} />
         <Route path="/projects/drift-and-direct/support" element={<DriftAndDirectSupportPage />} />
+        <Route path="/projects/omi-clash/privacy-policy" element={<OmiClashPrivacyPolicyPage />} />
+        <Route path="/projects/omi-clash/terms" element={<OmiClashTermsPage />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </BrowserRouter>
