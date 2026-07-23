@@ -6,8 +6,8 @@ const OmiClashPrivacyPolicyPage: React.FC = () => {
     <LegalPageLayout
       title="Omi Clash Privacy Policy"
       effectiveDate="2026-07-23"
-      backTo="/"
-      backLabel="Back to Home"
+      backTo="/projects/omi-clash"
+      backLabel="Back to Omi Clash"
     >
       <P>
         This privacy policy applies to the Omi Clash app for mobile devices, together with any

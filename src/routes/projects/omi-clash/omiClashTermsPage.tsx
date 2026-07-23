@@ -6,8 +6,8 @@ const OmiClashTermsPage: React.FC = () => {
     <LegalPageLayout
       title="Omi Clash Terms & Conditions"
       effectiveDate="2026-07-23"
-      backTo="/"
-      backLabel="Back to Home"
+      backTo="/projects/omi-clash"
+      backLabel="Back to Omi Clash"
     >
       <P>
         These terms and conditions apply to the Omi Clash app for mobile devices, together with any

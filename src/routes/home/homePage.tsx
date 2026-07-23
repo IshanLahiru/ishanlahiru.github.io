@@ -24,10 +24,27 @@ const projects = [
     title: 'Drift & Direct',
     description:
       'A swiping-mechanism based mobile focus game, designed to help players relax and stay in the moment.',
-    techStack: ['Flutter', 'Bloc', 'Firebase', 'Firebase Functions', 'Firebase Auth', 'Game Center', 'RevenueCat'],
+    techStack: [
+      'Flutter',
+      'Bloc',
+      'Firebase',
+      'Firebase Functions',
+      'Firebase Auth',
+      'Game Center',
+      'RevenueCat'
+    ],
     internalLink: '/projects/drift-and-direct',
     logo: '/projects/drift-and-direct/icon.png',
     visual: 'drift'
+  },
+  {
+    id: 4,
+    title: 'Omi Clash',
+    description:
+      'A 4-player trick-taking card game (Omi) with friend chat, live table voice chat, and country/global leaderboards.',
+    techStack: ['Flutter', 'Flame', 'Firebase', 'Cloud Functions', 'WebRTC', 'RevenueCat'],
+    internalLink: '/projects/omi-clash',
+    logo: '/projects/omi-clash/icon.png'
   },
   {
     id: 2,
@@ -54,7 +71,8 @@ const DriftWave = () => (
     <svg
       viewBox="0 0 160 48"
       preserveAspectRatio="none"
-      className="absolute inset-0 h-full w-[160px] animate-wave">
+      className="absolute inset-0 h-full w-[160px] animate-wave"
+    >
       <path
         d="M0 30 Q10 20 20 30 T40 30 T60 30 T80 30 L80 48 L0 48 Z"
         className="fill-dm-accent2/30 dark:fill-dm-accent/30"
@@ -110,15 +128,15 @@ const MiniMap = () => {
 
 const CardFan = () => (
   <div className="group/cards flex h-12 items-center">
-    <div className="-rotate-6 flex h-9 w-6 flex-col items-center justify-between rounded-sm border border-dm-aluminum bg-white px-0.5 py-0.5 text-[8px] font-bold text-black shadow-sm transition-transform duration-300 group-hover/cards:-translate-y-1 dark:border-dm-dark">
+    <div className="flex h-9 w-6 -rotate-6 flex-col items-center justify-between rounded-sm border border-dm-aluminum bg-white px-0.5 py-0.5 text-[8px] font-bold text-black shadow-sm transition-transform duration-300 group-hover/cards:-translate-y-1 dark:border-dm-dark">
       <span>A</span>
       <span className="text-xs">&spades;</span>
     </div>
-    <div className="-ml-3 z-10 flex h-9 w-6 flex-col items-center justify-between rounded-sm border border-dm-aluminum bg-white px-0.5 py-0.5 text-[8px] font-bold text-red-600 shadow-sm transition-transform duration-300 group-hover/cards:-translate-y-1.5 dark:border-dm-dark">
+    <div className="z-10 -ml-3 flex h-9 w-6 flex-col items-center justify-between rounded-sm border border-dm-aluminum bg-white px-0.5 py-0.5 text-[8px] font-bold text-red-600 shadow-sm transition-transform duration-300 group-hover/cards:-translate-y-1.5 dark:border-dm-dark">
       <span>10</span>
       <span className="text-xs">&hearts;</span>
     </div>
-    <div className="-ml-3 rotate-6 flex h-9 w-6 flex-col items-center justify-between rounded-sm border border-dm-aluminum bg-white px-0.5 py-0.5 text-[8px] font-bold text-red-600 shadow-sm transition-transform duration-300 group-hover/cards:-translate-y-1 dark:border-dm-dark">
+    <div className="-ml-3 flex h-9 w-6 rotate-6 flex-col items-center justify-between rounded-sm border border-dm-aluminum bg-white px-0.5 py-0.5 text-[8px] font-bold text-red-600 shadow-sm transition-transform duration-300 group-hover/cards:-translate-y-1 dark:border-dm-dark">
       <span>K</span>
       <span className="text-xs">&diams;</span>
     </div>
@@ -153,17 +171,25 @@ const blogs = [
 const SectionHeader = ({ label }: { label: string }) => (
   <div className="relative mb-8 mt-16 border-t border-dm-aluminum pt-6 dark:border-dm-dark">
     <LineArt className="pointer-events-none absolute inset-x-0 -top-10 -z-10 h-10 w-full text-dm-dark/10 dark:text-dm-cement/10" />
-    <span className="text-xs uppercase tracking-widest text-dm-ash dark:text-dm-ash">
-      {label}
-    </span>
+    <span className="text-xs uppercase tracking-widest text-dm-ash dark:text-dm-ash">{label}</span>
   </div>
 );
 
-const ProjectCard = ({ title, description, techStack, link, internalLink, logo, delay, visual }: any) => {
+const ProjectCard = ({
+  title,
+  description,
+  techStack,
+  link,
+  internalLink,
+  logo,
+  delay,
+  visual
+}: any) => {
   return (
     <div
       style={{ animationDelay: `${delay}ms` }}
-      className="group flex animate-fade-in-up flex-col justify-between border border-dm-aluminum p-8 opacity-0 transition-all duration-300 hover:-translate-y-1 hover:border-dm-accent2 dark:border-dm-dark dark:hover:border-dm-accent">
+      className="group flex animate-fade-in-up flex-col justify-between border border-dm-aluminum p-8 opacity-0 transition-all duration-300 hover:-translate-y-1 hover:border-dm-accent2 dark:border-dm-dark dark:hover:border-dm-accent"
+    >
       <div>
         <div className="flex items-center gap-4">
           {logo && (
@@ -185,7 +211,8 @@ const ProjectCard = ({ title, description, techStack, link, internalLink, logo, 
           {techStack.map((tech: string, index: number) => (
             <span
               key={index}
-              className="border border-dm-aluminum px-3 py-1 text-xs uppercase tracking-wide text-dm-ash dark:border-dm-dark dark:text-dm-ash">
+              className="border border-dm-aluminum px-3 py-1 text-xs uppercase tracking-wide text-dm-ash dark:border-dm-dark dark:text-dm-ash"
+            >
               {tech}
             </span>
           ))}
@@ -194,7 +221,8 @@ const ProjectCard = ({ title, description, techStack, link, internalLink, logo, 
       {internalLink ? (
         <Link
           to={internalLink}
-          className="text-base text-dm-dark transition-colors group-hover:text-dm-accent2 dark:text-dm-cement dark:group-hover:text-dm-accent">
+          className="text-base text-dm-dark transition-colors group-hover:text-dm-accent2 dark:text-dm-cement dark:group-hover:text-dm-accent"
+        >
           &gt; View Details
         </Link>
       ) : (
@@ -202,7 +230,8 @@ const ProjectCard = ({ title, description, techStack, link, internalLink, logo, 
           href={link}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-base text-dm-dark transition-colors group-hover:text-dm-accent2 dark:text-dm-cement dark:group-hover:text-dm-accent">
+          className="text-base text-dm-dark transition-colors group-hover:text-dm-accent2 dark:text-dm-cement dark:group-hover:text-dm-accent"
+        >
           &gt; View Project
         </a>
       )}
@@ -222,7 +251,8 @@ const BlogCard = ({ title, description, date, link }: any) => {
         href={link}
         target="_blank"
         rel="noopener noreferrer"
-        className="text-sm text-dm-dark transition-colors hover:text-dm-accent2 dark:text-dm-cement dark:hover:text-dm-accent">
+        className="text-sm text-dm-dark transition-colors hover:text-dm-accent2 dark:text-dm-cement dark:hover:text-dm-accent"
+      >
         &gt; Read More
       </a>
     </div>
@@ -236,11 +266,13 @@ const HomePage: React.FC = () => {
       <main className="pt-10 text-start">
         <div
           style={{ animationDelay: '0ms' }}
-          className="flex animate-fade-in-up flex-wrap items-center gap-2 text-xs uppercase tracking-widest text-dm-ash opacity-0 dark:text-dm-ash">
+          className="flex animate-fade-in-up flex-wrap items-center gap-2 text-xs uppercase tracking-widest text-dm-ash opacity-0 dark:text-dm-ash"
+        >
           <ToolTipWrapper
             tooltipText="A technophile is a person who has a strong enthusiasm for or interest in technology, particularly new or emerging technologies. They are often early adopters of gadgets, software, or innovations and enjoy exploring how technology can improve daily life or solve problems."
             tooltipWidth="320px"
-            direction="bottom">
+            direction="bottom"
+          >
             <span className="cursor-default border-b border-dotted border-dm-ash dark:border-dm-ash">
               Technophile
             </span>
@@ -251,7 +283,8 @@ const HomePage: React.FC = () => {
 
         <div
           style={{ animationDelay: '100ms' }}
-          className="relative mt-6 w-fit animate-fade-in-up opacity-0">
+          className="relative mt-6 w-fit animate-fade-in-up opacity-0"
+        >
           <CornerMarks className="pointer-events-none absolute -right-6 -top-6 -z-10 h-16 w-16 text-dm-accent2/30 dark:text-dm-accent/30" />
           <img
             src="https://avatars.githubusercontent.com/u/50785933?v=4"
@@ -262,16 +295,19 @@ const HomePage: React.FC = () => {
 
         <p
           style={{ animationDelay: '200ms' }}
-          className="mt-4 animate-fade-in-up text-base font-bold text-dm-dark opacity-0 dark:text-dm-cement">
+          className="mt-4 animate-fade-in-up text-base font-bold text-dm-dark opacity-0 dark:text-dm-cement"
+        >
           A person who understands code.
         </p>
 
         <div
           style={{ animationDelay: '300ms' }}
-          className="mt-6 flex animate-fade-in-up flex-wrap items-center gap-6 opacity-0">
+          className="mt-6 flex animate-fade-in-up flex-wrap items-center gap-6 opacity-0"
+        >
           <Link
             to="/about"
-            className="border border-dm-aluminum px-4 py-2 text-xs uppercase tracking-widest text-dm-dark transition-colors hover:border-dm-accent2 hover:text-dm-accent2 dark:border-dm-dark dark:text-dm-cement dark:hover:border-dm-accent dark:hover:text-dm-accent">
+            className="border border-dm-aluminum px-4 py-2 text-xs uppercase tracking-widest text-dm-dark transition-colors hover:border-dm-accent2 hover:text-dm-accent2 dark:border-dm-dark dark:text-dm-cement dark:hover:border-dm-accent dark:hover:text-dm-accent"
+          >
             About Ishan Lahiru
           </Link>
 
