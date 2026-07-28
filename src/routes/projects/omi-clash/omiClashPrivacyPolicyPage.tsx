@@ -5,7 +5,7 @@ const OmiClashPrivacyPolicyPage: React.FC = () => {
   return (
     <LegalPageLayout
       title="Omi Clash Privacy Policy"
-      effectiveDate="2026-07-23"
+      effectiveDate="2026-07-29"
       backTo="/projects/omi-clash"
       backLabel="Back to Omi Clash"
     >
@@ -59,6 +59,11 @@ const OmiClashPrivacyPolicyPage: React.FC = () => {
         Provider's behalf by RevenueCat. RevenueCat receives your Firebase user ID and your
         purchase/subscription history from the store; it does not receive your email address or
         display name from the Application directly.
+      </P>
+      <P>
+        Token cards (the Application's in-app currency) have no real-world monetary value and cannot
+        be redeemed or cashed out for real money, cryptocurrency, or any other item of value — see
+        the Terms & Conditions for details.
       </P>
 
       <H2>Your Rights</H2>

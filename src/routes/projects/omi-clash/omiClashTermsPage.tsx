@@ -5,7 +5,7 @@ const OmiClashTermsPage: React.FC = () => {
   return (
     <LegalPageLayout
       title="Omi Clash Terms & Conditions"
-      effectiveDate="2026-07-23"
+      effectiveDate="2026-07-29"
       backTo="/projects/omi-clash"
       backLabel="Back to Omi Clash"
     >
@@ -70,6 +70,13 @@ const OmiClashTermsPage: React.FC = () => {
         one-time purchases of in-app currency ("token cards"). Subscription pricing, billing period,
         and any free-trial or introductory-price terms are shown to you before purchase, at the
         point of sale within the Application.
+      </P>
+      <P>
+        <strong>Token cards, and every token won or lost at the table, have no real-world monetary
+        value.</strong> They cannot be redeemed, exchanged, transferred for value, or cashed out for
+        real money, cryptocurrency, or any other item of value, whether from the Service Provider or
+        from another player, and exist solely for use within the Application's games. Winning or
+        losing tokens in a match has no effect outside the Application.
       </P>
       <UL
         items={[
