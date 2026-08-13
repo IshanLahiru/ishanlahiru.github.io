@@ -110,6 +110,12 @@ const OmiClashPage: React.FC = () => {
             Support
           </Link>
           <Link
+            to="/projects/omi-clash/community"
+            className="text-blue-600 hover:underline dark:text-blue-400"
+          >
+            Community
+          </Link>
+          <Link
             to="/projects/omi-clash/privacy-policy"
             className="text-blue-600 hover:underline dark:text-blue-400"
           >

@@ -23,8 +23,11 @@ const indexHtml = join(distDir, 'index.html');
 copyFileSync(indexHtml, join(distDir, '404.html'));
 
 const criticalRoutes = [
+  '/projects/omi-clash',
   '/projects/omi-clash/privacy-policy',
   '/projects/omi-clash/terms',
+  '/projects/omi-clash/support',
+  '/projects/omi-clash/community',
 ];
 
 for (const route of criticalRoutes) {
