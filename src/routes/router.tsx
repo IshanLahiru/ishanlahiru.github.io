@@ -16,6 +16,10 @@ import OmiClashPrivacyPolicyPage from './projects/omi-clash/omiClashPrivacyPolic
 import OmiClashTermsPage from './projects/omi-clash/omiClashTermsPage';
 import OmiClashSupportPage from './projects/omi-clash/omiClashSupportPage';
 import OmiClashCommunityPage from './projects/omi-clash/omiClashCommunityPage';
+import TheravadaChantsPage from './projects/theravada-chants/theravadaChantsPage';
+import TheravadaChantsPrivacyPolicyPage from './projects/theravada-chants/theravadaChantsPrivacyPolicyPage';
+import TheravadaChantsTermsPage from './projects/theravada-chants/theravadaChantsTermsPage';
+import TheravadaChantsSupportPage from './projects/theravada-chants/theravadaChantsSupportPage';
 
 interface RouterProps {
   children?: ReactNode;
@@ -44,6 +48,13 @@ const Router: React.FC<RouterProps> = ({ children }) => {
         <Route path="/projects/omi-clash/terms" element={<OmiClashTermsPage />} />
         <Route path="/projects/omi-clash/support" element={<OmiClashSupportPage />} />
         <Route path="/projects/omi-clash/community" element={<OmiClashCommunityPage />} />
+        <Route path="/projects/theravada-chants" element={<TheravadaChantsPage />} />
+        <Route
+          path="/projects/theravada-chants/privacy-policy"
+          element={<TheravadaChantsPrivacyPolicyPage />}
+        />
+        <Route path="/projects/theravada-chants/terms" element={<TheravadaChantsTermsPage />} />
+        <Route path="/projects/theravada-chants/support" element={<TheravadaChantsSupportPage />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </BrowserRouter>

@@ -20,6 +20,15 @@ import sriLanka from '@svg-maps/sri-lanka';
 
 const projects = [
   {
+    id: 5,
+    title: 'Theravāda Chants',
+    description:
+      'A Pali chanting companion — chants with English translations, precept-level reading lists, a guided ceremony walkthrough, and a Pali pronunciation guide.',
+    techStack: ['Flutter', 'Firebase', 'Cloud Firestore', 'Cloud Storage', 'RevenueCat'],
+    internalLink: '/projects/theravada-chants',
+    logo: '/projects/theravada-chants/icon.png'
+  },
+  {
     id: 1,
     title: 'Drift & Direct',
     description:
