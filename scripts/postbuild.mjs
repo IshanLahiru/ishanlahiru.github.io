@@ -28,6 +28,10 @@ const criticalRoutes = [
   '/projects/omi-clash/terms',
   '/projects/omi-clash/support',
   '/projects/omi-clash/community',
+  '/projects/theravada-chants',
+  '/projects/theravada-chants/privacy-policy',
+  '/projects/theravada-chants/terms',
+  '/projects/theravada-chants/support',
 ];
 
 for (const route of criticalRoutes) {
