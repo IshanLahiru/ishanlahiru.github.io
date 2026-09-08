@@ -20,6 +20,15 @@ import sriLanka from '@svg-maps/sri-lanka';
 
 const projects = [
   {
+    id: 6,
+    title: 'Dammapadaya',
+    description:
+      'A daily-reading companion for the Dhammapada — all 423 verses across 26 chapters, in Pāli with English renderings, browsable by chapter or searchable by wording and theme.',
+    techStack: ['Flutter', 'Firebase', 'Cloud Firestore'],
+    internalLink: '/projects/dammapadaya',
+    logo: '/projects/dammapadaya/icon.png'
+  },
+  {
     id: 5,
     title: 'Theravāda Chants',
     description:

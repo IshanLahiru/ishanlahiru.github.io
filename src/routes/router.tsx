@@ -20,6 +20,10 @@ import TheravadaChantsPage from './projects/theravada-chants/theravadaChantsPage
 import TheravadaChantsPrivacyPolicyPage from './projects/theravada-chants/theravadaChantsPrivacyPolicyPage';
 import TheravadaChantsTermsPage from './projects/theravada-chants/theravadaChantsTermsPage';
 import TheravadaChantsSupportPage from './projects/theravada-chants/theravadaChantsSupportPage';
+import DammapadayaPage from './projects/dammapadaya/dammapadayaPage';
+import DammapadayaPrivacyPolicyPage from './projects/dammapadaya/dammapadayaPrivacyPolicyPage';
+import DammapadayaTermsPage from './projects/dammapadaya/dammapadayaTermsPage';
+import DammapadayaSupportPage from './projects/dammapadaya/dammapadayaSupportPage';
 
 interface RouterProps {
   children?: ReactNode;
@@ -55,6 +59,13 @@ const Router: React.FC<RouterProps> = ({ children }) => {
         />
         <Route path="/projects/theravada-chants/terms" element={<TheravadaChantsTermsPage />} />
         <Route path="/projects/theravada-chants/support" element={<TheravadaChantsSupportPage />} />
+        <Route path="/projects/dammapadaya" element={<DammapadayaPage />} />
+        <Route
+          path="/projects/dammapadaya/privacy-policy"
+          element={<DammapadayaPrivacyPolicyPage />}
+        />
+        <Route path="/projects/dammapadaya/terms" element={<DammapadayaTermsPage />} />
+        <Route path="/projects/dammapadaya/support" element={<DammapadayaSupportPage />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </BrowserRouter>

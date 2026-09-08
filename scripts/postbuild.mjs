@@ -32,6 +32,10 @@ const criticalRoutes = [
   '/projects/theravada-chants/privacy-policy',
   '/projects/theravada-chants/terms',
   '/projects/theravada-chants/support',
+  '/projects/dammapadaya',
+  '/projects/dammapadaya/privacy-policy',
+  '/projects/dammapadaya/terms',
+  '/projects/dammapadaya/support',
 ];
 
 for (const route of criticalRoutes) {
