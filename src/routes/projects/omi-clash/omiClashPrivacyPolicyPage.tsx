@@ -99,7 +99,7 @@ const OmiClashPrivacyPolicyPage: React.FC = () => {
           <>
             <a
               href="https://firebase.google.com/support/privacy"
-              className="text-np-ink underline decoration-np-accent decoration-2 underline-offset-2 dark:text-np-ink-night dark:decoration-np-accent-night"
+              className="text-np-accent hover:underline dark:text-np-accent-night"
             >
               Firebase
             </a>{' '}
@@ -109,7 +109,7 @@ const OmiClashPrivacyPolicyPage: React.FC = () => {
           <>
             <a
               href="https://policies.google.com/privacy"
-              className="text-np-ink underline decoration-np-accent decoration-2 underline-offset-2 dark:text-np-ink-night dark:decoration-np-accent-night"
+              className="text-np-accent hover:underline dark:text-np-accent-night"
             >
               Google Sign-In
             </a>{' '}
@@ -118,7 +118,7 @@ const OmiClashPrivacyPolicyPage: React.FC = () => {
           <>
             <a
               href="https://www.apple.com/legal/privacy/"
-              className="text-np-ink underline decoration-np-accent decoration-2 underline-offset-2 dark:text-np-ink-night dark:decoration-np-accent-night"
+              className="text-np-accent hover:underline dark:text-np-accent-night"
             >
               Sign in with Apple
             </a>{' '}
@@ -127,7 +127,7 @@ const OmiClashPrivacyPolicyPage: React.FC = () => {
           <>
             <a
               href="https://policies.google.com/technologies/partner-sites"
-              className="text-np-ink underline decoration-np-accent decoration-2 underline-offset-2 dark:text-np-ink-night dark:decoration-np-accent-night"
+              className="text-np-accent hover:underline dark:text-np-accent-night"
             >
               AdMob
             </a>{' '}
@@ -136,7 +136,7 @@ const OmiClashPrivacyPolicyPage: React.FC = () => {
           <>
             <a
               href="https://www.revenuecat.com/privacy"
-              className="text-np-ink underline decoration-np-accent decoration-2 underline-offset-2 dark:text-np-ink-night dark:decoration-np-accent-night"
+              className="text-np-accent hover:underline dark:text-np-accent-night"
             >
               RevenueCat
             </a>{' '}
@@ -149,7 +149,7 @@ const OmiClashPrivacyPolicyPage: React.FC = () => {
           <>
             <a
               href="https://www.cloudflare.com/privacypolicy/"
-              className="text-np-ink underline decoration-np-accent decoration-2 underline-offset-2 dark:text-np-ink-night dark:decoration-np-accent-night"
+              className="text-np-accent hover:underline dark:text-np-accent-night"
             >
               Cloudflare
             </a>{' '}

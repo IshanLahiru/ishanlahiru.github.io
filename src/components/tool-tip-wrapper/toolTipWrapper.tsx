@@ -24,7 +24,7 @@ const ToolTipWrapper: React.FC<ToolTipWrapperProps> = ({
     <div className="group relative inline-block">
       {children}
       <span
-        className={`absolute z-30 border border-np-ink bg-np-ink px-2 py-1 text-start font-sans text-xs text-np-paper opacity-0 transition-opacity duration-200 group-hover:opacity-100 dark:border-np-ink-night dark:bg-np-ink-night dark:text-np-paper-night ${tooltipClasses[direction]}`}
+        className={`absolute z-30 rounded-lg bg-np-ink px-2.5 py-1.5 text-start text-xs text-np-paper opacity-0 shadow-lg transition-opacity duration-200 group-hover:opacity-100 dark:bg-np-ink-night dark:text-np-paper-night ${tooltipClasses[direction]}`}
         style={{ width: tooltipWidth }}
       >
         {tooltipText}

@@ -32,7 +32,7 @@ const LegalPageLayout: React.FC<LegalPageLayoutProps> = ({
           {title}
         </h1>
         {effectiveDate && (
-          <p className="mb-8 font-mono text-xs uppercase tracking-widest text-np-500 dark:text-np-500-night">
+          <p className="mb-8 text-xs font-medium text-np-500 dark:text-np-500-night">
             Effective as of {effectiveDate}
           </p>
         )}
@@ -41,7 +41,7 @@ const LegalPageLayout: React.FC<LegalPageLayoutProps> = ({
         </article>
         <Link
           to="/"
-          className="mb-8 mt-10 inline-block min-h-[44px] content-center border border-np-ink bg-np-ink px-4 py-2 text-sm uppercase tracking-widest text-np-paper transition-colors hover:bg-np-paper hover:text-np-ink dark:border-np-ink-night dark:bg-np-ink-night dark:text-np-paper-night dark:hover:bg-np-paper-night dark:hover:text-np-ink-night">
+          className="mb-8 mt-10 inline-block min-h-[44px] content-center rounded-full bg-np-ink px-5 py-2.5 text-sm font-medium text-np-paper transition-colors hover:bg-np-700 dark:bg-np-ink-night dark:text-np-paper-night dark:hover:bg-np-200">
           Back to Portfolio
         </Link>
       </main>
@@ -70,8 +70,7 @@ export const UL = ({ items }: { items: React.ReactNode[] }) => (
   </ul>
 );
 
-export const inlineLinkClass =
-  'text-np-ink underline decoration-np-accent decoration-2 underline-offset-2 dark:text-np-ink-night dark:decoration-np-accent-night';
+export const inlineLinkClass = 'text-np-accent hover:underline dark:text-np-accent-night';
 
 export const ContactCard = ({
   label,
@@ -80,8 +79,8 @@ export const ContactCard = ({
   label: string;
   children: React.ReactNode;
 }) => (
-  <section className="mb-8 border border-np-ink p-6 dark:border-np-ink-night">
-    <p className="font-mono text-xs uppercase tracking-widest text-np-500 dark:text-np-500-night">
+  <section className="mb-8 rounded-2xl border border-np-muted bg-np-100/60 p-6 dark:border-np-muted-night dark:bg-np-700/20">
+    <p className="text-xs font-medium text-np-500 dark:text-np-500-night">
       {label}
     </p>
     <p className="mt-2 font-body text-sm leading-relaxed text-np-600 dark:text-np-400-night">
@@ -91,7 +90,7 @@ export const ContactCard = ({
 );
 
 export const Faq = ({ question, answer }: { question: string; answer: React.ReactNode }) => (
-  <details className="group border border-np-ink p-4 dark:border-np-ink-night">
+  <details className="group rounded-2xl border border-np-muted bg-np-100/60 p-4 dark:border-np-muted-night dark:bg-np-700/20">
     <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-sans text-sm font-semibold text-np-ink marker:content-none dark:text-np-ink-night">
       {question}
       <span className="shrink-0 font-mono text-lg leading-none text-np-accent transition-transform duration-200 group-open:rotate-45 dark:text-np-accent-night">

@@ -18,7 +18,8 @@ const OmiClashPage: React.FC = () => {
     <ProjectPageLayout
       title="Omi Clash"
       icon="/projects/omi-clash/icon.png"
-      status="🚧 In Active Development"
+      status="✅ Live on the App Store · 🧪 Testing on Google Play"
+      appStoreUrl="https://apps.apple.com/lk/app/omi-clash/id6793634949"
       description="A 4-player trick-taking card game (Omi), played in teams of two with trump calls, Court calls, and Kapoothi. Play against friends or bots at a shared table, chat 1:1 with friends or with everyone at the table, talk live over table voice chat, and climb the global and country leaderboards."
       techStack={techStack}
       liveDemo

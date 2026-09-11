@@ -129,7 +129,7 @@ const DriftAndDirectSupportPage: React.FC = () => {
         ))}
       </div>
 
-      <div className="flex gap-x-6 gap-y-2 border-t border-np-muted pt-6 font-mono text-xs uppercase tracking-widest dark:border-np-muted-night">
+      <div className="flex gap-x-6 gap-y-2 border-t border-np-muted pt-6 text-xs font-medium dark:border-np-muted-night">
         <Link to="/projects/drift-and-direct/privacy-policy" className={inlineLinkClass}>
           Privacy Policy
         </Link>

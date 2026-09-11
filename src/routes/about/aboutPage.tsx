@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import BaseContainer from '../../components/base-container/baseContainer';
-import { CornerMarks } from '../../components/decorative/decorativeSvgs';
-import NavigationBar from '../../components/header/header';
-import Footer from '../../components/footer/footer';
+import { ArrowLeft, Download } from 'lucide-react';
+import Navbar from '../../components/portfolio/Navbar';
+import Footer from '../../components/portfolio/Footer';
+import { Section, SectionHeading } from '../../components/portfolio/Section';
+import Reveal from '../../components/portfolio/Reveal';
 
-const experience = [
+export const experience = [
   {
     title: 'Associate Software Engineer',
     org: 'Plurative',
@@ -83,38 +84,28 @@ const certifications = [
   'Scientific Computing with Python'
 ];
 
-const SectionHeading = ({ id, label }: { id: string; label: string }) => (
-  <h2
-    id={id}
-    className="scroll-mt-24 border-t-4 border-np-ink pt-4 font-mono text-xs uppercase tracking-widest text-np-500 dark:border-np-ink-night dark:text-np-500-night">
-    {label}
-  </h2>
-);
+const quickLinks = [
+  { href: '#experience', label: 'Experience' },
+  { href: '#education', label: 'Education' },
+  { href: '#skills', label: 'Skills & Certifications' }
+];
 
-const TimelineItem = ({
-  title,
-  org,
-  dates,
-  duration,
-  bullets
-}: {
+const TimelineItem: React.FC<{
   title: string;
   org: string;
   dates: string;
   duration: string;
   bullets: string[];
-}) => (
-  <div className="border-l-2 border-np-muted py-1 pl-5 dark:border-np-muted-night">
-    <h3 className="font-serif text-lg font-bold text-np-ink dark:text-np-ink-night">{title}</h3>
-    <p className="mt-0.5 font-sans text-sm font-semibold text-np-accent dark:text-np-accent-night">
-      {org}
-    </p>
-    <p className="mt-0.5 font-mono text-xs uppercase tracking-wide text-np-500 dark:text-np-500-night">
+}> = ({ title, org, dates, duration, bullets }) => (
+  <div className="border-l-2 border-white/10 py-1 pl-5">
+    <h3 className="text-lg font-bold text-white">{title}</h3>
+    <p className="mt-0.5 text-sm font-medium text-orange-400">{org}</p>
+    <p className="mt-0.5 text-xs text-slate-500">
       {dates}
       {duration ? ` · ${duration}` : ''}
     </p>
     {bullets.length > 0 && (
-      <ul className="mt-3 list-disc space-y-1 pl-5 font-body text-sm leading-relaxed text-np-600 dark:text-np-400-night">
+      <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-relaxed text-slate-400">
         {bullets.map((bullet) => (
           <li key={bullet}>{bullet}</li>
         ))}
@@ -125,34 +116,32 @@ const TimelineItem = ({
 
 const AboutPage: React.FC = () => {
   return (
-    <BaseContainer>
-      <NavigationBar />
-      <main className="py-10 text-start">
-        <Link
-          to="/"
-          className="text-sm text-np-600 underline-offset-4 hover:text-np-accent hover:underline dark:text-np-400-night dark:hover:text-np-accent-night">
-          &larr; Back to Home
+    <div className="min-h-screen bg-black font-sans text-slate-300">
+      <Navbar />
+
+      <div className="mx-auto max-w-4xl px-4 pb-24 pt-10 sm:px-6 sm:pt-16 lg:px-8">
+        <Link to="/" className="inline-flex items-center gap-2 text-sm text-slate-500 transition-colors hover:text-white">
+          <ArrowLeft className="h-4 w-4" />
+          Back to Home
         </Link>
 
-        <div className="mt-6 flex flex-col gap-6 sm:flex-row sm:items-end">
-          <div className="relative w-fit flex-none">
-            <CornerMarks className="pointer-events-none absolute -right-6 -top-6 -z-10 h-16 w-16 text-np-accent/30 dark:text-np-accent-night/30 sm:h-20 sm:w-20 lg:h-24 lg:w-24" />
+        <Reveal className="mt-8 flex flex-col gap-6 sm:flex-row sm:items-end">
+          <div className="relative aspect-square w-28 flex-none overflow-hidden rounded-[2rem] shadow-xl shadow-black/40 sm:w-40 lg:w-48">
             <img
               src="https://avatars.githubusercontent.com/u/50785933?v=4"
               alt="Ishan Lahiru"
-              className="h-28 w-28 border border-np-ink object-cover transition-all duration-300 dark:border-np-ink-night sm:h-40 sm:w-40 lg:h-52 lg:w-52"
+              className="h-full w-full object-cover grayscale contrast-125"
             />
+            <div className="absolute inset-0 bg-orange-600/50 mix-blend-multiply" />
           </div>
 
           <div className="min-w-0 flex-1">
-            <h1 className="font-serif text-4xl font-black tracking-tight text-np-ink dark:text-np-ink-night sm:text-5xl">
+            <h1 className="text-4xl font-extrabold uppercase tracking-tight text-white sm:text-5xl">
               Ishan Lahiru
             </h1>
-            <p className="mt-1 font-mono text-xs uppercase tracking-widest text-np-500 dark:text-np-500-night">
-              Still learning, one project at a time.
-            </p>
+            <p className="mt-2 text-sm text-slate-500">A lifelong learner and creator.</p>
 
-            <p className="mt-6 max-w-xl font-body text-sm leading-relaxed text-np-600 first-letter:float-left first-letter:mr-2 first-letter:font-serif first-letter:text-7xl first-letter:font-bold first-letter:leading-[0.8] first-letter:text-np-ink dark:text-np-400-night dark:first-letter:text-np-ink-night">
+            <p className="mt-6 max-w-xl text-base leading-relaxed text-slate-400">
               I'm based in Kalutara District, Sri Lanka. Most recently, I was an Associate
               Software Engineer at Plurative, building a "Stateful AI" platform that gives
               conversational agents an OS-inspired memory system &mdash; paging context in and out
@@ -165,91 +154,75 @@ const AboutPage: React.FC = () => {
             <a
               href="/cv.pdf"
               download
-              className="mt-6 inline-block min-h-[44px] content-center border border-np-ink bg-np-ink px-4 py-2 font-mono text-xs uppercase tracking-widest text-np-paper transition-colors hover:bg-np-paper hover:text-np-ink dark:border-np-ink-night dark:bg-np-ink-night dark:text-np-paper-night dark:hover:bg-np-paper-night dark:hover:text-np-ink-night"
+              className="mt-6 inline-flex min-h-[44px] items-center gap-2 rounded-full bg-lime-300 px-5 py-2.5 text-sm font-semibold text-black transition-all duration-150 hover:bg-lime-200 active:scale-[0.98]"
             >
-              &darr; Download CV
+              <Download className="h-4 w-4" />
+              Download CV
             </a>
           </div>
-        </div>
+        </Reveal>
 
-        <nav className="mt-8 flex flex-wrap gap-x-6 gap-y-2 font-mono text-xs uppercase tracking-widest">
-          <a
-            href="#experience"
-            className="text-np-600 hover:text-np-accent dark:text-np-400-night dark:hover:text-np-accent-night">
-            Experience
-          </a>
-          <a
-            href="#education"
-            className="text-np-600 hover:text-np-accent dark:text-np-400-night dark:hover:text-np-accent-night">
-            Education
-          </a>
-          <a
-            href="#skills"
-            className="text-np-600 hover:text-np-accent dark:text-np-400-night dark:hover:text-np-accent-night">
-            Skills &amp; Certifications
-          </a>
+        <nav className="mt-10 flex flex-wrap gap-x-6 gap-y-2 border-t border-white/10 pt-6 text-sm font-medium">
+          {quickLinks.map((link) => (
+            <a key={link.href} href={link.href} className="text-slate-400 transition-colors hover:text-white">
+              {link.label}
+            </a>
+          ))}
         </nav>
 
-        <section className="mt-12">
-          <SectionHeading id="experience" label="Experience" />
-          <div className="mt-6 space-y-8">
-            {experience.map((item) => (
-              <TimelineItem key={`${item.title}-${item.org}`} {...item} />
+        <Section id="experience" className="!border-t-0">
+          <SectionHeading eyebrow="Career" title="Experience" />
+          <div className="space-y-8">
+            {experience.map((item, index) => (
+              <Reveal key={`${item.title}-${item.org}`} delay={index * 80}>
+                <TimelineItem {...item} />
+              </Reveal>
             ))}
           </div>
-        </section>
+        </Section>
 
-        <section className="mt-6">
-          <SectionHeading id="education" label="Education" />
-          <div className="mt-6 space-y-4">
+        <Section id="education" tint>
+          <SectionHeading eyebrow="Academics" title="Education" />
+          <div className="space-y-5">
             {education.map((item) => (
               <div key={item.school}>
-                <h3 className="font-serif text-base font-bold text-np-ink dark:text-np-ink-night">
-                  {item.school}
-                </h3>
-                <p className="mt-0.5 font-mono text-xs uppercase tracking-wide text-np-500 dark:text-np-500-night">
+                <h3 className="text-base font-bold text-white">{item.school}</h3>
+                <p className="mt-0.5 text-xs font-medium text-slate-500">
                   {item.detail}
                   {item.date ? ` · ${item.date}` : ''}
                 </p>
               </div>
             ))}
           </div>
-        </section>
+        </Section>
 
-        <section className="mb-10 mt-6">
-          <SectionHeading id="skills" label="Skills & Certifications" />
-          <div className="mt-6">
-            <h3 className="font-mono text-xs uppercase tracking-wide text-np-500 dark:text-np-500-night">
-              Top Skills
-            </h3>
+        <Section id="skills">
+          <SectionHeading eyebrow="Expertise" title="Skills & Certifications" />
+          <div>
+            <h3 className="text-xs font-semibold uppercase tracking-widest text-slate-500">Top Skills</h3>
             <div className="mt-3 flex flex-wrap gap-2">
               {topSkills.map((skill) => (
-                <span
-                  key={skill}
-                  className="border border-np-ink px-2 py-1 font-mono text-xs text-np-ink dark:border-np-ink-night dark:text-np-ink-night">
+                <span key={skill} className="rounded-full border border-white/10 px-3 py-1 text-xs text-slate-300">
                   {skill}
                 </span>
               ))}
             </div>
           </div>
-          <div className="mt-6">
-            <h3 className="font-mono text-xs uppercase tracking-wide text-np-500 dark:text-np-500-night">
-              Certifications
-            </h3>
+          <div className="mt-8">
+            <h3 className="text-xs font-semibold uppercase tracking-widest text-slate-500">Certifications</h3>
             <div className="mt-3 flex flex-wrap gap-2">
               {certifications.map((cert) => (
-                <span
-                  key={cert}
-                  className="border border-np-ink px-2 py-1 font-mono text-xs text-np-ink dark:border-np-ink-night dark:text-np-ink-night">
+                <span key={cert} className="rounded-full border border-white/10 px-3 py-1 text-xs text-slate-300">
                   {cert}
                 </span>
               ))}
             </div>
           </div>
-        </section>
-      </main>
+        </Section>
+      </div>
+
       <Footer />
-    </BaseContainer>
+    </div>
   );
 };
 

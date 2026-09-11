@@ -3,6 +3,14 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  section[id] {
+    scroll-margin-top: 5rem;
+  }
+
   body {
     @apply bg-np-paper font-body text-np-ink dark:bg-np-paper-night dark:text-np-ink-night;
   }

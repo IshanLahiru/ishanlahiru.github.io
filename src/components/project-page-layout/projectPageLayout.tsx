@@ -21,6 +21,7 @@ interface ProjectPageLayoutProps {
   title: string;
   icon: string;
   status?: string;
+  appStoreUrl?: string;
   description: string;
   techStack: string[];
   screenshots?: Screenshot[];
@@ -34,6 +35,7 @@ const ProjectPageLayout: React.FC<ProjectPageLayoutProps> = ({
   title,
   icon,
   status,
+  appStoreUrl,
   description,
   techStack,
   screenshots,
@@ -58,46 +60,60 @@ const ProjectPageLayout: React.FC<ProjectPageLayoutProps> = ({
             <img
               src={icon}
               alt={`${title} logo`}
-              className="h-16 w-16 border border-np-ink object-cover transition-all duration-300 dark:border-np-ink-night"
+              className="h-16 w-16 rounded-[22%] object-cover shadow-sm transition-all duration-300"
             />
           </picture>
           <div>
-            <h1 className="font-serif text-3xl font-bold text-np-ink dark:text-np-ink-night sm:text-4xl">
+            <h1 className="text-3xl font-bold tracking-tight text-np-ink dark:text-np-ink-night sm:text-4xl">
               {title}
             </h1>
             {status && (
-              <span className="mt-1 inline-block border border-np-accent px-2 py-0.5 font-mono text-[10px] uppercase tracking-widest text-np-accent dark:border-np-accent-night dark:text-np-accent-night">
+              <span className="mt-1 inline-block rounded-full bg-np-accent/10 px-2.5 py-1 text-xs font-medium text-np-accent dark:bg-np-accent-night/10 dark:text-np-accent-night">
                 {status}
               </span>
             )}
           </div>
         </div>
 
-        <p className="my-6 max-w-2xl font-body text-sm leading-relaxed text-np-600 dark:text-np-400-night">
+        <p className="my-6 max-w-2xl text-sm leading-relaxed text-np-600 dark:text-np-400-night">
           {description}
         </p>
 
-        <button
-          type="button"
-          disabled
-          title="Coming soon to the App Store"
-          className="mb-4 flex min-h-[44px] w-fit cursor-not-allowed items-center gap-3 border border-np-ink bg-np-ink px-4 py-2 text-np-paper opacity-70 dark:border-np-ink-night dark:bg-np-ink-night dark:text-np-paper-night">
-          <FontAwesomeIcon icon={faApple} className="h-6 w-6" />
-          <span className="text-left leading-tight">
-            <span className="block font-mono text-[10px] uppercase tracking-widest">Coming Soon on the</span>
-            <span className="block font-sans text-lg font-semibold">App Store</span>
-          </span>
-        </button>
+        {appStoreUrl ? (
+          <a
+            href={appStoreUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mb-4 flex min-h-[44px] w-fit items-center gap-3 rounded-2xl bg-np-ink px-4 py-2 text-np-paper transition-colors hover:bg-np-700 dark:bg-np-ink-night dark:text-np-paper-night dark:hover:bg-np-200">
+            <FontAwesomeIcon icon={faApple} className="h-6 w-6" />
+            <span className="text-left leading-tight">
+              <span className="block text-[10px]">View on the</span>
+              <span className="block text-lg font-semibold">App Store</span>
+            </span>
+          </a>
+        ) : (
+          <button
+            type="button"
+            disabled
+            title="Coming soon to the App Store"
+            className="mb-4 flex min-h-[44px] w-fit cursor-not-allowed items-center gap-3 rounded-2xl bg-np-ink px-4 py-2 text-np-paper opacity-70 dark:bg-np-ink-night dark:text-np-paper-night">
+            <FontAwesomeIcon icon={faApple} className="h-6 w-6" />
+            <span className="text-left leading-tight">
+              <span className="block text-[10px]">Coming Soon on the</span>
+              <span className="block text-lg font-semibold">App Store</span>
+            </span>
+          </button>
+        )}
 
         <section className="mt-10 border-t border-np-muted pt-6 dark:border-np-muted-night">
-          <h2 className="mb-3 font-mono text-xs uppercase tracking-widest text-np-500 dark:text-np-500-night">
+          <h2 className="mb-3 text-xs font-medium text-np-500 dark:text-np-500-night">
             Technologies
           </h2>
           <div className="flex flex-wrap gap-2">
             {techStack.map((tech) => (
               <span
                 key={tech}
-                className="border border-np-ink px-3 py-1 font-mono text-xs uppercase tracking-wide text-np-ink dark:border-np-ink-night dark:text-np-ink-night">
+                className="rounded-full bg-np-100 px-3 py-1 text-xs text-np-600 dark:bg-np-700/40 dark:text-np-400-night">
                 {tech}
               </span>
             ))}
@@ -105,13 +121,13 @@ const ProjectPageLayout: React.FC<ProjectPageLayoutProps> = ({
         </section>
 
         <section className="mt-10 border-t border-np-muted pt-6 dark:border-np-muted-night">
-          <h2 className="mb-3 font-mono text-xs uppercase tracking-widest text-np-500 dark:text-np-500-night">
+          <h2 className="mb-3 text-xs font-medium text-np-500 dark:text-np-500-night">
             Screenshots
           </h2>
           {screenshots && screenshots.length > 0 ? (
             <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
               {screenshots.map((shot) => (
-                <div key={shot.src} className="overflow-hidden border border-np-ink dark:border-np-ink-night">
+                <div key={shot.src} className="overflow-hidden rounded-2xl shadow-sm">
                   <picture>
                     {shot.webp && <source srcSet={shot.webp} type="image/webp" />}
                     <img src={shot.src} alt={shot.alt} className="h-full w-full object-cover" loading="lazy" />
@@ -124,7 +140,7 @@ const ProjectPageLayout: React.FC<ProjectPageLayoutProps> = ({
               {Array.from({ length: screenshotPlaceholderCount ?? 3 }).map((_, i) => (
                 <div
                   key={i}
-                  className="flex h-40 items-center justify-center border border-dashed border-np-ink bg-[radial-gradient(currentColor_1px,transparent_1px)] bg-[length:16px_16px] font-mono text-xs uppercase tracking-widest text-np-500 dark:border-np-ink-night dark:text-np-500-night">
+                  className="flex h-40 items-center justify-center rounded-2xl bg-np-100 text-xs font-medium text-np-500 dark:bg-np-700/30 dark:text-np-500-night">
                   Future Screenshot
                 </div>
               ))}
@@ -134,11 +150,11 @@ const ProjectPageLayout: React.FC<ProjectPageLayoutProps> = ({
 
         {liveDemo && (
           <section className="mt-10 border-t border-np-muted pt-6 dark:border-np-muted-night">
-            <div className="border border-np-ink p-6 text-center dark:border-np-ink-night">
-              <p className="font-sans text-sm font-semibold text-np-ink dark:text-np-ink-night">
+            <div className="rounded-2xl border border-np-muted bg-np-100/60 p-6 text-center dark:border-np-muted-night dark:bg-np-700/20">
+              <p className="text-sm font-semibold text-np-ink dark:text-np-ink-night">
                 Coming Soon: Live Demo
               </p>
-              <p className="mt-1 font-mono text-xs text-np-500 dark:text-np-500-night">
+              <p className="mt-1 text-xs text-np-500 dark:text-np-500-night">
                 A live demo will be linked here once available.
               </p>
             </div>
@@ -147,7 +163,7 @@ const ProjectPageLayout: React.FC<ProjectPageLayoutProps> = ({
 
         {children}
 
-        <div className="mb-6 mt-10 flex flex-wrap gap-x-6 gap-y-2 border-t border-np-muted pt-6 font-mono text-xs uppercase tracking-widest dark:border-np-muted-night">
+        <div className="mb-6 mt-10 flex flex-wrap gap-x-6 gap-y-2 border-t border-np-muted pt-6 text-xs font-medium dark:border-np-muted-night">
           {footerLinks.map((link) => (
             <Link
               key={link.to}
@@ -160,7 +176,7 @@ const ProjectPageLayout: React.FC<ProjectPageLayoutProps> = ({
 
         <Link
           to="/"
-          className="mb-8 inline-block min-h-[44px] content-center border border-np-ink bg-np-ink px-4 py-2 text-sm uppercase tracking-widest text-np-paper transition-colors hover:bg-np-paper hover:text-np-ink dark:border-np-ink-night dark:bg-np-ink-night dark:text-np-paper-night dark:hover:bg-np-paper-night dark:hover:text-np-ink-night">
+          className="mb-8 inline-block min-h-[44px] content-center rounded-full bg-np-ink px-5 py-2.5 text-sm font-medium text-np-paper transition-colors hover:bg-np-700 dark:bg-np-ink-night dark:text-np-paper-night dark:hover:bg-np-200">
           Back to Portfolio
         </Link>
       </main>

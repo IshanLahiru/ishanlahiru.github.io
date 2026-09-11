@@ -82,7 +82,7 @@ const TheravadaChantsPrivacyPolicyPage: React.FC = () => {
           <>
             <a
               href="https://firebase.google.com/support/privacy"
-              className="text-np-ink underline decoration-np-accent decoration-2 underline-offset-2 dark:text-np-ink-night dark:decoration-np-accent-night"
+              className="text-np-accent hover:underline dark:text-np-accent-night"
             >
               Firebase
             </a>{' '}
@@ -92,7 +92,7 @@ const TheravadaChantsPrivacyPolicyPage: React.FC = () => {
           <>
             <a
               href="https://www.revenuecat.com/privacy"
-              className="text-np-ink underline decoration-np-accent decoration-2 underline-offset-2 dark:text-np-ink-night dark:decoration-np-accent-night"
+              className="text-np-accent hover:underline dark:text-np-accent-night"
             >
               RevenueCat
             </a>{' '}
@@ -104,7 +104,7 @@ const TheravadaChantsPrivacyPolicyPage: React.FC = () => {
           <>
             <a
               href="https://policies.google.com/privacy"
-              className="text-np-ink underline decoration-np-accent decoration-2 underline-offset-2 dark:text-np-ink-night dark:decoration-np-accent-night"
+              className="text-np-accent hover:underline dark:text-np-accent-night"
             >
               Google Fonts
             </a>{' '}

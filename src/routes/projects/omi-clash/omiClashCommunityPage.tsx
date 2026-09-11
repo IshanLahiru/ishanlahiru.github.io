@@ -26,14 +26,14 @@ const OmiClashCommunityPage: React.FC = () => {
           just a hello.
         </p>
 
-        <section className="mb-6 border border-np-ink p-6 dark:border-np-ink-night">
-          <p className="font-mono text-xs uppercase tracking-widest text-np-500 dark:text-np-500-night">
+        <section className="mb-6 rounded-2xl border border-np-muted bg-np-100/60 p-6 dark:border-np-muted-night dark:bg-np-700/20">
+          <p className="text-xs font-medium text-np-500 dark:text-np-500-night">
             Get in touch
           </p>
           <p className="mt-2 font-body text-sm leading-relaxed text-np-600 dark:text-np-400-night">
             Email{' '}
             <a
-              className="text-np-ink underline decoration-np-accent decoration-2 underline-offset-2 dark:text-np-ink-night dark:decoration-np-accent-night"
+              className="text-np-accent hover:underline dark:text-np-accent-night"
               href={`mailto:${SUPPORT_EMAIL}`}>
               {SUPPORT_EMAIL}
             </a>{' '}
@@ -42,15 +42,15 @@ const OmiClashCommunityPage: React.FC = () => {
           </p>
         </section>
 
-        <section className="mb-8 border border-np-ink p-6 dark:border-np-ink-night">
-          <p className="font-mono text-xs uppercase tracking-widest text-np-500 dark:text-np-500-night">
+        <section className="mb-8 rounded-2xl border border-np-muted bg-np-100/60 p-6 dark:border-np-muted-night dark:bg-np-700/20">
+          <p className="text-xs font-medium text-np-500 dark:text-np-500-night">
             Found a bug, or need help?
           </p>
           <p className="mt-2 font-body text-sm leading-relaxed text-np-600 dark:text-np-400-night">
             That's handled on the{' '}
             <Link
               to="/projects/omi-clash/support"
-              className="text-np-ink underline decoration-np-accent decoration-2 underline-offset-2 dark:text-np-ink-night dark:decoration-np-accent-night">
+              className="text-np-accent hover:underline dark:text-np-accent-night">
               Support page
             </Link>{' '}
             instead &mdash; it covers common questions and the same contact email for anything
@@ -58,7 +58,7 @@ const OmiClashCommunityPage: React.FC = () => {
           </p>
         </section>
 
-        <div className="mb-6 flex gap-x-6 gap-y-2 border-t border-np-muted pt-6 font-mono text-xs uppercase tracking-widest dark:border-np-muted-night">
+        <div className="mb-6 flex gap-x-6 gap-y-2 border-t border-np-muted pt-6 text-xs font-medium dark:border-np-muted-night">
           <Link
             to="/projects/omi-clash/privacy-policy"
             className="text-np-600 hover:text-np-accent hover:underline dark:text-np-400-night dark:hover:text-np-accent-night">
@@ -73,7 +73,7 @@ const OmiClashCommunityPage: React.FC = () => {
 
         <Link
           to="/"
-          className="mb-8 inline-block min-h-[44px] content-center border border-np-ink bg-np-ink px-4 py-2 text-sm uppercase tracking-widest text-np-paper transition-colors hover:bg-np-paper hover:text-np-ink dark:border-np-ink-night dark:bg-np-ink-night dark:text-np-paper-night dark:hover:bg-np-paper-night dark:hover:text-np-ink-night">
+          className="mb-8 inline-block min-h-[44px] content-center rounded-full bg-np-ink px-5 py-2.5 text-sm font-medium text-np-paper transition-colors hover:bg-np-700 dark:bg-np-ink-night dark:text-np-paper-night dark:hover:bg-np-200">
           Back to Portfolio
         </Link>
       </main>

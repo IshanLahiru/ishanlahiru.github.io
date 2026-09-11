@@ -4,29 +4,31 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter', 'Helvetica Neue', 'sans-serif'],
-        serif: ['Playfair Display', 'Times New Roman', 'serif'],
-        body: ['Lora', 'Georgia', 'serif'],
-        mono: ['JetBrains Mono', 'Courier New', 'monospace']
+        sans: ['Inter', 'Helvetica Neue', 'Arial', 'sans-serif'],
+        serif: ['Poppins', 'Inter', 'Helvetica Neue', 'Arial', 'sans-serif'],
+        body: ['Inter', 'Helvetica Neue', 'Arial', 'sans-serif'],
+        mono: ['Inter', 'Helvetica Neue', 'Arial', 'sans-serif']
       },
       colors: {
         np: {
-          paper: '#F9F9F7',
-          ink: '#111111',
-          accent: '#CC0000',
-          muted: '#E5E5E0',
-          100: '#F5F5F5',
-          200: '#E5E5E5',
-          400: '#A3A3A3',
-          500: '#737373',
-          600: '#525252',
-          700: '#404040',
-          'paper-night': '#121212',
-          'ink-night': '#F2F0EA',
-          'accent-night': '#FF5C4D',
-          'muted-night': '#242420',
-          '400-night': '#A8A8A2',
-          '500-night': '#8F8F86'
+          paper: '#FAFAF8',
+          ink: '#151312',
+          accent: '#0099FF',
+          accent2: '#F4623C',
+          pop: '#C7FF4D',
+          muted: '#E4E2DE',
+          100: '#F1F0ED',
+          200: '#E4E2DE',
+          400: '#8A8985',
+          500: '#6E6D69',
+          600: '#55534F',
+          700: '#3D3B38',
+          'paper-night': '#131110',
+          'ink-night': '#F5F4F0',
+          'accent-night': '#33A6FF',
+          'muted-night': '#2A2826',
+          '400-night': '#9A9894',
+          '500-night': '#B4B2AD'
         }
       },
       keyframes: {
