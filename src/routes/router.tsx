@@ -1,29 +1,43 @@
-import React, { ReactNode } from 'react';
+import React, { lazy, ReactNode, Suspense } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import PageNotFound from './pageNotFound';
-import HomePage from './home/homePage';
-import AboutPage from './about/aboutPage';
-import DeckDrillPage from './projects/deckdrill/deckdrillPage';
-import DeckDrillPrivacyPolicyPage from './projects/deckdrill/deckdrillPrivacyPolicyPage';
-import DeckDrillTermsPage from './projects/deckdrill/deckdrillTermsPage';
-import DeckDrillSupportPage from './projects/deckdrill/deckdrillSupportPage';
-import DriftAndDirectPage from './projects/drift-and-direct/driftAndDirectPage';
-import DriftAndDirectPrivacyPolicyPage from './projects/drift-and-direct/driftAndDirectPrivacyPolicyPage';
-import DriftAndDirectTermsPage from './projects/drift-and-direct/driftAndDirectTermsPage';
-import DriftAndDirectSupportPage from './projects/drift-and-direct/driftAndDirectSupportPage';
-import OmiClashPage from './projects/omi-clash/omiClashPage';
-import OmiClashPrivacyPolicyPage from './projects/omi-clash/omiClashPrivacyPolicyPage';
-import OmiClashTermsPage from './projects/omi-clash/omiClashTermsPage';
-import OmiClashSupportPage from './projects/omi-clash/omiClashSupportPage';
-import OmiClashCommunityPage from './projects/omi-clash/omiClashCommunityPage';
-import TheravadaChantsPage from './projects/theravada-chants/theravadaChantsPage';
-import TheravadaChantsPrivacyPolicyPage from './projects/theravada-chants/theravadaChantsPrivacyPolicyPage';
-import TheravadaChantsTermsPage from './projects/theravada-chants/theravadaChantsTermsPage';
-import TheravadaChantsSupportPage from './projects/theravada-chants/theravadaChantsSupportPage';
-import DammapadayaPage from './projects/dammapadaya/dammapadayaPage';
-import DammapadayaPrivacyPolicyPage from './projects/dammapadaya/dammapadayaPrivacyPolicyPage';
-import DammapadayaTermsPage from './projects/dammapadaya/dammapadayaTermsPage';
-import DammapadayaSupportPage from './projects/dammapadaya/dammapadayaSupportPage';
+import RouteLoadingBar from '../components/route-loading-bar/routeLoadingBar';
+
+const PageNotFound = lazy(() => import('./pageNotFound'));
+const HomePage = lazy(() => import('./home/homePage'));
+const AboutPage = lazy(() => import('./about/aboutPage'));
+const DeckDrillPage = lazy(() => import('./projects/deckdrill/deckdrillPage'));
+const DeckDrillPrivacyPolicyPage = lazy(() => import('./projects/deckdrill/deckdrillPrivacyPolicyPage'));
+const DeckDrillTermsPage = lazy(() => import('./projects/deckdrill/deckdrillTermsPage'));
+const DeckDrillSupportPage = lazy(() => import('./projects/deckdrill/deckdrillSupportPage'));
+const DriftAndDirectPage = lazy(() => import('./projects/drift-and-direct/driftAndDirectPage'));
+const DriftAndDirectPrivacyPolicyPage = lazy(
+  () => import('./projects/drift-and-direct/driftAndDirectPrivacyPolicyPage')
+);
+const DriftAndDirectTermsPage = lazy(() => import('./projects/drift-and-direct/driftAndDirectTermsPage'));
+const DriftAndDirectSupportPage = lazy(
+  () => import('./projects/drift-and-direct/driftAndDirectSupportPage')
+);
+const OmiClashPage = lazy(() => import('./projects/omi-clash/omiClashPage'));
+const OmiClashPrivacyPolicyPage = lazy(() => import('./projects/omi-clash/omiClashPrivacyPolicyPage'));
+const OmiClashTermsPage = lazy(() => import('./projects/omi-clash/omiClashTermsPage'));
+const OmiClashSupportPage = lazy(() => import('./projects/omi-clash/omiClashSupportPage'));
+const OmiClashCommunityPage = lazy(() => import('./projects/omi-clash/omiClashCommunityPage'));
+const TheravadaChantsPage = lazy(() => import('./projects/theravada-chants/theravadaChantsPage'));
+const TheravadaChantsPrivacyPolicyPage = lazy(
+  () => import('./projects/theravada-chants/theravadaChantsPrivacyPolicyPage')
+);
+const TheravadaChantsTermsPage = lazy(
+  () => import('./projects/theravada-chants/theravadaChantsTermsPage')
+);
+const TheravadaChantsSupportPage = lazy(
+  () => import('./projects/theravada-chants/theravadaChantsSupportPage')
+);
+const DammapadayaPage = lazy(() => import('./projects/dammapadaya/dammapadayaPage'));
+const DammapadayaPrivacyPolicyPage = lazy(
+  () => import('./projects/dammapadaya/dammapadayaPrivacyPolicyPage')
+);
+const DammapadayaTermsPage = lazy(() => import('./projects/dammapadaya/dammapadayaTermsPage'));
+const DammapadayaSupportPage = lazy(() => import('./projects/dammapadaya/dammapadayaSupportPage'));
 
 interface RouterProps {
   children?: ReactNode;
@@ -33,41 +47,43 @@ const Router: React.FC<RouterProps> = ({ children }) => {
   return (
     <BrowserRouter>
       {children}
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/projects/deckdrill" element={<DeckDrillPage />} />
-        <Route path="/projects/deckdrill/privacy-policy" element={<DeckDrillPrivacyPolicyPage />} />
-        <Route path="/projects/deckdrill/terms" element={<DeckDrillTermsPage />} />
-        <Route path="/projects/deckdrill/support" element={<DeckDrillSupportPage />} />
-        <Route path="/projects/drift-and-direct" element={<DriftAndDirectPage />} />
-        <Route
-          path="/projects/drift-and-direct/privacy-policy"
-          element={<DriftAndDirectPrivacyPolicyPage />}
-        />
-        <Route path="/projects/drift-and-direct/terms" element={<DriftAndDirectTermsPage />} />
-        <Route path="/projects/drift-and-direct/support" element={<DriftAndDirectSupportPage />} />
-        <Route path="/projects/omi-clash" element={<OmiClashPage />} />
-        <Route path="/projects/omi-clash/privacy-policy" element={<OmiClashPrivacyPolicyPage />} />
-        <Route path="/projects/omi-clash/terms" element={<OmiClashTermsPage />} />
-        <Route path="/projects/omi-clash/support" element={<OmiClashSupportPage />} />
-        <Route path="/projects/omi-clash/community" element={<OmiClashCommunityPage />} />
-        <Route path="/projects/theravada-chants" element={<TheravadaChantsPage />} />
-        <Route
-          path="/projects/theravada-chants/privacy-policy"
-          element={<TheravadaChantsPrivacyPolicyPage />}
-        />
-        <Route path="/projects/theravada-chants/terms" element={<TheravadaChantsTermsPage />} />
-        <Route path="/projects/theravada-chants/support" element={<TheravadaChantsSupportPage />} />
-        <Route path="/projects/dammapadaya" element={<DammapadayaPage />} />
-        <Route
-          path="/projects/dammapadaya/privacy-policy"
-          element={<DammapadayaPrivacyPolicyPage />}
-        />
-        <Route path="/projects/dammapadaya/terms" element={<DammapadayaTermsPage />} />
-        <Route path="/projects/dammapadaya/support" element={<DammapadayaSupportPage />} />
-        <Route path="*" element={<PageNotFound />} />
-      </Routes>
+      <Suspense fallback={<RouteLoadingBar />}>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/projects/deckdrill" element={<DeckDrillPage />} />
+          <Route path="/projects/deckdrill/privacy-policy" element={<DeckDrillPrivacyPolicyPage />} />
+          <Route path="/projects/deckdrill/terms" element={<DeckDrillTermsPage />} />
+          <Route path="/projects/deckdrill/support" element={<DeckDrillSupportPage />} />
+          <Route path="/projects/drift-and-direct" element={<DriftAndDirectPage />} />
+          <Route
+            path="/projects/drift-and-direct/privacy-policy"
+            element={<DriftAndDirectPrivacyPolicyPage />}
+          />
+          <Route path="/projects/drift-and-direct/terms" element={<DriftAndDirectTermsPage />} />
+          <Route path="/projects/drift-and-direct/support" element={<DriftAndDirectSupportPage />} />
+          <Route path="/projects/omi-clash" element={<OmiClashPage />} />
+          <Route path="/projects/omi-clash/privacy-policy" element={<OmiClashPrivacyPolicyPage />} />
+          <Route path="/projects/omi-clash/terms" element={<OmiClashTermsPage />} />
+          <Route path="/projects/omi-clash/support" element={<OmiClashSupportPage />} />
+          <Route path="/projects/omi-clash/community" element={<OmiClashCommunityPage />} />
+          <Route path="/projects/theravada-chants" element={<TheravadaChantsPage />} />
+          <Route
+            path="/projects/theravada-chants/privacy-policy"
+            element={<TheravadaChantsPrivacyPolicyPage />}
+          />
+          <Route path="/projects/theravada-chants/terms" element={<TheravadaChantsTermsPage />} />
+          <Route path="/projects/theravada-chants/support" element={<TheravadaChantsSupportPage />} />
+          <Route path="/projects/dammapadaya" element={<DammapadayaPage />} />
+          <Route
+            path="/projects/dammapadaya/privacy-policy"
+            element={<DammapadayaPrivacyPolicyPage />}
+          />
+          <Route path="/projects/dammapadaya/terms" element={<DammapadayaTermsPage />} />
+          <Route path="/projects/dammapadaya/support" element={<DammapadayaSupportPage />} />
+          <Route path="*" element={<PageNotFound />} />
+        </Routes>
+      </Suspense>
     </BrowserRouter>
   );
 };

@@ -4,34 +4,35 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Space Mono', 'monospace'],
-        sansMono: ['Space Mono', 'monospace'],
-        mono: ['Space Mono', 'monospace']
+        sans: ['Inter', 'Helvetica Neue', 'sans-serif'],
+        serif: ['Playfair Display', 'Times New Roman', 'serif'],
+        body: ['Lora', 'Georgia', 'serif'],
+        mono: ['JetBrains Mono', 'Courier New', 'monospace']
       },
       colors: {
-        dm: {
-          carbon: '#222222',
-          soot: '#333333',
-          dark: '#444444',
-          smoke: '#666666',
-          clay: '#6c6c58',
-          mud: '#8a8a6f',
-          ash: '#8e8e8e',
-          cement: '#c0c0c0',
-          aluminum: '#cccccc',
-          enamel: '#eeeeee',
-          accent: '#ffa133',
-          accent2: '#e47b1a'
+        np: {
+          paper: '#F9F9F7',
+          ink: '#111111',
+          accent: '#CC0000',
+          muted: '#E5E5E0',
+          100: '#F5F5F5',
+          200: '#E5E5E5',
+          400: '#A3A3A3',
+          500: '#737373',
+          600: '#525252',
+          700: '#404040',
+          'paper-night': '#121212',
+          'ink-night': '#F2F0EA',
+          'accent-night': '#FF5C4D',
+          'muted-night': '#242420',
+          '400-night': '#A8A8A2',
+          '500-night': '#8F8F86'
         }
       },
       keyframes: {
         'fade-in-up': {
           '0%': { opacity: '0', transform: 'translateY(16px)' },
           '100%': { opacity: '1', transform: 'translateY(0)' }
-        },
-        draw: {
-          '0%': { strokeDashoffset: '1200' },
-          '100%': { strokeDashoffset: '0' }
         },
         'pulse-slow': {
           '0%, 100%': { opacity: '0.15' },
@@ -44,14 +45,19 @@ export default {
         bob: {
           '0%, 100%': { transform: 'translateY(0)' },
           '50%': { transform: 'translateY(-4px)' }
+        },
+        'loading-bar': {
+          '0%': { transform: 'translateX(-100%)' },
+          '50%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(100%)' }
         }
       },
       animation: {
         'fade-in-up': 'fade-in-up 0.7s ease-out both',
-        draw: 'draw 2.4s ease-out forwards',
         'pulse-slow': 'pulse-slow 4s ease-in-out infinite',
         wave: 'wave 3s linear infinite',
-        bob: 'bob 2s ease-in-out infinite'
+        bob: 'bob 2s ease-in-out infinite',
+        'loading-bar': 'loading-bar 1.1s ease-in-out infinite'
       }
     },
     screens: {

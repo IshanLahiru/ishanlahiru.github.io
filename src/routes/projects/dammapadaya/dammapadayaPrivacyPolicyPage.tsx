@@ -67,7 +67,7 @@ const DammapadayaPrivacyPolicyPage: React.FC = () => {
           <>
             <a
               href="https://firebase.google.com/support/privacy"
-              className="text-blue-600 hover:underline dark:text-blue-400"
+              className="text-np-ink underline decoration-np-accent decoration-2 underline-offset-2 dark:text-np-ink-night dark:decoration-np-accent-night"
             >
               Firebase
             </a>{' '}
@@ -76,7 +76,7 @@ const DammapadayaPrivacyPolicyPage: React.FC = () => {
           <>
             <a
               href="https://policies.google.com/privacy"
-              className="text-blue-600 hover:underline dark:text-blue-400"
+              className="text-np-ink underline decoration-np-accent decoration-2 underline-offset-2 dark:text-np-ink-night dark:decoration-np-accent-night"
             >
               Google Fonts
             </a>{' '}

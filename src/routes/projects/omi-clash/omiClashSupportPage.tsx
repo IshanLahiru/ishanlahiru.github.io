@@ -1,8 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import BaseContainer from '../../../components/base-container/baseContainer';
-import NavigationBar from '../../../components/header/header';
-import Footer from '../../../components/footer/footer';
+import LegalPageLayout, {
+  ContactCard,
+  Faq,
+  H2,
+  inlineLinkClass
+} from '../../../components/legal-page-layout/legalPageLayout';
 
 const SUPPORT_EMAIL = 'support.ishanvithanage@gmail.com';
 
@@ -60,10 +63,7 @@ const faqs: { question: string; answer: React.ReactNode }[] = [
     answer: (
       <>
         Email us at{' '}
-        <a
-          className="text-blue-600 hover:underline dark:text-blue-400"
-          href={`mailto:${SUPPORT_EMAIL}`}
-        >
+        <a className={inlineLinkClass} href={`mailto:${SUPPORT_EMAIL}`}>
           {SUPPORT_EMAIL}
         </a>{' '}
         with a description of what happened, the steps to reproduce it, and your device model and OS
@@ -76,10 +76,7 @@ const faqs: { question: string; answer: React.ReactNode }[] = [
     answer: (
       <>
         Yes. Send your idea to{' '}
-        <a
-          className="text-blue-600 hover:underline dark:text-blue-400"
-          href={`mailto:${SUPPORT_EMAIL}`}
-        >
+        <a className={inlineLinkClass} href={`mailto:${SUPPORT_EMAIL}`}>
           {SUPPORT_EMAIL}
         </a>{' '}
         and we'll consider it for a future release.
@@ -93,17 +90,11 @@ const faqs: { question: string; answer: React.ReactNode }[] = [
         Open Settings &rarr; "Legal &amp; data" &rarr; "Delete Account" in the app. This immediately
         and permanently deletes your lifetime stats, leaderboard entry, friend list and chat
         history, token-card balance, and your sign-in itself. You can also email{' '}
-        <a
-          className="text-blue-600 hover:underline dark:text-blue-400"
-          href={`mailto:${SUPPORT_EMAIL}`}
-        >
+        <a className={inlineLinkClass} href={`mailto:${SUPPORT_EMAIL}`}>
           {SUPPORT_EMAIL}
         </a>{' '}
         with a deletion request. See the{' '}
-        <Link
-          to="/projects/omi-clash/privacy-policy"
-          className="text-blue-600 hover:underline dark:text-blue-400"
-        >
+        <Link to="/projects/omi-clash/privacy-policy" className={inlineLinkClass}>
           Privacy Policy
         </Link>{' '}
         for details on how your data is handled and retained.
@@ -114,81 +105,39 @@ const faqs: { question: string; answer: React.ReactNode }[] = [
 
 const OmiClashSupportPage: React.FC = () => {
   return (
-    <BaseContainer>
-      <NavigationBar />
-      <main className="py-8 text-start">
-        <Link
-          to="/projects/omi-clash"
-          className="text-sm text-blue-600 hover:underline dark:text-blue-400"
-        >
-          &larr; Back to Omi Clash
+    <LegalPageLayout title="Omi Clash Support" backTo="/projects/omi-clash" backLabel="Back to Omi Clash">
+      <p className="mb-2 font-body text-sm leading-relaxed text-np-600 dark:text-np-400-night">
+        Need help with Omi Clash? Browse the frequently asked questions below, or reach out to us
+        directly and we'll get back to you as soon as we can.
+      </p>
+
+      <ContactCard label="Contact us">
+        Email{' '}
+        <a className={inlineLinkClass} href={`mailto:${SUPPORT_EMAIL}`}>
+          {SUPPORT_EMAIL}
+        </a>{' '}
+        for bug reports, feature requests, or any other questions about the app.
+      </ContactCard>
+
+      <H2>Frequently Asked Questions</H2>
+      <div className="space-y-3">
+        {faqs.map((faq) => (
+          <Faq key={faq.question} question={faq.question} answer={faq.answer} />
+        ))}
+      </div>
+
+      <div className="flex flex-wrap gap-x-6 gap-y-2 border-t border-np-muted pt-6 font-mono text-xs uppercase tracking-widest dark:border-np-muted-night">
+        <Link to="/projects/omi-clash/community" className={inlineLinkClass}>
+          Community
         </Link>
-
-        <h1 className="mb-1 mt-6 text-2xl font-bold text-gray-900 dark:text-gray-100">
-          Omi Clash Support
-        </h1>
-        <p className="mb-6 max-w-2xl text-sm text-gray-600 dark:text-gray-400">
-          Need help with Omi Clash? Browse the frequently asked questions below, or reach out to us
-          directly and we'll get back to you as soon as we can.
-        </p>
-
-        <section className="mb-8 rounded-lg border border-neutral-600 bg-white p-6 shadow-md dark:border-gray-400 dark:bg-neutral-950">
-          <p className="text-sm font-semibold text-gray-900 dark:text-gray-100">Contact us</p>
-          <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
-            Email{' '}
-            <a
-              className="text-blue-600 hover:underline dark:text-blue-400"
-              href={`mailto:${SUPPORT_EMAIL}`}
-            >
-              {SUPPORT_EMAIL}
-            </a>{' '}
-            for bug reports, feature requests, or any other questions about the app.
-          </p>
-        </section>
-
-        <section className="mb-8">
-          <h2 className="mb-3 text-lg font-semibold text-gray-900 dark:text-gray-100">
-            Frequently Asked Questions
-          </h2>
-          <div className="space-y-3">
-            {faqs.map((faq) => (
-              <details
-                key={faq.question}
-                className="group rounded-lg border border-neutral-600 bg-white p-4 shadow-sm dark:border-gray-400 dark:bg-neutral-950"
-              >
-                <summary className="cursor-pointer list-none text-sm font-semibold text-gray-900 marker:content-none dark:text-gray-100">
-                  {faq.question}
-                </summary>
-                <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">{faq.answer}</p>
-              </details>
-            ))}
-          </div>
-        </section>
-
-        <div className="mb-4 flex gap-4 text-xs">
-          <Link
-            to="/projects/omi-clash/privacy-policy"
-            className="text-blue-600 hover:underline dark:text-blue-400"
-          >
-            Privacy Policy
-          </Link>
-          <Link
-            to="/projects/omi-clash/terms"
-            className="text-blue-600 hover:underline dark:text-blue-400"
-          >
-            Terms &amp; Conditions
-          </Link>
-        </div>
-
-        <Link
-          to="/"
-          className="mb-8 inline-block rounded-md bg-gray-600 px-4 py-2 text-sm text-slate-200 hover:bg-gray-700 dark:bg-gray-200 dark:text-gray-950 dark:hover:bg-gray-300"
-        >
-          Back to Portfolio
+        <Link to="/projects/omi-clash/privacy-policy" className={inlineLinkClass}>
+          Privacy Policy
         </Link>
-      </main>
-      <Footer />
-    </BaseContainer>
+        <Link to="/projects/omi-clash/terms" className={inlineLinkClass}>
+          Terms &amp; Conditions
+        </Link>
+      </div>
+    </LegalPageLayout>
   );
 };
 

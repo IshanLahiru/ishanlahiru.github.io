@@ -13,28 +13,28 @@ const OmiClashCommunityPage: React.FC = () => {
       <main className="py-8 text-start">
         <Link
           to="/projects/omi-clash"
-          className="text-sm text-blue-600 hover:underline dark:text-blue-400"
-        >
+          className="text-sm text-np-600 underline-offset-4 hover:text-np-accent hover:underline dark:text-np-400-night dark:hover:text-np-accent-night">
           &larr; Back to Omi Clash
         </Link>
 
-        <h1 className="mb-1 mt-6 text-2xl font-bold text-gray-900 dark:text-gray-100">
+        <h1 className="mb-1 mt-6 font-serif text-3xl font-bold text-np-ink dark:text-np-ink-night sm:text-4xl">
           Omi Clash Community
         </h1>
-        <p className="mb-6 max-w-2xl text-sm text-gray-600 dark:text-gray-400">
+        <p className="mb-8 max-w-2xl font-body text-sm leading-relaxed text-np-600 dark:text-np-400-night">
           There's no dedicated social channel for Omi Clash yet &mdash; this page is the place to
           reach the team directly in the meantime, whether that's a question, a bug, an idea, or
           just a hello.
         </p>
 
-        <section className="mb-8 rounded-lg border border-neutral-600 bg-white p-6 shadow-md dark:border-gray-400 dark:bg-neutral-950">
-          <p className="text-sm font-semibold text-gray-900 dark:text-gray-100">Get in touch</p>
-          <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
+        <section className="mb-6 border border-np-ink p-6 dark:border-np-ink-night">
+          <p className="font-mono text-xs uppercase tracking-widest text-np-500 dark:text-np-500-night">
+            Get in touch
+          </p>
+          <p className="mt-2 font-body text-sm leading-relaxed text-np-600 dark:text-np-400-night">
             Email{' '}
             <a
-              className="text-blue-600 hover:underline dark:text-blue-400"
-              href={`mailto:${SUPPORT_EMAIL}`}
-            >
+              className="text-np-ink underline decoration-np-accent decoration-2 underline-offset-2 dark:text-np-ink-night dark:decoration-np-accent-night"
+              href={`mailto:${SUPPORT_EMAIL}`}>
               {SUPPORT_EMAIL}
             </a>{' '}
             with feedback, feature ideas, or anything you'd like to see change about the game.
@@ -42,16 +42,15 @@ const OmiClashCommunityPage: React.FC = () => {
           </p>
         </section>
 
-        <section className="mb-8 rounded-lg border border-neutral-600 bg-white p-6 shadow-md dark:border-gray-400 dark:bg-neutral-950">
-          <p className="text-sm font-semibold text-gray-900 dark:text-gray-100">
+        <section className="mb-8 border border-np-ink p-6 dark:border-np-ink-night">
+          <p className="font-mono text-xs uppercase tracking-widest text-np-500 dark:text-np-500-night">
             Found a bug, or need help?
           </p>
-          <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
+          <p className="mt-2 font-body text-sm leading-relaxed text-np-600 dark:text-np-400-night">
             That's handled on the{' '}
             <Link
               to="/projects/omi-clash/support"
-              className="text-blue-600 hover:underline dark:text-blue-400"
-            >
+              className="text-np-ink underline decoration-np-accent decoration-2 underline-offset-2 dark:text-np-ink-night dark:decoration-np-accent-night">
               Support page
             </Link>{' '}
             instead &mdash; it covers common questions and the same contact email for anything
@@ -59,25 +58,22 @@ const OmiClashCommunityPage: React.FC = () => {
           </p>
         </section>
 
-        <div className="mb-4 flex gap-4 text-xs">
+        <div className="mb-6 flex gap-x-6 gap-y-2 border-t border-np-muted pt-6 font-mono text-xs uppercase tracking-widest dark:border-np-muted-night">
           <Link
             to="/projects/omi-clash/privacy-policy"
-            className="text-blue-600 hover:underline dark:text-blue-400"
-          >
+            className="text-np-600 hover:text-np-accent hover:underline dark:text-np-400-night dark:hover:text-np-accent-night">
             Privacy Policy
           </Link>
           <Link
             to="/projects/omi-clash/terms"
-            className="text-blue-600 hover:underline dark:text-blue-400"
-          >
+            className="text-np-600 hover:text-np-accent hover:underline dark:text-np-400-night dark:hover:text-np-accent-night">
             Terms &amp; Conditions
           </Link>
         </div>
 
         <Link
           to="/"
-          className="mb-8 inline-block rounded-md bg-gray-600 px-4 py-2 text-sm text-slate-200 hover:bg-gray-700 dark:bg-gray-200 dark:text-gray-950 dark:hover:bg-gray-300"
-        >
+          className="mb-8 inline-block min-h-[44px] content-center border border-np-ink bg-np-ink px-4 py-2 text-sm uppercase tracking-widest text-np-paper transition-colors hover:bg-np-paper hover:text-np-ink dark:border-np-ink-night dark:bg-np-ink-night dark:text-np-paper-night dark:hover:bg-np-paper-night dark:hover:text-np-ink-night">
           Back to Portfolio
         </Link>
       </main>

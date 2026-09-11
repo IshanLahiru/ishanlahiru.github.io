@@ -36,7 +36,7 @@ const DammapadayaTermsPage: React.FC = () => {
         domain. The accompanying English renderings are adapted from a translation sourced via{' '}
         <a
           href="https://suttacentral.net"
-          className="text-blue-600 hover:underline dark:text-blue-400"
+          className="text-np-ink underline decoration-np-accent decoration-2 underline-offset-2 dark:text-np-ink-night dark:decoration-np-accent-night"
         >
           SuttaCentral
         </a>

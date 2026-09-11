@@ -4,14 +4,14 @@
 
 @layer base {
   body {
-    @apply bg-dm-enamel font-mono text-dm-dark dark:bg-dm-carbon dark:text-dm-cement;
+    @apply bg-np-paper font-body text-np-ink dark:bg-np-paper-night dark:text-np-ink-night;
   }
 
   ::selection {
-    @apply bg-dm-dark text-dm-enamel;
+    @apply bg-np-ink text-np-paper;
   }
 
   .dark ::selection {
-    @apply bg-dm-cement text-dm-carbon;
+    @apply bg-np-ink-night text-np-paper-night;
   }
 }

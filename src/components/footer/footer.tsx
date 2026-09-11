@@ -1,16 +1,16 @@
 const Footer = () => {
   return (
-    <footer className="mb-4 mt-8 flex flex-col gap-1 border-t border-dm-aluminum py-6 dark:border-dm-dark">
-      <p className="text-xs text-dm-ash dark:text-dm-ash">
-        © {new Date().getFullYear()} Ishan Lahiru Sampath. All rights reserved.
+    <footer className="mt-12 -mx-4 flex flex-col gap-1 bg-np-ink px-4 py-6 text-np-paper sm:-mx-6 sm:px-6">
+      <p className="font-mono text-[10px] uppercase tracking-widest text-np-paper/70">
+        &copy; {new Date().getFullYear()} Ishan Lahiru Sampath. All rights reserved.
       </p>
-      <p className="text-[10px] text-dm-ash/70 dark:text-dm-ash/70">
+      <p className="text-[10px] text-np-paper/50">
         Sri Lanka district map data by{' '}
         <a
           href="https://github.com/VictorCazanave/svg-maps"
           target="_blank"
           rel="noopener noreferrer"
-          className="underline hover:text-dm-accent2 dark:hover:text-dm-accent">
+          className="underline decoration-np-accent-night decoration-2 underline-offset-2 hover:text-np-paper">
           svg-maps
         </a>
         , licensed under CC BY 4.0.

@@ -86,7 +86,7 @@ const certifications = [
 const SectionHeading = ({ id, label }: { id: string; label: string }) => (
   <h2
     id={id}
-    className="scroll-mt-24 border-t border-dm-aluminum pt-6 text-xs uppercase tracking-widest text-dm-ash dark:border-dm-dark dark:text-dm-ash">
+    className="scroll-mt-24 border-t-4 border-np-ink pt-4 font-mono text-xs uppercase tracking-widest text-np-500 dark:border-np-ink-night dark:text-np-500-night">
     {label}
   </h2>
 );
@@ -104,15 +104,17 @@ const TimelineItem = ({
   duration: string;
   bullets: string[];
 }) => (
-  <div className="border-l border-dm-aluminum py-1 pl-5 dark:border-dm-dark">
-    <h3 className="text-base font-bold text-dm-dark dark:text-dm-cement">{title}</h3>
-    <p className="mt-0.5 text-sm text-dm-accent2 dark:text-dm-accent">{org}</p>
-    <p className="mt-0.5 text-xs text-dm-ash dark:text-dm-ash">
+  <div className="border-l-2 border-np-muted py-1 pl-5 dark:border-np-muted-night">
+    <h3 className="font-serif text-lg font-bold text-np-ink dark:text-np-ink-night">{title}</h3>
+    <p className="mt-0.5 font-sans text-sm font-semibold text-np-accent dark:text-np-accent-night">
+      {org}
+    </p>
+    <p className="mt-0.5 font-mono text-xs uppercase tracking-wide text-np-500 dark:text-np-500-night">
       {dates}
       {duration ? ` · ${duration}` : ''}
     </p>
     {bullets.length > 0 && (
-      <ul className="mt-3 list-disc space-y-1 pl-5 text-sm text-dm-ash dark:text-dm-ash">
+      <ul className="mt-3 list-disc space-y-1 pl-5 font-body text-sm leading-relaxed text-np-600 dark:text-np-400-night">
         {bullets.map((bullet) => (
           <li key={bullet}>{bullet}</li>
         ))}
@@ -126,47 +128,69 @@ const AboutPage: React.FC = () => {
     <BaseContainer>
       <NavigationBar />
       <main className="py-10 text-start">
-        <Link to="/" className="text-sm text-dm-ash hover:text-dm-accent2 dark:text-dm-ash dark:hover:text-dm-accent">
+        <Link
+          to="/"
+          className="text-sm text-np-600 underline-offset-4 hover:text-np-accent hover:underline dark:text-np-400-night dark:hover:text-np-accent-night">
           &larr; Back to Home
         </Link>
 
-        <div className="relative mt-6 w-fit">
-          <CornerMarks className="pointer-events-none absolute -right-6 -top-6 -z-10 h-16 w-16 text-dm-accent2/30 dark:text-dm-accent/30" />
-          <img
-            src="https://avatars.githubusercontent.com/u/50785933?v=4"
-            alt="Ishan Lahiru"
-            className="h-24 w-24 rounded-md border border-dm-aluminum object-cover dark:border-dm-dark"
-          />
+        <div className="mt-6 flex flex-col gap-6 sm:flex-row sm:items-end">
+          <div className="relative w-fit flex-none">
+            <CornerMarks className="pointer-events-none absolute -right-6 -top-6 -z-10 h-16 w-16 text-np-accent/30 dark:text-np-accent-night/30 sm:h-20 sm:w-20 lg:h-24 lg:w-24" />
+            <img
+              src="https://avatars.githubusercontent.com/u/50785933?v=4"
+              alt="Ishan Lahiru"
+              className="h-28 w-28 border border-np-ink object-cover transition-all duration-300 dark:border-np-ink-night sm:h-40 sm:w-40 lg:h-52 lg:w-52"
+            />
+          </div>
+
+          <div className="min-w-0 flex-1">
+            <h1 className="font-serif text-4xl font-black tracking-tight text-np-ink dark:text-np-ink-night sm:text-5xl">
+              Ishan Lahiru
+            </h1>
+            <p className="mt-1 font-mono text-xs uppercase tracking-widest text-np-500 dark:text-np-500-night">
+              Still learning, one project at a time.
+            </p>
+
+            <p className="mt-6 max-w-xl font-body text-sm leading-relaxed text-np-600 first-letter:float-left first-letter:mr-2 first-letter:font-serif first-letter:text-7xl first-letter:font-bold first-letter:leading-[0.8] first-letter:text-np-ink dark:text-np-400-night dark:first-letter:text-np-ink-night">
+              I'm based in Kalutara District, Sri Lanka. Most recently, I was an Associate
+              Software Engineer at Plurative, building a "Stateful AI" platform that gives
+              conversational agents an OS-inspired memory system &mdash; paging context in and out
+              over long-running interactions, backed by RAG-style vector search and a type-safe
+              API layer. Before that, I worked as a trainee on a multi-tenant workflow platform,
+              and spent time teaching software engineering at iCET while also designing the
+              institute's brand and marketing materials.
+            </p>
+
+            <a
+              href="/cv.pdf"
+              download
+              className="mt-6 inline-block min-h-[44px] content-center border border-np-ink bg-np-ink px-4 py-2 font-mono text-xs uppercase tracking-widest text-np-paper transition-colors hover:bg-np-paper hover:text-np-ink dark:border-np-ink-night dark:bg-np-ink-night dark:text-np-paper-night dark:hover:bg-np-paper-night dark:hover:text-np-ink-night"
+            >
+              &darr; Download CV
+            </a>
+          </div>
         </div>
 
-        <h1 className="mt-6 text-2xl font-bold text-dm-dark dark:text-dm-cement">Ishan Lahiru</h1>
-        <p className="mt-1 text-base font-bold text-dm-dark dark:text-dm-cement">
-          A person who understands code.
-        </p>
-
-        <p className="mt-4 max-w-xl text-sm leading-relaxed text-dm-ash dark:text-dm-ash">
-          I'm based in Kalutara District, Sri Lanka. Most recently, I was an Associate Software
-          Engineer at Plurative, building a "Stateful AI" platform that gives conversational
-          agents an OS-inspired memory system &mdash; paging context in and out over long-running
-          interactions, backed by RAG-style vector search and a type-safe API layer. Before that,
-          I worked as a trainee on a multi-tenant workflow platform, and spent time teaching
-          software engineering at iCET while also designing the institute's brand and marketing
-          materials.
-        </p>
-
-        <nav className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-xs uppercase tracking-widest">
-          <a href="#experience" className="text-dm-ash hover:text-dm-accent2 dark:text-dm-ash dark:hover:text-dm-accent">
+        <nav className="mt-8 flex flex-wrap gap-x-6 gap-y-2 font-mono text-xs uppercase tracking-widest">
+          <a
+            href="#experience"
+            className="text-np-600 hover:text-np-accent dark:text-np-400-night dark:hover:text-np-accent-night">
             Experience
           </a>
-          <a href="#education" className="text-dm-ash hover:text-dm-accent2 dark:text-dm-ash dark:hover:text-dm-accent">
+          <a
+            href="#education"
+            className="text-np-600 hover:text-np-accent dark:text-np-400-night dark:hover:text-np-accent-night">
             Education
           </a>
-          <a href="#skills" className="text-dm-ash hover:text-dm-accent2 dark:text-dm-ash dark:hover:text-dm-accent">
+          <a
+            href="#skills"
+            className="text-np-600 hover:text-np-accent dark:text-np-400-night dark:hover:text-np-accent-night">
             Skills &amp; Certifications
           </a>
         </nav>
 
-        <section className="mt-10">
+        <section className="mt-12">
           <SectionHeading id="experience" label="Experience" />
           <div className="mt-6 space-y-8">
             {experience.map((item) => (
@@ -175,15 +199,15 @@ const AboutPage: React.FC = () => {
           </div>
         </section>
 
-        <section className="mt-4">
+        <section className="mt-6">
           <SectionHeading id="education" label="Education" />
           <div className="mt-6 space-y-4">
             {education.map((item) => (
               <div key={item.school}>
-                <h3 className="text-sm font-bold text-dm-dark dark:text-dm-cement">
+                <h3 className="font-serif text-base font-bold text-np-ink dark:text-np-ink-night">
                   {item.school}
                 </h3>
-                <p className="mt-0.5 text-xs text-dm-ash dark:text-dm-ash">
+                <p className="mt-0.5 font-mono text-xs uppercase tracking-wide text-np-500 dark:text-np-500-night">
                   {item.detail}
                   {item.date ? ` · ${item.date}` : ''}
                 </p>
@@ -192,31 +216,31 @@ const AboutPage: React.FC = () => {
           </div>
         </section>
 
-        <section className="mb-10 mt-4">
+        <section className="mb-10 mt-6">
           <SectionHeading id="skills" label="Skills & Certifications" />
           <div className="mt-6">
-            <h3 className="text-xs uppercase tracking-wide text-dm-ash dark:text-dm-ash">
+            <h3 className="font-mono text-xs uppercase tracking-wide text-np-500 dark:text-np-500-night">
               Top Skills
             </h3>
             <div className="mt-3 flex flex-wrap gap-2">
               {topSkills.map((skill) => (
                 <span
                   key={skill}
-                  className="border border-dm-aluminum px-2 py-0.5 text-xs text-dm-dark dark:border-dm-dark dark:text-dm-cement">
+                  className="border border-np-ink px-2 py-1 font-mono text-xs text-np-ink dark:border-np-ink-night dark:text-np-ink-night">
                   {skill}
                 </span>
               ))}
             </div>
           </div>
           <div className="mt-6">
-            <h3 className="text-xs uppercase tracking-wide text-dm-ash dark:text-dm-ash">
+            <h3 className="font-mono text-xs uppercase tracking-wide text-np-500 dark:text-np-500-night">
               Certifications
             </h3>
             <div className="mt-3 flex flex-wrap gap-2">
               {certifications.map((cert) => (
                 <span
                   key={cert}
-                  className="border border-dm-aluminum px-2 py-0.5 text-xs text-dm-dark dark:border-dm-dark dark:text-dm-cement">
+                  className="border border-np-ink px-2 py-1 font-mono text-xs text-np-ink dark:border-np-ink-night dark:text-np-ink-night">
                   {cert}
                 </span>
               ))}
