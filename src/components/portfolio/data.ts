@@ -1,7 +1,8 @@
 export const stats = [
-  { value: '3+', label: 'Years of Experience' },
-  { value: '6+', label: 'Projects Shipped' },
-  { value: '8', label: 'Core Technologies' }
+  { value: '3+', label: 'Years Building Software' },
+  { value: '6+', label: 'Apps & Platforms Shipped' },
+  { value: '2', label: 'Apps Live on the App Store' },
+  { value: '11', label: 'Technologies in My Stack' }
 ];
 
 export const techPills = ['Flutter', 'TypeScript', 'NestJS', 'Firebase', 'RAG / Vector Search', 'UI/UX'];
@@ -101,14 +102,22 @@ export const projects: Project[] = [
 
 export const experience = [
   {
-    title: 'Associate Software Engineer',
+    title: 'Freelance Software Developer',
+    org: 'Self-Employed',
+    dates: 'Dec 2025 – Present',
+    summary:
+      'Currently learning new technologies, building my own projects, and taking on freelance software development work.',
+    current: true
+  },
+  {
+    title: 'Associate Software Developer',
     org: 'Plurative',
     dates: 'Feb 2024 – Dec 2025',
     summary:
       'Built a "Stateful AI" platform giving conversational agents an OS-inspired memory architecture, with RAG-based retrieval and a type-safe backend.'
   },
   {
-    title: 'Software Engineering Trainee',
+    title: 'Software Development Trainee',
     org: 'Plurative',
     dates: 'Nov 2023 – Feb 2024',
     summary:
@@ -118,13 +127,13 @@ export const experience = [
     title: 'Teacher',
     org: 'Institute of Computer Engineering Technology (iCET)',
     dates: 'Jan 2023 – Oct 2023',
-    summary: 'Delivered hands-on software engineering training and designed the institute\'s marketing materials.'
+    summary: 'Delivered hands-on software development training and designed the institute\'s marketing materials.'
   },
   {
     title: 'Student',
     org: 'IJSE – Institute of Software Engineering',
     dates: 'Apr 2022 – Jan 2023',
-    summary: 'Completed foundational and advanced coursework in software engineering.'
+    summary: 'Completed foundational and advanced coursework in software development.'
   }
 ];
 
@@ -139,7 +148,9 @@ export const tools: Tool[] = [
   { name: 'Figma', note: 'Interface design', logo: '/tools/figma.svg' },
   { name: 'Rive', note: 'Interactive animation', logo: '/tools/rive.svg' },
   { name: 'FreeCAD', note: '3D & parametric design', logo: '/tools/freecad.svg' },
-  { name: 'Cloudflare', note: 'Edge & DNS', logo: '/tools/cloudflare.svg' }
+  { name: 'Cloudflare', note: 'Edge & DNS', logo: '/tools/cloudflare.svg' },
+  { name: 'Claude', note: 'AI pair programming', logo: '/tools/claude.svg' },
+  { name: 'Gemini', note: 'AI research & ideation', logo: '/tools/gemini.svg' }
 ];
 
 export type Interest = { name: string; note: string; logo: string };
@@ -154,27 +165,35 @@ export const interests: Interest[] = [
 
 export const articles = [
   {
+    id: 4,
+    title: 'A Different Kind of Chapter',
+    description: 'A personal, reflective post.',
+    date: 'September 12, 2026',
+    readTime: '3 min read',
+    link: 'https://medium.com/@ishanLahiruSampath/a-different-kind-of-chapter-7fd69302f0e1'
+  },
+  {
     id: 1,
     title: 'Understanding React DnD',
-    description: 'A deep dive into implementing drag-and-drop functionality in React using React DnD.',
+    description: 'Official docs, setup, code, and a live drag-and-drop demo built with React DnD.',
     date: 'January 10, 2025',
     readTime: '6 min read',
-    link: '#'
+    internalLink: '/blog/understanding-react-dnd'
   },
   {
     id: 2,
     title: 'SVG Map Manipulation with React',
-    description: 'Learn how to dynamically manipulate SVG maps for interactive data visualization.',
+    description: 'How the Election Results Dashboard renders an interactive SVG map — with a live demo.',
     date: 'December 15, 2024',
     readTime: '5 min read',
-    link: '#'
+    internalLink: '/blog/svg-map-manipulation-with-react'
   },
   {
     id: 3,
     title: 'Monorepo Management with Turbo',
-    description: 'Best practices for managing multiple projects in a monorepo using Turbo.',
+    description: 'Task graphs, remote caching, and workspaces in Turborepo, with Mermaid diagrams.',
     date: 'November 20, 2024',
     readTime: '4 min read',
-    link: '#'
+    internalLink: '/blog/monorepo-management-with-turbo'
   }
 ];

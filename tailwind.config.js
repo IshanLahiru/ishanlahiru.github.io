@@ -7,7 +7,8 @@ export default {
         sans: ['Inter', 'Helvetica Neue', 'Arial', 'sans-serif'],
         serif: ['Poppins', 'Inter', 'Helvetica Neue', 'Arial', 'sans-serif'],
         body: ['Inter', 'Helvetica Neue', 'Arial', 'sans-serif'],
-        mono: ['Inter', 'Helvetica Neue', 'Arial', 'sans-serif']
+        mono: ['Inter', 'Helvetica Neue', 'Arial', 'sans-serif'],
+        lora: ['Lora', 'Georgia', 'serif']
       },
       colors: {
         np: {

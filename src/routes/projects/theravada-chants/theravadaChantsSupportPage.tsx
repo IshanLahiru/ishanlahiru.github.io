@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import LegalPageLayout, {
+import TheravadaChantsLegalLayout, {
   ContactCard,
   Faq,
   H2,
   inlineLinkClass
-} from '../../../components/legal-page-layout/legalPageLayout';
+} from '../../../components/theravada-chants/legalLayout';
 
 const SUPPORT_EMAIL = 'ishanlahiru2002@gmail.com';
 
@@ -92,7 +92,7 @@ const faqs: { question: string; answer: React.ReactNode }[] = [
 
 const TheravadaChantsSupportPage: React.FC = () => {
   return (
-    <LegalPageLayout
+    <TheravadaChantsLegalLayout
       title="Theravāda Chants Support"
       backTo="/projects/theravada-chants"
       backLabel="Back to Theravāda Chants">
@@ -124,7 +124,7 @@ const TheravadaChantsSupportPage: React.FC = () => {
           Terms &amp; Conditions
         </Link>
       </div>
-    </LegalPageLayout>
+    </TheravadaChantsLegalLayout>
   );
 };
 

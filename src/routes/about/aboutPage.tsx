@@ -8,7 +8,19 @@ import Reveal from '../../components/portfolio/Reveal';
 
 export const experience = [
   {
-    title: 'Associate Software Engineer',
+    title: 'Freelance Software Developer',
+    org: 'Self-Employed',
+    dates: 'December 2025 – Present',
+    duration: '',
+    current: true,
+    bullets: [
+      'Currently learning new technologies and deepening my skills in AI, robotics, and 3D design.',
+      'Building and shipping my own mobile apps and side projects.',
+      'Taking on freelance software development work.'
+    ]
+  },
+  {
+    title: 'Associate Software Developer',
     org: 'Plurative',
     dates: 'February 2024 – December 2025',
     duration: '1 yr 11 mo',
@@ -20,7 +32,7 @@ export const experience = [
     ]
   },
   {
-    title: 'Software Engineering Trainee',
+    title: 'Software Development Trainee',
     org: 'Plurative',
     dates: 'November 2023 – February 2024',
     duration: '4 mo',
@@ -38,7 +50,7 @@ export const experience = [
     dates: 'January 2023 – October 2023',
     duration: 'Panadura, Sri Lanka',
     bullets: [
-      'Delivered software engineering training using hands-on, practical teaching methods.',
+      'Delivered software development training using hands-on, practical teaching methods.',
       "Designed the institute's logos, flyers, and other marketing materials."
     ]
   },
@@ -96,9 +108,18 @@ const TimelineItem: React.FC<{
   dates: string;
   duration: string;
   bullets: string[];
-}> = ({ title, org, dates, duration, bullets }) => (
+  current?: boolean;
+}> = ({ title, org, dates, duration, bullets, current }) => (
   <div className="border-l-2 border-white/10 py-1 pl-5">
-    <h3 className="text-lg font-bold text-white">{title}</h3>
+    <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5">
+      <h3 className="text-lg font-bold text-white">{title}</h3>
+      {current && (
+        <span className="inline-flex items-center gap-1.5 rounded-full border border-lime-300/30 bg-lime-300/10 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wide text-lime-300">
+          <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-lime-300" />
+          Open to Work
+        </span>
+      )}
+    </div>
     <p className="mt-0.5 text-sm font-medium text-orange-400">{org}</p>
     <p className="mt-0.5 text-xs text-slate-500">
       {dates}
@@ -142,12 +163,13 @@ const AboutPage: React.FC = () => {
             <p className="mt-2 text-sm text-slate-500">A lifelong learner and creator.</p>
 
             <p className="mt-6 max-w-xl text-base leading-relaxed text-slate-400">
-              I'm based in Kalutara District, Sri Lanka. Most recently, I was an Associate
-              Software Engineer at Plurative, building a "Stateful AI" platform that gives
+              I'm based in Kalutara District, Sri Lanka. Currently freelancing, learning new
+              technologies, and building my own projects. Most recently, I was an Associate
+              Software Developer at Plurative, building a "Stateful AI" platform that gives
               conversational agents an OS-inspired memory system &mdash; paging context in and out
               over long-running interactions, backed by RAG-style vector search and a type-safe
               API layer. Before that, I worked as a trainee on a multi-tenant workflow platform,
-              and spent time teaching software engineering at iCET while also designing the
+              and spent time teaching software development at iCET while also designing the
               institute's brand and marketing materials.
             </p>
 

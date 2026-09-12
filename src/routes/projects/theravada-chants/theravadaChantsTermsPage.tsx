@@ -1,9 +1,9 @@
 import React from 'react';
-import LegalPageLayout, { H2, P, UL } from '../../../components/legal-page-layout/legalPageLayout';
+import TheravadaChantsLegalLayout, { H2, P, UL } from '../../../components/theravada-chants/legalLayout';
 
 const TheravadaChantsTermsPage: React.FC = () => {
   return (
-    <LegalPageLayout
+    <TheravadaChantsLegalLayout
       title="Theravāda Chants Terms & Conditions"
       effectiveDate="2026-08-30"
       backTo="/projects/theravada-chants"
@@ -161,7 +161,7 @@ const TheravadaChantsTermsPage: React.FC = () => {
         If you have any questions about these Terms and Conditions, please contact the Service
         Provider at ishanlahiru2002@gmail.com.
       </P>
-    </LegalPageLayout>
+    </TheravadaChantsLegalLayout>
   );
 };
 

@@ -38,6 +38,9 @@ const DammapadayaPrivacyPolicyPage = lazy(
 );
 const DammapadayaTermsPage = lazy(() => import('./projects/dammapadaya/dammapadayaTermsPage'));
 const DammapadayaSupportPage = lazy(() => import('./projects/dammapadaya/dammapadayaSupportPage'));
+const UnderstandingReactDndPage = lazy(() => import('./blog/understandingReactDndPage'));
+const SvgMapManipulationPage = lazy(() => import('./blog/svgMapManipulationPage'));
+const MonorepoManagementPage = lazy(() => import('./blog/monorepoManagementPage'));
 
 interface RouterProps {
   children?: ReactNode;
@@ -81,6 +84,9 @@ const Router: React.FC<RouterProps> = ({ children }) => {
           />
           <Route path="/projects/dammapadaya/terms" element={<DammapadayaTermsPage />} />
           <Route path="/projects/dammapadaya/support" element={<DammapadayaSupportPage />} />
+          <Route path="/blog/understanding-react-dnd" element={<UnderstandingReactDndPage />} />
+          <Route path="/blog/svg-map-manipulation-with-react" element={<SvgMapManipulationPage />} />
+          <Route path="/blog/monorepo-management-with-turbo" element={<MonorepoManagementPage />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </Suspense>

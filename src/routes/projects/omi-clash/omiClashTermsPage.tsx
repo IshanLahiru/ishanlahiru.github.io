@@ -1,9 +1,9 @@
 import React from 'react';
-import LegalPageLayout, { H2, P, UL } from '../../../components/legal-page-layout/legalPageLayout';
+import OmiClashLegalLayout, { H2, P, UL } from '../../../components/omi-clash/legalLayout';
 
 const OmiClashTermsPage: React.FC = () => {
   return (
-    <LegalPageLayout
+    <OmiClashLegalLayout
       title="Omi Clash Terms & Conditions"
       effectiveDate="2026-07-29"
       backTo="/projects/omi-clash"
@@ -273,7 +273,7 @@ const OmiClashTermsPage: React.FC = () => {
         If you have any questions or suggestions about the Terms and Conditions, please do not
         hesitate to contact the Service Provider at support.ishanvithanage@gmail.com.
       </P>
-    </LegalPageLayout>
+    </OmiClashLegalLayout>
   );
 };
 

@@ -69,7 +69,7 @@ const ProjectRow: React.FC<Project & { index: number }> = ({
   return (
     <div className={`py-6 ${index === 0 ? '' : 'border-t border-white/10'}`}>
       {internalLink ? (
-        <Link to={internalLink} className={linkClass}>
+        <Link to={internalLink} state={{ from: 'portfolio' }} className={linkClass}>
           {CardInner}
         </Link>
       ) : (

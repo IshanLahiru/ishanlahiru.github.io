@@ -1,9 +1,9 @@
 import React from 'react';
-import LegalPageLayout, { H2, P, UL } from '../../../components/legal-page-layout/legalPageLayout';
+import TheravadaChantsLegalLayout, { H2, P, UL, inlineLinkClass } from '../../../components/theravada-chants/legalLayout';
 
 const TheravadaChantsPrivacyPolicyPage: React.FC = () => {
   return (
-    <LegalPageLayout
+    <TheravadaChantsLegalLayout
       title="Theravāda Chants Privacy Policy"
       effectiveDate="2026-08-30"
       backTo="/projects/theravada-chants"
@@ -82,7 +82,7 @@ const TheravadaChantsPrivacyPolicyPage: React.FC = () => {
           <>
             <a
               href="https://firebase.google.com/support/privacy"
-              className="text-np-accent hover:underline dark:text-np-accent-night"
+              className={inlineLinkClass}
             >
               Firebase
             </a>{' '}
@@ -92,7 +92,7 @@ const TheravadaChantsPrivacyPolicyPage: React.FC = () => {
           <>
             <a
               href="https://www.revenuecat.com/privacy"
-              className="text-np-accent hover:underline dark:text-np-accent-night"
+              className={inlineLinkClass}
             >
               RevenueCat
             </a>{' '}
@@ -104,7 +104,7 @@ const TheravadaChantsPrivacyPolicyPage: React.FC = () => {
           <>
             <a
               href="https://policies.google.com/privacy"
-              className="text-np-accent hover:underline dark:text-np-accent-night"
+              className={inlineLinkClass}
             >
               Google Fonts
             </a>{' '}
@@ -157,7 +157,7 @@ const TheravadaChantsPrivacyPolicyPage: React.FC = () => {
         If you have any questions regarding privacy while using the Application, please contact the
         Service Provider via email at ishanlahiru2002@gmail.com.
       </P>
-    </LegalPageLayout>
+    </TheravadaChantsLegalLayout>
   );
 };
 

@@ -1,9 +1,9 @@
 import React from 'react';
-import LegalPageLayout, { H2, P, UL } from '../../../components/legal-page-layout/legalPageLayout';
+import OmiClashLegalLayout, { H2, P, UL, inlineLinkClass } from '../../../components/omi-clash/legalLayout';
 
 const OmiClashPrivacyPolicyPage: React.FC = () => {
   return (
-    <LegalPageLayout
+    <OmiClashLegalLayout
       title="Omi Clash Privacy Policy"
       effectiveDate="2026-07-29"
       backTo="/projects/omi-clash"
@@ -99,7 +99,7 @@ const OmiClashPrivacyPolicyPage: React.FC = () => {
           <>
             <a
               href="https://firebase.google.com/support/privacy"
-              className="text-np-accent hover:underline dark:text-np-accent-night"
+              className={inlineLinkClass}
             >
               Firebase
             </a>{' '}
@@ -109,7 +109,7 @@ const OmiClashPrivacyPolicyPage: React.FC = () => {
           <>
             <a
               href="https://policies.google.com/privacy"
-              className="text-np-accent hover:underline dark:text-np-accent-night"
+              className={inlineLinkClass}
             >
               Google Sign-In
             </a>{' '}
@@ -118,7 +118,7 @@ const OmiClashPrivacyPolicyPage: React.FC = () => {
           <>
             <a
               href="https://www.apple.com/legal/privacy/"
-              className="text-np-accent hover:underline dark:text-np-accent-night"
+              className={inlineLinkClass}
             >
               Sign in with Apple
             </a>{' '}
@@ -127,7 +127,7 @@ const OmiClashPrivacyPolicyPage: React.FC = () => {
           <>
             <a
               href="https://policies.google.com/technologies/partner-sites"
-              className="text-np-accent hover:underline dark:text-np-accent-night"
+              className={inlineLinkClass}
             >
               AdMob
             </a>{' '}
@@ -136,7 +136,7 @@ const OmiClashPrivacyPolicyPage: React.FC = () => {
           <>
             <a
               href="https://www.revenuecat.com/privacy"
-              className="text-np-accent hover:underline dark:text-np-accent-night"
+              className={inlineLinkClass}
             >
               RevenueCat
             </a>{' '}
@@ -149,7 +149,7 @@ const OmiClashPrivacyPolicyPage: React.FC = () => {
           <>
             <a
               href="https://www.cloudflare.com/privacypolicy/"
-              className="text-np-accent hover:underline dark:text-np-accent-night"
+              className={inlineLinkClass}
             >
               Cloudflare
             </a>{' '}
@@ -259,7 +259,7 @@ const OmiClashPrivacyPolicyPage: React.FC = () => {
         If you have any questions regarding privacy while using the Application, please contact the
         Service Provider via email at support.ishanvithanage@gmail.com.
       </P>
-    </LegalPageLayout>
+    </OmiClashLegalLayout>
   );
 };
 

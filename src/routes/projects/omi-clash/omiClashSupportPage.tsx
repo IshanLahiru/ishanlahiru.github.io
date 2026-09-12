@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import LegalPageLayout, {
+import OmiClashLegalLayout, {
   ContactCard,
   Faq,
   H2,
   inlineLinkClass
-} from '../../../components/legal-page-layout/legalPageLayout';
+} from '../../../components/omi-clash/legalLayout';
 
 const SUPPORT_EMAIL = 'support.ishanvithanage@gmail.com';
 
@@ -105,8 +105,8 @@ const faqs: { question: string; answer: React.ReactNode }[] = [
 
 const OmiClashSupportPage: React.FC = () => {
   return (
-    <LegalPageLayout title="Omi Clash Support" backTo="/projects/omi-clash" backLabel="Back to Omi Clash">
-      <p className="mb-2 font-body text-sm leading-relaxed text-np-600 dark:text-np-400-night">
+    <OmiClashLegalLayout title="Omi Clash Support" backTo="/projects/omi-clash" backLabel="Back to Omi Clash">
+      <p className="mb-2 text-sm leading-relaxed text-slate-400">
         Need help with Omi Clash? Browse the frequently asked questions below, or reach out to us
         directly and we'll get back to you as soon as we can.
       </p>
@@ -126,7 +126,7 @@ const OmiClashSupportPage: React.FC = () => {
         ))}
       </div>
 
-      <div className="flex flex-wrap gap-x-6 gap-y-2 border-t border-np-muted pt-6 text-xs font-medium dark:border-np-muted-night">
+      <div className="flex flex-wrap gap-x-6 gap-y-2 border-t border-white/10 pt-6 text-xs font-medium">
         <Link to="/projects/omi-clash/community" className={inlineLinkClass}>
           Community
         </Link>
@@ -137,7 +137,7 @@ const OmiClashSupportPage: React.FC = () => {
           Terms &amp; Conditions
         </Link>
       </div>
-    </LegalPageLayout>
+    </OmiClashLegalLayout>
   );
 };
 
