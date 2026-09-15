@@ -2,7 +2,7 @@ export const stats = [
   { value: '3+', label: 'Years Building Software' },
   { value: '6+', label: 'Apps & Platforms Shipped' },
   { value: '2', label: 'Apps Live on the App Store' },
-  { value: '11', label: 'Technologies in My Stack' }
+  { value: '21', label: 'Technologies in My Stack' }
 ];
 
 export const techPills = ['Flutter', 'TypeScript', 'NestJS', 'Firebase', 'RAG / Vector Search', 'UI/UX'];
@@ -150,7 +150,17 @@ export const tools: Tool[] = [
   { name: 'FreeCAD', note: '3D & parametric design', logo: '/tools/freecad.svg' },
   { name: 'Cloudflare', note: 'Edge & DNS', logo: 'https://svgl.app/library/cloudflare.svg' },
   { name: 'Claude', note: 'AI pair programming', logo: 'https://svgl.app/library/claude-ai-icon.svg' },
-  { name: 'Gemini', note: 'AI research & ideation', logo: '/tools/gemini.svg' }
+  { name: 'Gemini', note: 'AI research & ideation', logo: '/tools/gemini.svg' },
+  { name: 'PostgreSQL', note: 'Relational databases', logo: 'https://svgl.app/library/postgresql.svg' },
+  { name: 'SQLite', note: 'Embedded databases', logo: 'https://svgl.app/library/sqlite.svg' },
+  { name: 'Redis', note: 'Caching & pub/sub', logo: 'https://svgl.app/library/redis.svg' },
+  { name: 'Affinity Designer', note: 'Vector graphics', logo: 'https://svgl.app/library/affinity_designer.svg' },
+  { name: 'n8n', note: 'Workflow automation', logo: 'https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/n8n.svg' },
+  { name: 'OpenRouter', note: 'LLM routing', logo: 'https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/openrouter.svg' },
+  { name: 'GitHub', note: 'Version control', logo: 'https://svgl.app/library/github_dark.svg' },
+  { name: 'PyCharm', note: 'Python IDE', logo: 'https://svgl.app/library/pycharm.svg' },
+  { name: 'VS Code', note: 'Code editor', logo: 'https://svgl.app/library/vscode.svg' },
+  { name: 'Postman', note: 'API testing', logo: 'https://svgl.app/library/postman.svg' }
 ];
 
 export type Interest = { name: string; note: string; logo: string };
