@@ -140,16 +140,16 @@ export const experience = [
 export type Tool = { name: string; note: string; logo: string };
 
 export const tools: Tool[] = [
-  { name: 'Flutter', note: 'Cross-platform apps', logo: '/tools/flutter.svg' },
-  { name: 'TypeScript', note: 'Type-safe systems', logo: '/tools/typescript.svg' },
-  { name: 'NestJS', note: 'Backend APIs', logo: '/tools/nestjs.svg' },
-  { name: 'Firebase', note: 'Auth, data & functions', logo: '/tools/firebase.svg' },
-  { name: 'Supabase', note: 'Postgres backends', logo: '/tools/supabase.svg' },
-  { name: 'Figma', note: 'Interface design', logo: '/tools/figma.svg' },
+  { name: 'Flutter', note: 'Cross-platform apps', logo: 'https://svgl.app/library/flutter.svg' },
+  { name: 'TypeScript', note: 'Type-safe systems', logo: 'https://svgl.app/library/typescript.svg' },
+  { name: 'NestJS', note: 'Backend APIs', logo: 'https://svgl.app/library/nestjs.svg' },
+  { name: 'Firebase', note: 'Auth, data & functions', logo: 'https://svgl.app/library/firebase.svg' },
+  { name: 'Supabase', note: 'Postgres backends', logo: 'https://svgl.app/library/supabase.svg' },
+  { name: 'Figma', note: 'Interface design', logo: 'https://svgl.app/library/figma.svg' },
   { name: 'Rive', note: 'Interactive animation', logo: '/tools/rive.svg' },
   { name: 'FreeCAD', note: '3D & parametric design', logo: '/tools/freecad.svg' },
-  { name: 'Cloudflare', note: 'Edge & DNS', logo: '/tools/cloudflare.svg' },
-  { name: 'Claude', note: 'AI pair programming', logo: '/tools/claude.svg' },
+  { name: 'Cloudflare', note: 'Edge & DNS', logo: 'https://svgl.app/library/cloudflare.svg' },
+  { name: 'Claude', note: 'AI pair programming', logo: 'https://svgl.app/library/claude-ai-icon.svg' },
   { name: 'Gemini', note: 'AI research & ideation', logo: '/tools/gemini.svg' }
 ];
 
@@ -158,8 +158,8 @@ export type Interest = { name: string; note: string; logo: string };
 export const interests: Interest[] = [
   { name: 'Robotics', note: 'Building & automation', logo: '/tools/arduino.svg' },
   { name: 'ROS', note: 'Robot Operating System', logo: '/tools/ros.svg' },
-  { name: 'Artificial Intelligence', note: 'Exploring ML & agents', logo: '/tools/huggingface.svg' },
-  { name: 'RAG', note: 'Retrieval-augmented generation', logo: '/tools/langchain.svg' },
+  { name: 'Artificial Intelligence', note: 'Exploring ML & agents', logo: 'https://svgl.app/library/hugging_face.svg' },
+  { name: 'RAG', note: 'Retrieval-augmented generation', logo: 'https://svgl.app/library/langchain-logo.svg' },
   { name: '3D Modeling', note: 'Designing in FreeCAD', logo: '/tools/freecad.svg' }
 ];
 
