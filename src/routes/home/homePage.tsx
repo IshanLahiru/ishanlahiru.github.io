@@ -15,7 +15,7 @@ const HomePage: React.FC = () => {
   return (
     <div id="top" className="min-h-screen bg-black font-sans text-slate-300">
       <Seo
-        title="Ishan Lahiru - Software Developer & Mobile App Builder"
+        title="Ishan Lahiru"
         description="Ishan Lahiru's official portfolio - a Flutter and TypeScript developer building mobile apps, games, and backend platforms. Explore projects like Omi Clash, Theravāda Chants, and Dammapadaya."
         path="/"
       />
