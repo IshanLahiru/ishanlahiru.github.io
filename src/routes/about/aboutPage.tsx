@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Download } from 'lucide-react';
+import Seo from '../../components/seo/Seo';
 import Navbar from '../../components/portfolio/Navbar';
 import Footer from '../../components/portfolio/Footer';
 import { Section, SectionHeading } from '../../components/portfolio/Section';
@@ -138,6 +139,11 @@ const TimelineItem: React.FC<{
 const AboutPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-black font-sans text-slate-300">
+      <Seo
+        title="About Ishan Lahiru - Software Developer"
+        description="Ishan Lahiru is a software developer based in Kalutara District, Sri Lanka, building mobile apps and backend platforms with Flutter, TypeScript, and NestJS."
+        path="/about"
+      />
       <Navbar />
 
       <div className="mx-auto max-w-4xl px-4 pb-24 pt-10 sm:px-6 sm:pt-16 lg:px-8">

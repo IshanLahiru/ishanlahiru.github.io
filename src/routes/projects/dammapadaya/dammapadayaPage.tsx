@@ -8,6 +8,7 @@ const DammapadayaPage: React.FC = () => {
     <ProjectPageLayout
       title="Dammapadaya"
       icon="/projects/dammapadaya/icon.png"
+      path="/projects/dammapadaya"
       status="🚧 In Active Development"
       description="A daily-reading companion for the Dhammapada — the complete text, all 423 verses across its 26 traditional chapters (vaggas), in the original Pāli alongside a plain-English rendering of each verse's meaning. A rotating 'today's verse' opens the app, and the full text is browsable by chapter or searchable by verse, theme, or wording. Free, with no account, no ads, and no purchases."
       techStack={techStack}

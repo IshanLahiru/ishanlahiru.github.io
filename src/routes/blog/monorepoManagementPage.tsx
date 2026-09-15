@@ -47,6 +47,8 @@ const MonorepoManagementPage: React.FC = () => (
     eyebrow="Tooling"
     date="November 20, 2024"
     readTime="4 min read"
+    description="Task graphs, remote caching, and workspaces in Turborepo, with Mermaid diagrams."
+    path="/blog/monorepo-management-with-turbo"
   >
     <p>
       Once a codebase has more than one deployable package — an app, a shared UI library, a couple

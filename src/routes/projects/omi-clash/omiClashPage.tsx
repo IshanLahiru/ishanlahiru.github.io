@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faApple, faGooglePlay } from '@fortawesome/free-brands-svg-icons';
 import { ArrowLeft } from 'lucide-react';
+import Seo from '../../../components/seo/Seo';
 
 const screenshots = [
   { src: '/projects/omi-clash/screenshots/01-gameplay', alt: 'Outsmart your rivals — real-time multiplayer card battles' },
@@ -54,6 +55,12 @@ const OmiClashPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-black font-sans text-slate-300">
+      <Seo
+        title="Omi Clash - Real-time Sri Lankan Card Game | Ishan Lahiru"
+        description="Omi Clash is a 4-player trick-taking card game (Omi) with friend chat, live table voice chat, and country/global leaderboards, built by Ishan Lahiru."
+        path="/projects/omi-clash"
+        image="https://ishanlahiru.github.io/projects/omi-clash/hero-art.png"
+      />
       <header className="sticky top-0 z-40 border-b border-white/10 bg-black/95 backdrop-blur-xl">
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
           {cameFromPortfolio ? (

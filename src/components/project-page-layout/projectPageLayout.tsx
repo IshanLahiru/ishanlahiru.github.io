@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import BaseContainer from '../base-container/baseContainer';
 import Footer from '../footer/footer';
 import NavigationBar from '../header/header';
+import Seo from '../seo/Seo';
 
 interface Screenshot {
   src: string;
@@ -20,6 +21,7 @@ interface FooterLink {
 interface ProjectPageLayoutProps {
   title: string;
   icon: string;
+  path: string;
   status?: string;
   appStoreUrl?: string;
   description: string;
@@ -34,6 +36,7 @@ interface ProjectPageLayoutProps {
 const ProjectPageLayout: React.FC<ProjectPageLayoutProps> = ({
   title,
   icon,
+  path,
   status,
   appStoreUrl,
   description,
@@ -46,6 +49,7 @@ const ProjectPageLayout: React.FC<ProjectPageLayoutProps> = ({
 }) => {
   return (
     <BaseContainer>
+      <Seo title={`${title} - Ishan Lahiru`} description={description} path={path} />
       <NavigationBar />
       <main className="py-8 text-start">
         <Link

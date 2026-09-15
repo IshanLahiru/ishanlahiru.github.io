@@ -29,6 +29,8 @@ const SvgMapManipulationPage: React.FC = () => (
     eyebrow="Data Visualization"
     date="December 15, 2024"
     readTime="5 min read"
+    description="How the Election Results Dashboard renders an interactive SVG map — with a live demo."
+    path="/blog/svg-map-manipulation-with-react"
   >
     <p>
       My{' '}

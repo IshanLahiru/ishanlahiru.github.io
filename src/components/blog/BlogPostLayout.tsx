@@ -4,15 +4,19 @@ import { ArrowLeft, Clock } from 'lucide-react';
 import Navbar from '../portfolio/Navbar';
 import Footer from '../portfolio/Footer';
 import Reveal from '../portfolio/Reveal';
+import Seo from '../seo/Seo';
 
 const BlogPostLayout: React.FC<{
   title: string;
   eyebrow: string;
   date: string;
   readTime: string;
+  description: string;
+  path: string;
   children: React.ReactNode;
-}> = ({ title, eyebrow, date, readTime, children }) => (
+}> = ({ title, eyebrow, date, readTime, description, path, children }) => (
   <div className="min-h-screen bg-black font-sans text-slate-300">
+    <Seo title={`${title} - Ishan Lahiru`} description={description} path={path} />
     <Navbar />
 
     <div className="mx-auto max-w-3xl px-4 pb-24 pt-10 sm:px-6 sm:pt-16 lg:px-8">

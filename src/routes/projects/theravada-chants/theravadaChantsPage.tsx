@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faApple, faGooglePlay } from '@fortawesome/free-brands-svg-icons';
 import { ArrowLeft, Volume2 } from 'lucide-react';
+import Seo from '../../../components/seo/Seo';
 
 const screenshots = [
   { src: '01-daily-companion', alt: 'Your daily practice companion — the full library' },
@@ -27,6 +28,11 @@ const TheravadaChantsPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-[#FBF5EA] font-sans text-[#2B2118]">
+      <Seo
+        title="Theravāda Chants - Pali Chanting Companion | Ishan Lahiru"
+        description="A Pali chanting companion by Ishan Lahiru — chants with English translations, precept-level reading lists, a guided ceremony walkthrough, and a Pali pronunciation guide."
+        path="/projects/theravada-chants"
+      />
       <header className="sticky top-0 z-40 border-b border-[#2B2118]/10 bg-[#FBF5EA]/95 backdrop-blur-xl">
         <div className="mx-auto flex h-16 max-w-4xl items-center justify-between px-4 sm:px-6 lg:px-8">
           {cameFromPortfolio ? (

@@ -51,6 +51,8 @@ const UnderstandingReactDndPage: React.FC = () => (
     eyebrow="Frontend"
     date="January 10, 2025"
     readTime="6 min read"
+    description="Official docs, setup, code, and a live drag-and-drop demo built with React DnD."
+    path="/blog/understanding-react-dnd"
   >
     <p>
       Drag-and-drop feels simple to use and surprisingly fiddly to build: you need to track what's

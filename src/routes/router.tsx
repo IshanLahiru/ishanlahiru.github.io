@@ -1,5 +1,5 @@
-import React, { lazy, ReactNode, Suspense } from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import React, { lazy, ReactNode, Suspense, useEffect } from 'react';
+import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
 import RouteLoadingBar from '../components/route-loading-bar/routeLoadingBar';
 
 const PageNotFound = lazy(() => import('./pageNotFound'));
@@ -46,9 +46,20 @@ interface RouterProps {
   children?: ReactNode;
 }
 
+const ScrollToTop: React.FC = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+};
+
 const Router: React.FC<RouterProps> = ({ children }) => {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       {children}
       <Suspense fallback={<RouteLoadingBar />}>
         <Routes>

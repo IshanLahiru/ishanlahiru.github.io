@@ -36,6 +36,7 @@ const DeckDrillPage: React.FC = () => {
     <ProjectPageLayout
       title="DeckDrill"
       icon="/projects/deckdrill/icon.png"
+      path="/projects/deckdrill"
       status="🚧 In Active Development"
       description="A card counting and training simulator application. DeckDrill is a Blackjack Training & Simulation App built to help players learn basic strategy and practice card counting."
       techStack={techStack}

@@ -1,4 +1,5 @@
 import React from 'react';
+import Seo from '../../components/seo/Seo';
 import Navbar from '../../components/portfolio/Navbar';
 import PortraitCard from '../../components/portfolio/PortraitCard';
 import Hero from '../../components/portfolio/Hero';
@@ -13,6 +14,11 @@ import Footer from '../../components/portfolio/Footer';
 const HomePage: React.FC = () => {
   return (
     <div id="top" className="min-h-screen bg-black font-sans text-slate-300">
+      <Seo
+        title="Ishan Lahiru - Software Developer & Mobile App Builder"
+        description="Ishan Lahiru's official portfolio - a Flutter and TypeScript developer building mobile apps, games, and backend platforms. Explore projects like Omi Clash, Theravāda Chants, and Dammapadaya."
+        path="/"
+      />
       <Navbar />
 
       <div className="mx-auto max-w-6xl px-4 pb-24 pt-10 sm:px-6 sm:pt-16 lg:px-8">
