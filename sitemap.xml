@@ -29,6 +29,10 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://ishanlahiru.github.io/projects/typal</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://ishanlahiru.github.io/blog/understanding-react-dnd</loc>
     <priority>0.5</priority>
   </url>
