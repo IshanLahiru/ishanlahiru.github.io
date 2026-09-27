@@ -15,9 +15,8 @@ const faqs: { question: string; answer: React.ReactNode }[] = [
     answer: (
       <>
         Drift &amp; Direct is a swiping-mechanism based mobile focus game. Symbols fall down the
-        screen and you swipe the correct direction for each one &mdash; the direction a yellow
-        arrow drifts, or the direction a green arrow points &mdash; to survive and climb the
-        leaderboards.
+        screen and you swipe the correct direction for each one &mdash; the direction a yellow arrow
+        drifts, or the direction a green arrow points &mdash; to survive and climb the leaderboards.
       </>
     )
   },
@@ -44,8 +43,8 @@ const faqs: { question: string; answer: React.ReactNode }[] = [
     question: 'I ran out of lives. How do I keep playing?',
     answer: (
       <>
-        From the game-over screen you can watch a rewarded ad for an extra life, spend coins, or
-        buy a hearts pack.
+        From the game-over screen you can watch a rewarded ad for an extra life, spend coins, or buy
+        a hearts pack.
       </>
     )
   },
@@ -67,8 +66,8 @@ const faqs: { question: string; answer: React.ReactNode }[] = [
         <a className={inlineLinkClass} href={`mailto:${SUPPORT_EMAIL}`}>
           {SUPPORT_EMAIL}
         </a>{' '}
-        with a description of what happened, the steps to reproduce it, and your device model and
-        OS version if possible. Screenshots or screen recordings help a lot.
+        with a description of what happened, the steps to reproduce it, and your device model and OS
+        version if possible. Screenshots or screen recordings help a lot.
       </>
     )
   },
@@ -110,8 +109,8 @@ const DriftAndDirectSupportPage: React.FC = () => {
       backTo="/projects/drift-and-direct"
       backLabel="Back to Drift & Direct">
       <p className="mb-2 font-body text-sm leading-relaxed text-np-600 dark:text-np-400-night">
-        Need help with Drift &amp; Direct? Browse the frequently asked questions below, or reach
-        out to us directly and we'll get back to you as soon as we can.
+        Need help with Drift &amp; Direct? Browse the frequently asked questions below, or reach out
+        to us directly and we'll get back to you as soon as we can.
       </p>
 
       <ContactCard label="Contact us">

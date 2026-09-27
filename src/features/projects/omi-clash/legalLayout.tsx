@@ -27,8 +27,7 @@ const OmiClashLegalLayout: React.FC<OmiClashLegalLayoutProps> = ({
           {cameFromPortfolio ? (
             <Link
               to="/"
-              className="flex items-center gap-2 text-sm font-semibold text-slate-500 transition-colors hover:text-white"
-            >
+              className="flex items-center gap-2 text-sm font-semibold text-slate-500 transition-colors hover:text-white">
               <ArrowLeft className="h-4 w-4" />
               <span className="hidden sm:inline">Portfolio</span>
             </Link>
@@ -37,9 +36,12 @@ const OmiClashLegalLayout: React.FC<OmiClashLegalLayoutProps> = ({
           )}
           <Link
             to="/projects/omi-clash"
-            className="flex items-center gap-2 text-sm font-extrabold uppercase tracking-tight text-white"
-          >
-            <img src="/projects/omi-clash/icon.png" alt="" className="h-8 w-8 rounded-[22%] object-cover" />
+            className="flex items-center gap-2 text-sm font-extrabold uppercase tracking-tight text-white">
+            <img
+              src="/projects/omi-clash/icon.png"
+              alt=""
+              className="h-8 w-8 rounded-[22%] object-cover"
+            />
             <span className="hidden sm:inline">Omi Clash</span>
           </Link>
           <span className="w-4" aria-hidden />
@@ -49,18 +51,20 @@ const OmiClashLegalLayout: React.FC<OmiClashLegalLayoutProps> = ({
       <main className="mx-auto max-w-2xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
         <Link
           to={backTo}
-          className="text-sm text-slate-500 underline-offset-4 transition-colors hover:text-amber-400 hover:underline"
-        >
+          className="text-sm text-slate-500 underline-offset-4 transition-colors hover:text-amber-400 hover:underline">
           &larr; {backLabel}
         </Link>
-        <h1 className="mb-1 mt-6 text-3xl font-extrabold uppercase tracking-tight text-white sm:text-4xl">{title}</h1>
-        {effectiveDate && <p className="mb-8 text-xs font-medium text-slate-500">Effective as of {effectiveDate}</p>}
+        <h1 className="mb-1 mt-6 text-3xl font-extrabold uppercase tracking-tight text-white sm:text-4xl">
+          {title}
+        </h1>
+        {effectiveDate && (
+          <p className="mb-8 text-xs font-medium text-slate-500">Effective as of {effectiveDate}</p>
+        )}
         <article className="max-w-2xl space-y-4 border-t border-white/10 pt-6">{children}</article>
 
         <Link
           to="/projects/omi-clash"
-          className="mb-8 mt-10 inline-block min-h-[44px] content-center rounded-full bg-amber-400 px-5 py-2.5 text-sm font-extrabold uppercase tracking-wide text-black transition-colors hover:bg-amber-300"
-        >
+          className="mb-8 mt-10 inline-block min-h-[44px] content-center rounded-full bg-amber-400 px-5 py-2.5 text-sm font-extrabold uppercase tracking-wide text-black transition-colors hover:bg-amber-300">
           Back to Omi Clash
         </Link>
       </main>
@@ -92,14 +96,20 @@ export const UL: React.FC<{ items: React.ReactNode[] }> = ({ items }) => (
 
 export const inlineLinkClass = 'text-amber-400 hover:underline';
 
-export const ContactCard: React.FC<{ label: string; children: React.ReactNode }> = ({ label, children }) => (
+export const ContactCard: React.FC<{ label: string; children: React.ReactNode }> = ({
+  label,
+  children
+}) => (
   <section className="mb-8 rounded-2xl border border-white/10 bg-white/[0.03] p-6">
     <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">{label}</p>
     <p className="mt-2 text-sm leading-relaxed text-slate-400">{children}</p>
   </section>
 );
 
-export const Faq: React.FC<{ question: string; answer: React.ReactNode }> = ({ question, answer }) => (
+export const Faq: React.FC<{ question: string; answer: React.ReactNode }> = ({
+  question,
+  answer
+}) => (
   <details className="group rounded-2xl border border-white/10 bg-white/[0.03] p-4">
     <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-sm font-semibold text-white marker:content-none">
       {question}

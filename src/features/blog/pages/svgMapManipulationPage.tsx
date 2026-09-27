@@ -30,21 +30,24 @@ const SvgMapManipulationPage: React.FC = () => (
     date="December 15, 2024"
     readTime="5 min read"
     description="How the Election Results Dashboard renders an interactive SVG map — with a live demo."
-    path="/blog/svg-map-manipulation-with-react"
-  >
+    path="/blog/svg-map-manipulation-with-react">
     <p>
       My{' '}
-      <DocLink href="https://ishanlahiru.github.io/election-map-site/">Election Results Dashboard</DocLink>{' '}
+      <DocLink href="https://ishanlahiru.github.io/election-map-site/">
+        Election Results Dashboard
+      </DocLink>{' '}
       renders an interactive district map without any charting library — just an SVG, a data file,
-      and React state. The trick is that an SVG map is really just a list of <code>&lt;path&gt;</code>{' '}
-      elements, one per region, and once you have that, "manipulating the map" is no different from
-      manipulating any other list of DOM elements in React.
+      and React state. The trick is that an SVG map is really just a list of{' '}
+      <code>&lt;path&gt;</code> elements, one per region, and once you have that, "manipulating the
+      map" is no different from manipulating any other list of DOM elements in React.
     </p>
 
     <H2>Where the Paths Come From</H2>
     <p>
       Rather than tracing Sri Lanka's district borders by hand, the dashboard uses the{' '}
-      <DocLink href="https://www.npmjs.com/package/@svg-maps/sri-lanka">@svg-maps/sri-lanka</DocLink>{' '}
+      <DocLink href="https://www.npmjs.com/package/@svg-maps/sri-lanka">
+        @svg-maps/sri-lanka
+      </DocLink>{' '}
       package — part of the open-source{' '}
       <DocLink href="https://github.com/VictorCazanave/svg-maps">svg-maps</DocLink> project. It
       exports a <code>viewBox</code> and a list of <code>locations</code>, each with an{' '}

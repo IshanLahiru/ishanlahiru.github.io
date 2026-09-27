@@ -7,7 +7,10 @@ import Seo from '@core/seo/Seo';
 
 const screenshots = [
   { src: '01-daily-companion', alt: 'Your daily practice companion — the full library' },
-  { src: '03-verses-translated', alt: 'Pāli verses, fully translated, with meaning and description' },
+  {
+    src: '03-verses-translated',
+    alt: 'Pāli verses, fully translated, with meaning and description'
+  },
   { src: '04-guided-practice', alt: 'Guided by your practice — choose Pansil, Atasil, or Dasasil' },
   { src: '05-chant-confidence', alt: 'A full Pāli pronunciation guide' },
   { src: '02-reading-list', alt: 'Build your reading list' },
@@ -38,16 +41,21 @@ const TheravadaChantsPage: React.FC = () => {
           {cameFromPortfolio ? (
             <Link
               to="/"
-              className="flex items-center gap-2 text-sm font-medium text-[#8B7F6E] transition-colors hover:text-[#2B2118]"
-            >
+              className="flex items-center gap-2 text-sm font-medium text-[#8B7F6E] transition-colors hover:text-[#2B2118]">
               <ArrowLeft className="h-4 w-4" />
               <span className="hidden sm:inline">Portfolio</span>
             </Link>
           ) : (
             <span />
           )}
-          <Link to="/projects/theravada-chants" className="flex items-center gap-2 text-sm font-semibold text-[#2B2118]">
-            <img src="/projects/theravada-chants/icon.png" alt="" className="h-8 w-8 rounded-[22%] object-cover" />
+          <Link
+            to="/projects/theravada-chants"
+            className="flex items-center gap-2 text-sm font-semibold text-[#2B2118]">
+            <img
+              src="/projects/theravada-chants/icon.png"
+              alt=""
+              className="h-8 w-8 rounded-[22%] object-cover"
+            />
             <span className="hidden sm:inline">Theravāda Chants</span>
           </Link>
           <span className="w-4" aria-hidden />
@@ -97,8 +105,7 @@ const TheravadaChantsPage: React.FC = () => {
               href={APP_STORE_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 rounded-xl bg-[#2B2118] px-5 py-3 text-white shadow-sm transition-transform duration-150 hover:-translate-y-0.5"
-            >
+              className="inline-flex items-center gap-3 rounded-xl bg-[#2B2118] px-5 py-3 text-white shadow-sm transition-transform duration-150 hover:-translate-y-0.5">
               <FontAwesomeIcon icon={faApple} className="h-6 w-6" />
               <span className="text-left leading-tight">
                 <span className="block text-[10px] font-medium text-white/70">Download on the</span>
@@ -119,12 +126,19 @@ const TheravadaChantsPage: React.FC = () => {
       {/* Screenshots */}
       <section className="border-t border-[#2B2118]/10 bg-white/50">
         <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#A9752F]">See It in Action</p>
-          <h2 className="mt-3 font-lora text-2xl italic text-[#2B2118] sm:text-3xl">A Closer Look</h2>
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#A9752F]">
+            See It in Action
+          </p>
+          <h2 className="mt-3 font-lora text-2xl italic text-[#2B2118] sm:text-3xl">
+            A Closer Look
+          </h2>
           <div className="mt-8 flex gap-5 overflow-x-auto px-2 pb-4">
             {screenshots.map((shot) => (
               <picture key={shot.src} className="flex-none">
-                <source srcSet={`/projects/theravada-chants/screenshots/${shot.src}.webp`} type="image/webp" />
+                <source
+                  srcSet={`/projects/theravada-chants/screenshots/${shot.src}.webp`}
+                  type="image/webp"
+                />
                 <img
                   src={`/projects/theravada-chants/screenshots/${shot.src}.png`}
                   alt={shot.alt}
@@ -149,8 +163,7 @@ const TheravadaChantsPage: React.FC = () => {
           {cameFromPortfolio && (
             <Link
               to="/"
-              className="rounded-lg border border-[#2B2118]/10 px-4 py-2 text-xs font-semibold text-[#2B2118] transition-colors hover:bg-[#2B2118]/5"
-            >
+              className="rounded-lg border border-[#2B2118]/10 px-4 py-2 text-xs font-semibold text-[#2B2118] transition-colors hover:bg-[#2B2118]/5">
               Back to Portfolio
             </Link>
           )}

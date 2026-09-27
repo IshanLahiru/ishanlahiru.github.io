@@ -12,8 +12,7 @@ const Experience: React.FC = () => (
           <div
             className={`flex flex-col gap-2 py-8 sm:flex-row sm:items-baseline sm:gap-10 ${
               index === 0 ? '' : 'border-t border-white/10'
-            }`}
-          >
+            }`}>
             <span className="flex-none text-xs font-semibold uppercase tracking-widest text-slate-500 sm:w-40">
               {item.dates}
             </span>

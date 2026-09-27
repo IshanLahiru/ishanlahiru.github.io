@@ -13,8 +13,7 @@ const TypalTermsPage: React.FC = () => {
       title="TyPâl Terms of Use"
       effectiveDate="2026-09-27"
       backTo="/projects/typal"
-      backLabel="Back to TyPâl"
-    >
+      backLabel="Back to TyPâl">
       <P>
         These terms apply to the TyPâl app and keyboard for iPhone (the "Application"), operated by
         Kekulandala Vithanage Ishan Lahiru Sampath (the "Service Provider"). By using the
@@ -84,8 +83,7 @@ const TypalTermsPage: React.FC = () => {
             break the AI provider's own rules; for TyPâl AI, Google's{' '}
             <a
               href="https://policies.google.com/terms/generative-ai/use-policy"
-              className={inlineLinkClass}
-            >
+              className={inlineLinkClass}>
               Generative AI Prohibited Use Policy
             </a>
           </>
@@ -122,8 +120,7 @@ const TypalTermsPage: React.FC = () => {
         something,{' '}
         <a
           href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
-          className={inlineLinkClass}
-        >
+          className={inlineLinkClass}>
           Apple's Standard License Agreement
         </a>{' '}
         applies. In addition:

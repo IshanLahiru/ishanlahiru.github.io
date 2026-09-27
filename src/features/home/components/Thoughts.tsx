@@ -5,17 +5,20 @@ import { Section, SectionHeading } from '@core/design-system/Section';
 import Reveal from '@core/design-system/Reveal';
 import { articles } from '../data';
 
-const rowClass = 'group flex flex-col gap-2 py-6 sm:flex-row sm:items-center sm:justify-between sm:gap-6';
+const rowClass =
+  'group flex flex-col gap-2 py-6 sm:flex-row sm:items-center sm:justify-between sm:gap-6';
 
-const ArticleContent: React.FC<{ title: string; description: string; date: string; readTime: string }> = ({
-  title,
-  description,
-  date,
-  readTime
-}) => (
+const ArticleContent: React.FC<{
+  title: string;
+  description: string;
+  date: string;
+  readTime: string;
+}> = ({ title, description, date, readTime }) => (
   <>
     <div className="min-w-0">
-      <h3 className="text-lg font-bold text-white transition-colors group-hover:text-lime-300">{title}</h3>
+      <h3 className="text-lg font-bold text-white transition-colors group-hover:text-lime-300">
+        {title}
+      </h3>
       <p className="mt-1 max-w-xl text-sm leading-relaxed text-slate-400">{description}</p>
       <div className="mt-2 flex items-center gap-3 text-xs text-slate-500">
         <span>{date}</span>
@@ -25,7 +28,7 @@ const ArticleContent: React.FC<{ title: string; description: string; date: strin
         </span>
       </div>
     </div>
-    <ArrowUpRight className="h-5 w-5 flex-none text-slate-500 transition-all group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-orange-500" />
+    <ArrowUpRight className="h-5 w-5 flex-none text-slate-500 transition-all group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-orange-500" />
   </>
 );
 

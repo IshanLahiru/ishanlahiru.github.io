@@ -27,8 +27,7 @@ const TheravadaChantsLegalLayout: React.FC<TheravadaChantsLegalLayoutProps> = ({
           {cameFromPortfolio ? (
             <Link
               to="/"
-              className="flex items-center gap-2 text-sm font-medium text-[#8B7F6E] transition-colors hover:text-[#2B2118]"
-            >
+              className="flex items-center gap-2 text-sm font-medium text-[#8B7F6E] transition-colors hover:text-[#2B2118]">
               <ArrowLeft className="h-4 w-4" />
               <span className="hidden sm:inline">Portfolio</span>
             </Link>
@@ -37,9 +36,12 @@ const TheravadaChantsLegalLayout: React.FC<TheravadaChantsLegalLayoutProps> = ({
           )}
           <Link
             to="/projects/theravada-chants"
-            className="flex items-center gap-2 text-sm font-semibold text-[#2B2118]"
-          >
-            <img src="/projects/theravada-chants/icon.png" alt="" className="h-8 w-8 rounded-[22%] object-cover" />
+            className="flex items-center gap-2 text-sm font-semibold text-[#2B2118]">
+            <img
+              src="/projects/theravada-chants/icon.png"
+              alt=""
+              className="h-8 w-8 rounded-[22%] object-cover"
+            />
             <span className="hidden sm:inline">Theravāda Chants</span>
           </Link>
           <span className="w-4" aria-hidden />
@@ -49,18 +51,20 @@ const TheravadaChantsLegalLayout: React.FC<TheravadaChantsLegalLayoutProps> = ({
       <main className="mx-auto max-w-2xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
         <Link
           to={backTo}
-          className="text-sm text-[#8B7F6E] underline-offset-4 transition-colors hover:text-[#A9752F] hover:underline"
-        >
+          className="text-sm text-[#8B7F6E] underline-offset-4 transition-colors hover:text-[#A9752F] hover:underline">
           &larr; {backLabel}
         </Link>
         <h1 className="mb-1 mt-6 font-lora text-3xl italic text-[#2B2118] sm:text-4xl">{title}</h1>
-        {effectiveDate && <p className="mb-8 text-xs font-medium text-[#8B7F6E]">Effective as of {effectiveDate}</p>}
-        <article className="max-w-2xl space-y-4 border-t border-[#2B2118]/10 pt-6">{children}</article>
+        {effectiveDate && (
+          <p className="mb-8 text-xs font-medium text-[#8B7F6E]">Effective as of {effectiveDate}</p>
+        )}
+        <article className="max-w-2xl space-y-4 border-t border-[#2B2118]/10 pt-6">
+          {children}
+        </article>
 
         <Link
           to="/projects/theravada-chants"
-          className="mb-8 mt-10 inline-block min-h-[44px] content-center rounded-full bg-[#2B2118] px-5 py-2.5 text-sm font-medium text-[#FBF5EA] transition-colors hover:bg-[#3a2c1c]"
-        >
+          className="mb-8 mt-10 inline-block min-h-[44px] content-center rounded-full bg-[#2B2118] px-5 py-2.5 text-sm font-medium text-[#FBF5EA] transition-colors hover:bg-[#3a2c1c]">
           Back to Theravāda Chants
         </Link>
       </main>
@@ -92,14 +96,20 @@ export const UL: React.FC<{ items: React.ReactNode[] }> = ({ items }) => (
 
 export const inlineLinkClass = 'text-[#A9752F] hover:underline';
 
-export const ContactCard: React.FC<{ label: string; children: React.ReactNode }> = ({ label, children }) => (
+export const ContactCard: React.FC<{ label: string; children: React.ReactNode }> = ({
+  label,
+  children
+}) => (
   <section className="mb-8 rounded-2xl border border-[#2B2118]/10 bg-white/60 p-6">
     <p className="text-xs font-medium text-[#8B7F6E]">{label}</p>
     <p className="mt-2 text-sm leading-relaxed text-[#5B4E3E]">{children}</p>
   </section>
 );
 
-export const Faq: React.FC<{ question: string; answer: React.ReactNode }> = ({ question, answer }) => (
+export const Faq: React.FC<{ question: string; answer: React.ReactNode }> = ({
+  question,
+  answer
+}) => (
   <details className="group rounded-2xl border border-[#2B2118]/10 bg-white/60 p-4">
     <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-sm font-semibold text-[#2B2118] marker:content-none">
       {question}

@@ -52,7 +52,7 @@ const routeMeta = {
   '/projects/dammapadaya': {
     title: 'Dammapadaya - Ishan Lahiru',
     description:
-      "A daily-reading companion for the Dhammapada — all 423 verses across 26 chapters, in Pāli with English renderings, browsable by chapter or searchable by wording and theme."
+      'A daily-reading companion for the Dhammapada — all 423 verses across 26 chapters, in Pāli with English renderings, browsable by chapter or searchable by wording and theme.'
   },
   '/projects/drift-and-direct': {
     title: 'Drift & Direct - Ishan Lahiru',
@@ -75,7 +75,8 @@ const routeMeta = {
   },
   '/blog/svg-map-manipulation-with-react': {
     title: 'SVG Map Manipulation with React - Ishan Lahiru',
-    description: 'How the Election Results Dashboard renders an interactive SVG map — with a live demo.'
+    description:
+      'How the Election Results Dashboard renders an interactive SVG map — with a live demo.'
   },
   '/blog/monorepo-management-with-turbo': {
     title: 'Monorepo Management with Turbo - Ishan Lahiru',

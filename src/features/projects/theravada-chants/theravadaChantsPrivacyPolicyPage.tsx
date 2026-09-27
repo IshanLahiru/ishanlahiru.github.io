@@ -7,8 +7,7 @@ const TheravadaChantsPrivacyPolicyPage: React.FC = () => {
       title="Theravāda Chants Privacy Policy"
       effectiveDate="2026-08-30"
       backTo="/projects/theravada-chants"
-      backLabel="Back to Theravāda Chants"
-    >
+      backLabel="Back to Theravāda Chants">
       <P>
         This privacy policy applies to the Theravāda Chants app for mobile devices, together with
         any related services operated by Ishan Lahiru Sampath Kekulandala Vithanage (collectively,
@@ -80,20 +79,14 @@ const TheravadaChantsPrivacyPolicyPage: React.FC = () => {
       <UL
         items={[
           <>
-            <a
-              href="https://firebase.google.com/support/privacy"
-              className={inlineLinkClass}
-            >
+            <a href="https://firebase.google.com/support/privacy" className={inlineLinkClass}>
               Firebase
             </a>{' '}
             (Google) — Cloud Firestore and Cloud Storage for app content, Firebase Authentication
             for the admin-only area described above
           </>,
           <>
-            <a
-              href="https://www.revenuecat.com/privacy"
-              className={inlineLinkClass}
-            >
+            <a href="https://www.revenuecat.com/privacy" className={inlineLinkClass}>
               RevenueCat
             </a>{' '}
             — subscription and purchase management, see "Purchases" above
@@ -102,10 +95,7 @@ const TheravadaChantsPrivacyPolicyPage: React.FC = () => {
             Apple App Store / Google Play Billing — payment processing for the optional purchases
           </>,
           <>
-            <a
-              href="https://policies.google.com/privacy"
-              className={inlineLinkClass}
-            >
+            <a href="https://policies.google.com/privacy" className={inlineLinkClass}>
               Google Fonts
             </a>{' '}
             — the Application may download typeface files from Google's font servers the first time

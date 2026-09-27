@@ -7,12 +7,11 @@ const DammapadayaTermsPage: React.FC = () => {
       title="Dammapadaya Terms & Conditions"
       effectiveDate="2026-09-08"
       backTo="/projects/dammapadaya"
-      backLabel="Back to Dammapadaya"
-    >
+      backLabel="Back to Dammapadaya">
       <P>
-        These terms and conditions apply to the Dammapadaya app for mobile devices, together with any
-        related services operated by Ishan Lahiru Sampath Kekulandala Vithanage (collectively, the
-        "Application"). Ishan Lahiru Sampath Kekulandala Vithanage is hereby referred to as the
+        These terms and conditions apply to the Dammapadaya app for mobile devices, together with
+        any related services operated by Ishan Lahiru Sampath Kekulandala Vithanage (collectively,
+        the "Application"). Ishan Lahiru Sampath Kekulandala Vithanage is hereby referred to as the
         "Service Provider".
       </P>
       <P>
@@ -24,10 +23,11 @@ const DammapadayaTermsPage: React.FC = () => {
       <P>
         Subject to your compliance with these Terms, the Service Provider grants you a limited,
         non-exclusive, non-transferable, revocable license to install and use the Application on a
-        mobile device that you own or control, for personal, non-commercial purposes, as permitted by
-        the usage rules of the applicable app store. You may not reproduce, distribute, modify, create
-        derivative works from, reverse engineer, decompile, or disassemble the Application's software,
-        except as and only to the extent that such activity is expressly permitted by applicable law.
+        mobile device that you own or control, for personal, non-commercial purposes, as permitted
+        by the usage rules of the applicable app store. You may not reproduce, distribute, modify,
+        create derivative works from, reverse engineer, decompile, or disassemble the Application's
+        software, except as and only to the extent that such activity is expressly permitted by
+        applicable law.
       </P>
 
       <H2>Dhammapada Content</H2>
@@ -36,8 +36,7 @@ const DammapadayaTermsPage: React.FC = () => {
         domain. The accompanying English renderings are adapted from a translation sourced via{' '}
         <a
           href="https://suttacentral.net"
-          className="text-np-accent hover:underline dark:text-np-accent-night"
-        >
+          className="text-np-accent hover:underline dark:text-np-accent-night">
           SuttaCentral
         </a>
         , an open, publicly available archive of early Buddhist texts, used in accordance with its
@@ -52,14 +51,15 @@ const DammapadayaTermsPage: React.FC = () => {
       <P>
         The Service Provider retains all intellectual property rights in the Application itself,
         including its code, design, trademarks, and branding. Nothing in these Terms grants you any
-        license or right to use the Service Provider's trademarks, logos, or branding for any purpose.
+        license or right to use the Service Provider's trademarks, logos, or branding for any
+        purpose.
       </P>
 
       <H2>No Purchases</H2>
       <P>
         The Application is provided free of charge in full. It does not offer any purchases,
-        subscriptions, or in-app advertising, and no feature or content is gated behind payment of any
-        kind.
+        subscriptions, or in-app advertising, and no feature or content is gated behind payment of
+        any kind.
       </P>
 
       <H2>Disclaimers</H2>
@@ -85,10 +85,10 @@ const DammapadayaTermsPage: React.FC = () => {
       <P>
         To the fullest extent permitted by law, the Service Provider shall not be liable for any
         indirect, incidental, special, or consequential damages arising from your use of the
-        Application, even if advised of the possibility of such damages. However, the Service Provider
-        retains full liability for death or personal injury caused by negligence, fraud or fraudulent
-        misrepresentation, and any other liability that cannot be excluded or limited under applicable
-        law.
+        Application, even if advised of the possibility of such damages. However, the Service
+        Provider retains full liability for death or personal injury caused by negligence, fraud or
+        fraudulent misrepresentation, and any other liability that cannot be excluded or limited
+        under applicable law.
       </P>
       <P>
         To the fullest extent permitted by law, the total liability of the Service Provider for any
@@ -136,14 +136,14 @@ const DammapadayaTermsPage: React.FC = () => {
 
       <H2>Entire Agreement</H2>
       <P>
-        These Terms and Conditions, together with the Privacy Policy, constitute the entire agreement
-        between you and the Service Provider concerning your use of the Application.
+        These Terms and Conditions, together with the Privacy Policy, constitute the entire
+        agreement between you and the Service Provider concerning your use of the Application.
       </P>
 
       <H2>Changes to These Terms and Conditions</H2>
       <P>
-        The Service Provider may periodically update these Terms and Conditions. Material changes will
-        be posted here with an updated effective date.
+        The Service Provider may periodically update these Terms and Conditions. Material changes
+        will be posted here with an updated effective date.
       </P>
 
       <H2>Contact Us</H2>

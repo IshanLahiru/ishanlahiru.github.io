@@ -1,11 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import TheravadaChantsLegalLayout, {
-  ContactCard,
-  Faq,
-  H2,
-  inlineLinkClass
-} from './legalLayout';
+import TheravadaChantsLegalLayout, { ContactCard, Faq, H2, inlineLinkClass } from './legalLayout';
 
 const SUPPORT_EMAIL = 'ishanlahiru2002@gmail.com';
 

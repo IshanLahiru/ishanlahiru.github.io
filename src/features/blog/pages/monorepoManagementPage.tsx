@@ -48,20 +48,19 @@ const MonorepoManagementPage: React.FC = () => (
     date="November 20, 2024"
     readTime="4 min read"
     description="Task graphs, remote caching, and workspaces in Turborepo, with Mermaid diagrams."
-    path="/blog/monorepo-management-with-turbo"
-  >
+    path="/blog/monorepo-management-with-turbo">
     <p>
       Once a codebase has more than one deployable package — an app, a shared UI library, a couple
       of internal tools — running <code>lint</code>, <code>test</code>, and <code>build</code>{' '}
-      across all of them by hand stops scaling. <DocLink href="https://turbo.build/repo/docs">Turborepo</DocLink>{' '}
-      manages that by turning your package scripts into a dependency graph and caching every task
-      it runs, locally and remotely.
+      across all of them by hand stops scaling.{' '}
+      <DocLink href="https://turbo.build/repo/docs">Turborepo</DocLink> manages that by turning your
+      package scripts into a dependency graph and caching every task it runs, locally and remotely.
     </p>
 
     <H2>Task Pipelines</H2>
     <p>
-      A <code>turbo.json</code> file declares tasks and what each one depends on. <code>^build</code>{' '}
-      means "build every package this one depends on first":
+      A <code>turbo.json</code> file declares tasks and what each one depends on.{' '}
+      <code>^build</code> means "build every package this one depends on first":
     </p>
     <CodeBlock language="json" code={turboJsonCode} />
     <p>Turborepo turns that config into a task graph and only runs what's actually affected:</p>
@@ -72,7 +71,9 @@ const MonorepoManagementPage: React.FC = () => (
       Every task run is fingerprinted from its inputs (source files, env vars, the task's own
       config). If nothing relevant changed, Turborepo replays the cached output instead of
       re-running the task — locally, or from a{' '}
-      <DocLink href="https://turbo.build/repo/docs/core-concepts/remote-caching">remote cache</DocLink>{' '}
+      <DocLink href="https://turbo.build/repo/docs/core-concepts/remote-caching">
+        remote cache
+      </DocLink>{' '}
       shared across your team and CI:
     </p>
     <Mermaid id="cache-flow" chart={cacheFlow} />

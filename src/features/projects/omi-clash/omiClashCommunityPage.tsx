@@ -6,7 +6,10 @@ const SUPPORT_EMAIL = 'support.ishanvithanage@gmail.com';
 
 const OmiClashCommunityPage: React.FC = () => {
   return (
-    <OmiClashLegalLayout title="Omi Clash Community" backTo="/projects/omi-clash" backLabel="Back to Omi Clash">
+    <OmiClashLegalLayout
+      title="Omi Clash Community"
+      backTo="/projects/omi-clash"
+      backLabel="Back to Omi Clash">
       <p className="mb-2 text-sm leading-relaxed text-slate-400">
         There's no dedicated social channel for Omi Clash yet — this page is the place to reach the
         team directly in the meantime, whether that's a question, a bug, an idea, or just a hello.

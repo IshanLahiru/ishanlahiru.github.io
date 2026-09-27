@@ -98,11 +98,14 @@ const TextLoop: React.FC<TextLoopProps> = ({
   const rawId = useId();
   const pathId = `text-loop-${rawId.replace(/:/g, '')}`;
 
-  const d = useMemo(() => path || buildPath(shape, curviness, ribbonWidth), [path, shape, curviness, ribbonWidth]);
+  const d = useMemo(
+    () => path || buildPath(shape, curviness, ribbonWidth),
+    [path, shape, curviness, ribbonWidth]
+  );
 
   const unit = useMemo(() => {
     const base = uppercase ? String(text).toUpperCase() : String(text);
-    const gap = separator ? ` ${separator} ` : '   ';
+    const gap = separator ? `\u00a0${separator}\u00a0` : '\u00a0\u00a0\u00a0';
     return `${base}${gap}`;
   }, [text, separator, uppercase]);
 
@@ -131,7 +134,9 @@ const TextLoop: React.FC<TextLoopProps> = ({
       if (!length) return;
 
       const reps = unitWidth > 0 ? Math.max(1, Math.round(length / unitWidth)) : 1;
-      setMetrics((prev) => (prev.length === length && prev.reps === reps ? prev : { length, reps }));
+      setMetrics((prev) =>
+        prev.length === length && prev.reps === reps ? prev : { length, reps }
+      );
     };
 
     measure();
@@ -159,7 +164,8 @@ const TextLoop: React.FC<TextLoopProps> = ({
     apply(0);
 
     const prefersReduced =
-      typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      typeof window !== 'undefined' &&
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (prefersReduced || speed <= 0) return undefined;
 
     const state = { offset: 0 };
@@ -199,8 +205,7 @@ const TextLoop: React.FC<TextLoopProps> = ({
         viewBox={`0 0 ${VIEW_W} ${VIEW_H}`}
         preserveAspectRatio="xMidYMid meet"
         role="img"
-        aria-label={text}
-      >
+        aria-label={text}>
         <path
           ref={pathRef}
           id={pathId}
@@ -223,8 +228,7 @@ const TextLoop: React.FC<TextLoopProps> = ({
           dominantBaseline="central"
           aria-hidden="true"
           textLength={fitLength}
-          lengthAdjust="spacing"
-        >
+          lengthAdjust="spacing">
           <textPath ref={headRef} href={`#${pathId}`} startOffset={0}>
             {loopText}
           </textPath>
@@ -237,8 +241,7 @@ const TextLoop: React.FC<TextLoopProps> = ({
           dominantBaseline="central"
           aria-hidden="true"
           textLength={fitLength}
-          lengthAdjust="spacing"
-        >
+          lengthAdjust="spacing">
           <textPath ref={tailRef} href={`#${pathId}`} startOffset={0}>
             {loopText}
           </textPath>

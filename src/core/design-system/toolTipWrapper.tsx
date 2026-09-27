@@ -25,8 +25,7 @@ const ToolTipWrapper: React.FC<ToolTipWrapperProps> = ({
       {children}
       <span
         className={`absolute z-30 rounded-lg bg-np-ink px-2.5 py-1.5 text-start text-xs text-np-paper opacity-0 shadow-lg transition-opacity duration-200 group-hover:opacity-100 dark:bg-np-ink-night dark:text-np-paper-night ${tooltipClasses[direction]}`}
-        style={{ width: tooltipWidth }}
-      >
+        style={{ width: tooltipWidth }}>
         {tooltipText}
       </span>
     </div>

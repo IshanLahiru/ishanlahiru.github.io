@@ -25,7 +25,13 @@ export type DecryptedTextClickMode = 'once' | 'toggle';
 
 type SafeSpanProps = Omit<
   React.ComponentPropsWithoutRef<'span'>,
-  'children' | 'onDrag' | 'onDragStart' | 'onDragEnd' | 'onAnimationStart' | 'onAnimationEnd' | 'onAnimationIteration'
+  | 'children'
+  | 'onDrag'
+  | 'onDragStart'
+  | 'onDragEnd'
+  | 'onAnimationStart'
+  | 'onAnimationEnd'
+  | 'onAnimationIteration'
 >;
 
 interface DecryptedTextProps extends SafeSpanProps {
@@ -378,7 +384,12 @@ const DecryptedText: React.FC<DecryptedTextProps> = ({
         : {};
 
   return (
-    <motion.span className={parentClassName} ref={containerRef} style={styles.wrapper} {...animateProps} {...props}>
+    <motion.span
+      className={parentClassName}
+      ref={containerRef}
+      style={styles.wrapper}
+      {...animateProps}
+      {...props}>
       <span style={styles.srOnly}>{displayText}</span>
 
       <span aria-hidden="true">

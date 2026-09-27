@@ -34,8 +34,7 @@ const ProjectRow: React.FC<Project & { index: number }> = ({
   const CardInner = (
     <>
       <div
-        className={`flex aspect-square w-20 flex-none items-center justify-center overflow-hidden rounded-[22%] border border-white/10 bg-gradient-to-br transition-transform duration-300 group-hover:scale-105 sm:w-28 ${tileTints[index % tileTints.length]}`}
-      >
+        className={`flex aspect-square w-20 flex-none items-center justify-center overflow-hidden rounded-[22%] border border-white/10 bg-gradient-to-br transition-transform duration-300 group-hover:scale-105 sm:w-28 ${tileTints[index % tileTints.length]}`}>
         {logo ? (
           <img src={logo} alt={`${title} logo`} className="h-full w-full object-cover" />
         ) : (
@@ -50,17 +49,18 @@ const ProjectRow: React.FC<Project & { index: number }> = ({
           {badges.map((badge) => (
             <span
               key={badge.label}
-              className={`inline-flex items-center gap-1.5 text-xs font-medium ${textColors[badge.status]}`}
-            >
+              className={`inline-flex items-center gap-1.5 text-xs font-medium ${textColors[badge.status]}`}>
               <span className={`h-1.5 w-1.5 rounded-full ${dotColors[badge.status]}`} />
               {badge.label}
             </span>
           ))}
         </div>
-        <p className="mt-2 hidden max-w-md text-sm leading-relaxed text-slate-400 sm:block">{description}</p>
+        <p className="mt-2 hidden max-w-md text-sm leading-relaxed text-slate-400 sm:block">
+          {description}
+        </p>
       </div>
 
-      <ArrowUpRight className="h-6 w-6 flex-none text-slate-500 transition-all group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-orange-500" />
+      <ArrowUpRight className="h-6 w-6 flex-none text-slate-500 transition-all group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-orange-500" />
     </>
   );
 
@@ -83,8 +83,7 @@ const ProjectRow: React.FC<Project & { index: number }> = ({
           href={appStoreUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="ml-[5.75rem] mt-3 inline-flex w-fit items-center gap-1.5 rounded-full border border-white/15 px-3 py-1 text-xs font-medium text-slate-300 transition-colors hover:border-orange-500/60 hover:text-white sm:ml-[8.5rem]"
-        >
+          className="ml-[5.75rem] mt-3 inline-flex w-fit items-center gap-1.5 rounded-full border border-white/15 px-3 py-1 text-xs font-medium text-slate-300 transition-colors hover:border-orange-500/60 hover:text-white sm:ml-[8.5rem]">
           <FontAwesomeIcon icon={faApple} className="h-3.5 w-3.5" />
           View on the App Store
         </a>
@@ -96,7 +95,9 @@ const ProjectRow: React.FC<Project & { index: number }> = ({
 const Projects: React.FC = () => (
   <div>
     <Reveal>
-      <p className="text-xs font-semibold uppercase tracking-[0.25em] text-orange-500">Recent Work</p>
+      <p className="text-xs font-semibold uppercase tracking-[0.25em] text-orange-500">
+        Recent Work
+      </p>
       <h2 className="mt-3 text-4xl font-extrabold uppercase leading-[0.95] tracking-tight sm:text-6xl">
         <span className="block text-white">Recent</span>
         <span className="block text-zinc-800">Projects</span>

@@ -17,8 +17,8 @@ const DriftAndDirectPrivacyPolicyPage: React.FC = () => {
 
       <H2>Information Collection and Use</H2>
       <P>
-        You can play the Application anonymously, or sign in with Google or Apple. Depending on
-        how you use the Application, the Service Provider collects:
+        You can play the Application anonymously, or sign in with Google or Apple. Depending on how
+        you use the Application, the Service Provider collects:
       </P>
       <UL
         items={[
@@ -43,8 +43,8 @@ const DriftAndDirectPrivacyPolicyPage: React.FC = () => {
       <H2>Your Rights</H2>
       <P>
         You may request access to, correction of, or deletion of your personal data held by the
-        Service Provider. To exercise these rights, or to withdraw consent where processing is
-        based on consent, contact the Service Provider at support.ishanvithanage@gmail.com.
+        Service Provider. To exercise these rights, or to withdraw consent where processing is based
+        on consent, contact the Service Provider at support.ishanvithanage@gmail.com.
       </P>
 
       <H2>Your California privacy rights (CCPA/CPRA)</H2>
@@ -83,8 +83,8 @@ const DriftAndDirectPrivacyPolicyPage: React.FC = () => {
       <P>
         The Service Provider or its third-party service providers (including Firebase, RevenueCat,
         and Google Mobile Ads) may transfer personal data to countries outside your country of
-        residence, including outside the European Economic Area (EEA). Where applicable law
-        requires safeguards for international transfers, the Service Provider will use appropriate
+        residence, including outside the European Economic Area (EEA). Where applicable law requires
+        safeguards for international transfers, the Service Provider will use appropriate
         mechanisms.
       </P>
       <UL
@@ -143,17 +143,17 @@ const DriftAndDirectPrivacyPolicyPage: React.FC = () => {
       <P>
         The Application is not directed at children under 13 (or the equivalent minimum age under
         applicable local law), and the Service Provider does not knowingly collect personal
-        information from children. If you believe a child has provided personal information
-        through the Application, please contact the Service Provider at
-        support.ishanvithanage@gmail.com so that it can be removed. If you are under the applicable
-        age, your parent or guardian must provide consent on your behalf where permitted by law.
+        information from children. If you believe a child has provided personal information through
+        the Application, please contact the Service Provider at support.ishanvithanage@gmail.com so
+        that it can be removed. If you are under the applicable age, your parent or guardian must
+        provide consent on your behalf where permitted by law.
       </P>
 
       <H2>Security</H2>
       <P>
-        The Service Provider is concerned about safeguarding the confidentiality of your
-        information and relies on Firebase's security infrastructure (including Firestore Security
-        Rules restricting access to your own data) alongside its own procedural safeguards.
+        The Service Provider is concerned about safeguarding the confidentiality of your information
+        and relies on Firebase's security infrastructure (including Firestore Security Rules
+        restricting access to your own data) alongside its own procedural safeguards.
       </P>
 
       <H2>Data Breach Notification</H2>
@@ -165,24 +165,24 @@ const DriftAndDirectPrivacyPolicyPage: React.FC = () => {
 
       <H2>Changes</H2>
       <P>
-        The Service Provider may update this Privacy Policy from time to time. The Service
-        Provider will notify you of material changes by posting the updated Privacy Policy with an
-        effective date. Where required by law, the Service Provider will seek your consent to
-        material changes before they take effect.
+        The Service Provider may update this Privacy Policy from time to time. The Service Provider
+        will notify you of material changes by posting the updated Privacy Policy with an effective
+        date. Where required by law, the Service Provider will seek your consent to material changes
+        before they take effect.
       </P>
 
       <H2>Your Consent</H2>
       <P>
-        Where processing is based on consent, you provide that consent by affirmatively opting in
-        to the relevant feature or action (for example, signing in with Google/Apple, uploading a
-        profile photo, or making a purchase). You may withdraw consent at any time without
-        affecting processing carried out before withdrawal.
+        Where processing is based on consent, you provide that consent by affirmatively opting in to
+        the relevant feature or action (for example, signing in with Google/Apple, uploading a
+        profile photo, or making a purchase). You may withdraw consent at any time without affecting
+        processing carried out before withdrawal.
       </P>
 
       <H2>Contact Us</H2>
       <P>
-        If you have any questions regarding privacy while using the Application, please contact
-        the Service Provider via email at support.ishanvithanage@gmail.com.
+        If you have any questions regarding privacy while using the Application, please contact the
+        Service Provider via email at support.ishanvithanage@gmail.com.
       </P>
     </LegalPageLayout>
   );

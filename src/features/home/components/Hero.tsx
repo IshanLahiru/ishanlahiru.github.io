@@ -6,8 +6,18 @@ import TechWatermark from './TechWatermark';
 import DecryptedText from './DecryptedText';
 import { stats } from '../data';
 
-const stackIcons = ['/tools/flutter.svg', '/tools/typescript.svg', '/tools/firebase.svg', '/tools/nestjs.svg'];
-const systemIcons = ['/tools/supabase.svg', '/tools/cloudflare.svg', '/tools/figma.svg', '/tools/rive.svg'];
+const stackIcons = [
+  '/tools/flutter.svg',
+  '/tools/typescript.svg',
+  '/tools/firebase.svg',
+  '/tools/nestjs.svg'
+];
+const systemIcons = [
+  '/tools/supabase.svg',
+  '/tools/cloudflare.svg',
+  '/tools/figma.svg',
+  '/tools/rive.svg'
+];
 
 const Hero: React.FC = () => (
   <div>
@@ -32,8 +42,7 @@ const Hero: React.FC = () => (
           <Link
             to="/projects/omi-clash"
             state={{ from: 'portfolio' }}
-            className="group/omi relative -mt-1 inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 py-1 pl-1 pr-2.5 align-middle font-semibold text-white transition-all duration-200 hover:-translate-y-0.5 hover:border-lime-300/50 hover:bg-white/10"
-          >
+            className="group/omi relative -mt-1 inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 py-1 pl-1 pr-2.5 align-middle font-semibold text-white transition-all duration-200 hover:-translate-y-0.5 hover:border-lime-300/50 hover:bg-white/10">
             <img
               src="/projects/omi-clash/icon.png"
               alt="Omi Clash icon"
@@ -56,8 +65,7 @@ const Hero: React.FC = () => (
 
       <Link
         to="/#contact"
-        className="group relative mt-6 inline-flex w-fit items-center gap-2 overflow-hidden rounded-full border border-lime-300/30 bg-gradient-to-r from-lime-300/10 via-orange-500/10 to-lime-300/10 px-4 py-2 text-xs font-semibold uppercase tracking-widest text-lime-300 transition-all duration-300 hover:-translate-y-0.5 hover:border-lime-300/60 hover:shadow-[0_0_24px_-4px_rgba(163,230,53,0.6)] active:scale-95"
-      >
+        className="group relative mt-6 inline-flex w-fit items-center gap-2 overflow-hidden rounded-full border border-lime-300/30 bg-gradient-to-r from-lime-300/10 via-orange-500/10 to-lime-300/10 px-4 py-2 text-xs font-semibold uppercase tracking-widest text-lime-300 transition-all duration-300 hover:-translate-y-0.5 hover:border-lime-300/60 hover:shadow-[0_0_24px_-4px_rgba(163,230,53,0.6)] active:scale-95">
         <span
           aria-hidden
           className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 ease-out group-hover:translate-x-full"
@@ -67,7 +75,7 @@ const Hero: React.FC = () => (
           <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-lime-300" />
         </span>
         Open to Work
-        <ArrowUpRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+        <ArrowUpRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
       </Link>
     </Reveal>
 
@@ -76,7 +84,9 @@ const Hero: React.FC = () => (
         {stats.map((stat) => (
           <div key={stat.label}>
             <p className="text-4xl font-extrabold text-white sm:text-5xl">{stat.value}</p>
-            <p className="mt-1 max-w-[9rem] text-xs uppercase leading-snug text-slate-500">{stat.label}</p>
+            <p className="mt-1 max-w-[9rem] text-xs uppercase leading-snug text-slate-500">
+              {stat.label}
+            </p>
           </div>
         ))}
       </div>
@@ -84,8 +94,7 @@ const Hero: React.FC = () => (
       <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
         <a
           href="/#tools"
-          className="group relative flex min-h-[9rem] flex-col justify-between overflow-hidden rounded-2xl bg-orange-600 p-5 text-black shadow-lg shadow-orange-950/0 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-orange-950/40 active:scale-[0.98]"
-        >
+          className="group relative flex min-h-[9rem] flex-col justify-between overflow-hidden rounded-2xl bg-orange-600 p-5 text-black shadow-lg shadow-orange-950/0 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-orange-950/40 active:scale-[0.98]">
           <TechWatermark icons={stackIcons} />
           <Layers className="relative h-6 w-6 text-black transition-transform duration-300 group-hover:-rotate-6 group-hover:scale-110" />
           <span className="relative text-lg font-extrabold uppercase leading-tight">
@@ -95,8 +104,7 @@ const Hero: React.FC = () => (
         </a>
         <a
           href="/#experience"
-          className="group relative flex min-h-[9rem] flex-col justify-between overflow-hidden rounded-2xl bg-lime-300 p-5 text-black shadow-lg shadow-lime-950/0 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-lime-950/30 active:scale-[0.98]"
-        >
+          className="group relative flex min-h-[9rem] flex-col justify-between overflow-hidden rounded-2xl bg-lime-300 p-5 text-black shadow-lg shadow-lime-950/0 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-lime-950/30 active:scale-[0.98]">
           <TechWatermark icons={systemIcons} />
           <Wrench className="relative h-6 w-6 text-black transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110" />
           <span className="relative text-lg font-extrabold uppercase leading-tight">

@@ -7,8 +7,7 @@ const OmiClashTermsPage: React.FC = () => {
       title="Omi Clash Terms & Conditions"
       effectiveDate="2026-07-29"
       backTo="/projects/omi-clash"
-      backLabel="Back to Omi Clash"
-    >
+      backLabel="Back to Omi Clash">
       <P>
         These terms and conditions apply to the Omi Clash app for mobile devices, together with any
         related services operated by Ishan Lahiru Sampath Kekulandala Vithanage (collectively, the
@@ -72,11 +71,13 @@ const OmiClashTermsPage: React.FC = () => {
         point of sale within the Application.
       </P>
       <P>
-        <strong>Token cards, and every token won or lost at the table, have no real-world monetary
-        value.</strong> They cannot be redeemed, exchanged, transferred for value, or cashed out for
-        real money, cryptocurrency, or any other item of value, whether from the Service Provider or
-        from another player, and exist solely for use within the Application's games. Winning or
-        losing tokens in a match has no effect outside the Application.
+        <strong>
+          Token cards, and every token won or lost at the table, have no real-world monetary value.
+        </strong>{' '}
+        They cannot be redeemed, exchanged, transferred for value, or cashed out for real money,
+        cryptocurrency, or any other item of value, whether from the Service Provider or from
+        another player, and exist solely for use within the Application's games. Winning or losing
+        tokens in a match has no effect outside the Application.
       </P>
       <UL
         items={[

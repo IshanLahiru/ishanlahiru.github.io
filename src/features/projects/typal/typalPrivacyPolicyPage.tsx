@@ -12,8 +12,7 @@ const TypalPrivacyPolicyPage: React.FC = () => {
       title="TyPâl Privacy Policy"
       effectiveDate="2026-09-27"
       backTo="/projects/typal"
-      backLabel="Back to TyPâl"
-    >
+      backLabel="Back to TyPâl">
       <P>
         This privacy policy applies to the TyPâl app and keyboard for iPhone (the "Application"),
         operated by Kekulandala Vithanage Ishan Lahiru Sampath (the "Service Provider"). TyPâl has

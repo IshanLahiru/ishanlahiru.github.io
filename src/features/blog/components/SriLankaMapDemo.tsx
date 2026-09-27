@@ -40,7 +40,8 @@ const SriLankaMapDemo: React.FC = () => {
         {active ? (
           <>
             <p className="text-sm font-bold text-white">{active.name}</p>
-            <p className={`mt-1 text-sm ${active.party === 'Party A' ? 'text-orange-400' : 'text-lime-300'}`}>
+            <p
+              className={`mt-1 text-sm ${active.party === 'Party A' ? 'text-orange-400' : 'text-lime-300'}`}>
               {active.party} &middot; {active.share}%
             </p>
           </>

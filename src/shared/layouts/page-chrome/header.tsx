@@ -42,13 +42,19 @@ const NavigationBar: React.FC = () => {
             className="min-h-[44px] content-center rounded-full bg-np-accent px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-np-accent/90 dark:bg-np-accent-night dark:hover:bg-np-accent-night/90">
             Resume
           </a>
-          <ToolTipWrapper tooltipText={isDarkMode ? 'Toggle Light' : 'Toggle Dark'} direction="bottom">
+          <ToolTipWrapper
+            tooltipText={isDarkMode ? 'Toggle Light' : 'Toggle Dark'}
+            direction="bottom">
             <button
               type="button"
               onClick={toggleTheme}
               aria-label={isDarkMode ? 'Toggle light mode' : 'Toggle dark mode'}
               className="flex h-9 w-9 items-center justify-center rounded-full text-np-ink transition-colors hover:bg-np-100 dark:text-np-ink-night dark:hover:bg-np-700/40">
-              {isDarkMode ? <Moon className="h-4 w-4" strokeWidth={1.5} /> : <Sun className="h-4 w-4" strokeWidth={1.5} />}
+              {isDarkMode ? (
+                <Moon className="h-4 w-4" strokeWidth={1.5} />
+              ) : (
+                <Sun className="h-4 w-4" strokeWidth={1.5} />
+              )}
             </button>
           </ToolTipWrapper>
         </nav>

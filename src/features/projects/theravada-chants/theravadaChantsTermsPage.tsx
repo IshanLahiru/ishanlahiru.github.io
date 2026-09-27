@@ -7,8 +7,7 @@ const TheravadaChantsTermsPage: React.FC = () => {
       title="Theravāda Chants Terms & Conditions"
       effectiveDate="2026-08-30"
       backTo="/projects/theravada-chants"
-      backLabel="Back to Theravāda Chants"
-    >
+      backLabel="Back to Theravāda Chants">
       <P>
         These terms and conditions apply to the Theravāda Chants app for mobile devices, together
         with any related services operated by Ishan Lahiru Sampath Kekulandala Vithanage

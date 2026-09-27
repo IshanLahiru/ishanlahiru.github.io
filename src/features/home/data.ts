@@ -5,7 +5,14 @@ export const stats = [
   { value: '21', label: 'Technologies in My Stack' }
 ];
 
-export const techPills = ['Flutter', 'TypeScript', 'NestJS', 'Firebase', 'RAG / Vector Search', 'UI/UX'];
+export const techPills = [
+  'Flutter',
+  'TypeScript',
+  'NestJS',
+  'Firebase',
+  'RAG / Vector Search',
+  'UI/UX'
+];
 
 export type ProjectStatus = 'live' | 'testing' | 'development';
 
@@ -63,7 +70,8 @@ export const projects: Project[] = [
       { label: 'Testing on App Store', status: 'testing' },
       { label: 'Testing on Google Play', status: 'testing' }
     ],
-    description: 'A swiping-mechanism based mobile focus game, designed to help players relax and stay in the moment.',
+    description:
+      'A swiping-mechanism based mobile focus game, designed to help players relax and stay in the moment.',
     techStack: ['Flutter', 'Bloc', 'Firebase Auth', 'Game Center'],
     internalLink: '/projects/drift-and-direct',
     logo: '/projects/drift-and-direct/icon.png'
@@ -83,7 +91,8 @@ export const projects: Project[] = [
     title: 'Election Results Dashboard',
     category: 'Web App',
     badges: [{ label: 'Live', status: 'live' }],
-    description: 'A dynamic dashboard displaying election results using interactive SVG maps and detailed statistics.',
+    description:
+      'A dynamic dashboard displaying election results using interactive SVG maps and detailed statistics.',
     techStack: ['React', 'JavaScript', 'SVG'],
     link: 'https://ishanlahiru.github.io/election-map-site/'
   },
@@ -138,7 +147,8 @@ export const experience = [
     title: 'Teacher',
     org: 'Institute of Computer Engineering Technology (iCET)',
     dates: 'Jan 2023 – Oct 2023',
-    summary: 'Delivered hands-on software development training and designed the institute\'s marketing materials.'
+    summary:
+      "Delivered hands-on software development training and designed the institute's marketing materials."
   },
   {
     title: 'Student',
@@ -152,22 +162,50 @@ export type Tool = { name: string; note: string; logo: string };
 
 export const tools: Tool[] = [
   { name: 'Flutter', note: 'Cross-platform apps', logo: 'https://svgl.app/library/flutter.svg' },
-  { name: 'TypeScript', note: 'Type-safe systems', logo: 'https://svgl.app/library/typescript.svg' },
+  {
+    name: 'TypeScript',
+    note: 'Type-safe systems',
+    logo: 'https://svgl.app/library/typescript.svg'
+  },
   { name: 'NestJS', note: 'Backend APIs', logo: 'https://svgl.app/library/nestjs.svg' },
-  { name: 'Firebase', note: 'Auth, data & functions', logo: 'https://svgl.app/library/firebase.svg' },
+  {
+    name: 'Firebase',
+    note: 'Auth, data & functions',
+    logo: 'https://svgl.app/library/firebase.svg'
+  },
   { name: 'Supabase', note: 'Postgres backends', logo: 'https://svgl.app/library/supabase.svg' },
   { name: 'Figma', note: 'Interface design', logo: 'https://svgl.app/library/figma.svg' },
   { name: 'Rive', note: 'Interactive animation', logo: '/tools/rive.svg' },
   { name: 'FreeCAD', note: '3D & parametric design', logo: '/tools/freecad.svg' },
   { name: 'Cloudflare', note: 'Edge & DNS', logo: 'https://svgl.app/library/cloudflare.svg' },
-  { name: 'Claude', note: 'AI pair programming', logo: 'https://svgl.app/library/claude-ai-icon.svg' },
+  {
+    name: 'Claude',
+    note: 'AI pair programming',
+    logo: 'https://svgl.app/library/claude-ai-icon.svg'
+  },
   { name: 'Gemini', note: 'AI research & ideation', logo: '/tools/gemini.svg' },
-  { name: 'PostgreSQL', note: 'Relational databases', logo: 'https://svgl.app/library/postgresql.svg' },
+  {
+    name: 'PostgreSQL',
+    note: 'Relational databases',
+    logo: 'https://svgl.app/library/postgresql.svg'
+  },
   { name: 'SQLite', note: 'Embedded databases', logo: 'https://svgl.app/library/sqlite.svg' },
   { name: 'Redis', note: 'Caching & pub/sub', logo: 'https://svgl.app/library/redis.svg' },
-  { name: 'Affinity Designer', note: 'Vector graphics', logo: 'https://svgl.app/library/affinity_designer.svg' },
-  { name: 'n8n', note: 'Workflow automation', logo: 'https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/n8n.svg' },
-  { name: 'OpenRouter', note: 'LLM routing', logo: 'https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/openrouter.svg' },
+  {
+    name: 'Affinity Designer',
+    note: 'Vector graphics',
+    logo: 'https://svgl.app/library/affinity_designer.svg'
+  },
+  {
+    name: 'n8n',
+    note: 'Workflow automation',
+    logo: 'https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/n8n.svg'
+  },
+  {
+    name: 'OpenRouter',
+    note: 'LLM routing',
+    logo: 'https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/openrouter.svg'
+  },
   { name: 'GitHub', note: 'Version control', logo: 'https://svgl.app/library/github_dark.svg' },
   { name: 'PyCharm', note: 'Python IDE', logo: 'https://svgl.app/library/pycharm.svg' },
   { name: 'VS Code', note: 'Code editor', logo: 'https://svgl.app/library/vscode.svg' },
@@ -179,8 +217,16 @@ export type Interest = { name: string; note: string; logo: string };
 export const interests: Interest[] = [
   { name: 'Robotics', note: 'Building & automation', logo: '/tools/arduino.svg' },
   { name: 'ROS', note: 'Robot Operating System', logo: '/tools/ros.svg' },
-  { name: 'Artificial Intelligence', note: 'Exploring ML & agents', logo: 'https://svgl.app/library/hugging_face.svg' },
-  { name: 'RAG', note: 'Retrieval-augmented generation', logo: 'https://svgl.app/library/langchain-logo.svg' },
+  {
+    name: 'Artificial Intelligence',
+    note: 'Exploring ML & agents',
+    logo: 'https://svgl.app/library/hugging_face.svg'
+  },
+  {
+    name: 'RAG',
+    note: 'Retrieval-augmented generation',
+    logo: 'https://svgl.app/library/langchain-logo.svg'
+  },
   { name: '3D Modeling', note: 'Designing in FreeCAD', logo: '/tools/freecad.svg' }
 ];
 
@@ -204,7 +250,8 @@ export const articles = [
   {
     id: 2,
     title: 'SVG Map Manipulation with React',
-    description: 'How the Election Results Dashboard renders an interactive SVG map — with a live demo.',
+    description:
+      'How the Election Results Dashboard renders an interactive SVG map — with a live demo.',
     date: 'December 15, 2024',
     readTime: '5 min read',
     internalLink: '/blog/svg-map-manipulation-with-react'

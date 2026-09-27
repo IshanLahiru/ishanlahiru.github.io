@@ -6,11 +6,26 @@ import { ArrowLeft } from 'lucide-react';
 import Seo from '@core/seo/Seo';
 
 const screenshots = [
-  { src: '/projects/omi-clash/screenshots/01-gameplay', alt: 'Outsmart your rivals — real-time multiplayer card battles' },
-  { src: '/projects/omi-clash/screenshots/03-home', alt: 'Jump in, anytime — one tap into the action' },
-  { src: '/projects/omi-clash/screenshots/04-multiplayer', alt: 'Squad up, clash — create a room and invite friends' },
-  { src: '/projects/omi-clash/screenshots/05-practice', alt: 'Level up your skills — practice offline, earn XP' },
-  { src: '/projects/omi-clash/screenshots/06-profile', alt: 'Track your glory — stats, achievements, bragging rights' },
+  {
+    src: '/projects/omi-clash/screenshots/01-gameplay',
+    alt: 'Outsmart your rivals — real-time multiplayer card battles'
+  },
+  {
+    src: '/projects/omi-clash/screenshots/03-home',
+    alt: 'Jump in, anytime — one tap into the action'
+  },
+  {
+    src: '/projects/omi-clash/screenshots/04-multiplayer',
+    alt: 'Squad up, clash — create a room and invite friends'
+  },
+  {
+    src: '/projects/omi-clash/screenshots/05-practice',
+    alt: 'Level up your skills — practice offline, earn XP'
+  },
+  {
+    src: '/projects/omi-clash/screenshots/06-profile',
+    alt: 'Track your glory — stats, achievements, bragging rights'
+  },
   { src: '/projects/omi-clash/screenshots/02-brand', alt: 'Omi Clash brand splash screen' }
 ];
 
@@ -38,13 +53,19 @@ const buttonBase =
   'inline-flex items-center gap-2 rounded-lg font-extrabold uppercase tracking-wide transition-all duration-100 active:translate-y-1';
 
 const WaveTop: React.FC<{ color: string }> = ({ color }) => (
-  <svg viewBox="0 0 1440 60" preserveAspectRatio="none" className="absolute -top-px left-0 h-8 w-full sm:h-14">
+  <svg
+    viewBox="0 0 1440 60"
+    preserveAspectRatio="none"
+    className="absolute -top-px left-0 h-8 w-full sm:h-14">
     <path d="M0,0 L0,22 C360,58 1080,-16 1440,22 L1440,0 Z" fill={color} />
   </svg>
 );
 
 const WaveBottom: React.FC<{ color: string }> = ({ color }) => (
-  <svg viewBox="0 0 1440 60" preserveAspectRatio="none" className="absolute -bottom-px left-0 h-8 w-full sm:h-14">
+  <svg
+    viewBox="0 0 1440 60"
+    preserveAspectRatio="none"
+    className="absolute -bottom-px left-0 h-8 w-full sm:h-14">
     <path d="M0,60 L0,38 C360,2 1080,76 1440,38 L1440,60 Z" fill={color} />
   </svg>
 );
@@ -66,8 +87,7 @@ const OmiClashPage: React.FC = () => {
           {cameFromPortfolio ? (
             <Link
               to="/"
-              className="flex items-center gap-2 text-sm font-semibold text-slate-500 transition-colors hover:text-white"
-            >
+              className="flex items-center gap-2 text-sm font-semibold text-slate-500 transition-colors hover:text-white">
               <ArrowLeft className="h-4 w-4" />
               <span className="hidden sm:inline">Portfolio</span>
             </Link>
@@ -76,8 +96,7 @@ const OmiClashPage: React.FC = () => {
           )}
           <Link
             to="/projects/omi-clash"
-            className="group flex items-center gap-2 text-sm font-extrabold uppercase tracking-tight text-white"
-          >
+            className="group flex items-center gap-2 text-sm font-extrabold uppercase tracking-tight text-white">
             <img
               src="/projects/omi-clash/icon.png"
               alt=""
@@ -94,7 +113,11 @@ const OmiClashPage: React.FC = () => {
         <div className="mx-auto max-w-2xl px-4 py-16 text-center sm:px-6 sm:py-24 lg:px-8">
           <picture className="mx-auto block w-48 animate-bob sm:w-64">
             <source srcSet="/projects/omi-clash/hero-art.webp" type="image/webp" />
-            <img src="/projects/omi-clash/hero-art.png" alt="Omi Clash" className="w-full drop-shadow-2xl" />
+            <img
+              src="/projects/omi-clash/hero-art.png"
+              alt="Omi Clash"
+              className="w-full drop-shadow-2xl"
+            />
           </picture>
 
           <span className="mt-2 inline-flex -rotate-2 items-center gap-1.5 rounded border border-red-500 bg-red-600 px-3 py-1 text-xs font-extrabold uppercase tracking-widest text-white transition-transform duration-200 hover:rotate-0">
@@ -123,8 +146,7 @@ const OmiClashPage: React.FC = () => {
               href={APP_STORE_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className={`${buttonBase} border-b-4 border-slate-500 bg-white px-5 py-3 text-black hover:-translate-y-0.5 hover:brightness-95 active:border-b-0 active:translate-y-1`}
-            >
+              className={`${buttonBase} border-b-4 border-slate-500 bg-white px-5 py-3 text-black hover:-translate-y-0.5 hover:brightness-95 active:translate-y-1 active:border-b-0`}>
               <FontAwesomeIcon icon={faApple} className="h-7 w-7" />
               <span className="text-left normal-case leading-tight">
                 <span className="block text-[10px] font-medium">Download on the</span>
@@ -145,14 +167,17 @@ const OmiClashPage: React.FC = () => {
       {/* Screenshots */}
       <section id="screenshots">
         <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
-          <p className="text-xs font-extrabold uppercase tracking-[0.25em] text-red-500">See It in Action</p>
-          <h2 className="mt-3 text-3xl font-extrabold uppercase tracking-tight text-white sm:text-4xl">Screenshots</h2>
+          <p className="text-xs font-extrabold uppercase tracking-[0.25em] text-red-500">
+            See It in Action
+          </p>
+          <h2 className="mt-3 text-3xl font-extrabold uppercase tracking-tight text-white sm:text-4xl">
+            Screenshots
+          </h2>
           <div className="mt-10 flex gap-5 overflow-x-auto px-2 pb-4">
             {screenshots.map((shot, i) => (
               <picture
                 key={shot.src}
-                className={`flex-none transition-transform duration-300 hover:z-10 hover:!rotate-0 hover:scale-105 ${i % 2 === 0 ? 'rotate-2' : '-rotate-2'}`}
-              >
+                className={`flex-none transition-transform duration-300 hover:z-10 hover:!rotate-0 hover:scale-105 ${i % 2 === 0 ? 'rotate-2' : '-rotate-2'}`}>
                 <source srcSet={`${shot.src}.webp`} type="image/webp" />
                 <img
                   src={`${shot.src}.png`}
@@ -170,7 +195,9 @@ const OmiClashPage: React.FC = () => {
       <section id="leagues" className="relative bg-[#1a0a0d] py-6">
         <WaveTop color="#000000" />
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14 lg:px-8">
-          <p className="text-xs font-extrabold uppercase tracking-[0.25em] text-amber-400">Rank Up</p>
+          <p className="text-xs font-extrabold uppercase tracking-[0.25em] text-amber-400">
+            Rank Up
+          </p>
           <h2 className="mt-3 text-3xl font-extrabold uppercase tracking-tight text-white sm:text-4xl">
             Climb the Leagues
           </h2>
@@ -183,8 +210,7 @@ const OmiClashPage: React.FC = () => {
               <div key={league} className="group flex flex-col items-center gap-2">
                 <picture
                   className="transition-transform duration-200 ease-out hover:-translate-y-2 hover:rotate-6 hover:scale-110"
-                  style={{ animation: `bob 2.4s ease-in-out ${i * 0.15}s infinite` }}
-                >
+                  style={{ animation: `bob 2.4s ease-in-out ${i * 0.15}s infinite` }}>
                   <source srcSet={`/projects/omi-clash/leagues/${league}.webp`} type="image/webp" />
                   <img
                     src={`/projects/omi-clash/leagues/${league}.png`}
@@ -201,13 +227,14 @@ const OmiClashPage: React.FC = () => {
           </div>
 
           <div className="mt-14 flex flex-col items-center gap-4 border-t border-white/10 pt-10 text-center">
-            <p className="text-2xl font-extrabold uppercase tracking-tight text-white">Ready to Clash?</p>
+            <p className="text-2xl font-extrabold uppercase tracking-tight text-white">
+              Ready to Clash?
+            </p>
             <a
               href={APP_STORE_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className={`${buttonBase} border-b-4 border-amber-600 bg-amber-400 px-5 py-3 text-black hover:-translate-y-0.5 hover:brightness-105 active:border-b-0 active:translate-y-1`}
-            >
+              className={`${buttonBase} border-b-4 border-amber-600 bg-amber-400 px-5 py-3 text-black hover:-translate-y-0.5 hover:brightness-105 active:translate-y-1 active:border-b-0`}>
               <FontAwesomeIcon icon={faApple} className="h-5 w-5" />
               Download on the App Store
             </a>
@@ -220,28 +247,40 @@ const OmiClashPage: React.FC = () => {
       <section className="border-b border-white/10">
         <div className="mx-auto grid max-w-6xl grid-cols-1 gap-10 px-4 py-16 sm:px-6 sm:py-20 lg:grid-cols-2 lg:px-8">
           <div>
-            <p className="text-xs font-extrabold uppercase tracking-[0.25em] text-red-500">The Rules</p>
+            <p className="text-xs font-extrabold uppercase tracking-[0.25em] text-red-500">
+              The Rules
+            </p>
             <h2 className="mt-3 text-2xl font-extrabold uppercase tracking-tight text-white sm:text-3xl">
               Omi, the Way It's Played at Home
             </h2>
             <p className="mt-4 max-w-lg text-sm leading-relaxed text-slate-400">
               Omi Clash brings the trick-taking card game played at Sri Lankan family gatherings
-              online — teams of two, trump calls, Court calls, and the all-or-nothing Kapoothi
-              call, all wrapped in a fast, modern app.
+              online — teams of two, trump calls, Court calls, and the all-or-nothing Kapoothi call,
+              all wrapped in a fast, modern app.
             </p>
           </div>
           <div>
-            <p className="text-xs font-extrabold uppercase tracking-[0.25em] text-amber-400">Built With</p>
+            <p className="text-xs font-extrabold uppercase tracking-[0.25em] text-amber-400">
+              Built With
+            </p>
             <h2 className="mt-3 text-2xl font-extrabold uppercase tracking-tight text-white sm:text-3xl">
               Tech Stack
             </h2>
             <div className="mt-5 grid grid-cols-3 gap-4 sm:grid-cols-6">
               {techStack.map((tech) => (
-                <div key={tech.name} className="group relative flex flex-col items-center gap-2 text-center">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-[22%] bg-white p-2.5 shadow-sm transition-transform duration-200 hover:scale-110 hover:rotate-6">
-                    <img src={tech.logo} alt={`${tech.name} logo`} className="h-full w-full object-contain" />
+                <div
+                  key={tech.name}
+                  className="group relative flex flex-col items-center gap-2 text-center">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-[22%] bg-white p-2.5 shadow-sm transition-transform duration-200 hover:rotate-6 hover:scale-110">
+                    <img
+                      src={tech.logo}
+                      alt={`${tech.name} logo`}
+                      className="h-full w-full object-contain"
+                    />
                   </div>
-                  <span className="text-[11px] font-bold uppercase tracking-wide text-slate-400">{tech.name}</span>
+                  <span className="text-[11px] font-bold uppercase tracking-wide text-slate-400">
+                    {tech.name}
+                  </span>
                   <span className="pointer-events-none absolute bottom-full left-1/2 mb-2 w-max max-w-[9rem] -translate-x-1/2 rounded-lg bg-white px-2.5 py-1.5 text-[10px] font-medium normal-case leading-snug text-black opacity-0 shadow-lg transition-opacity duration-150 group-hover:opacity-100">
                     {tech.name} is a trademark of its respective owner.
                   </span>
@@ -250,8 +289,8 @@ const OmiClashPage: React.FC = () => {
             </div>
             <p className="mt-6 text-[11px] leading-relaxed text-slate-600">
               All logos and trademarks shown are the property of their respective owners and are
-              used here solely to identify the technologies this app is built with. No
-              endorsement or affiliation is implied.
+              used here solely to identify the technologies this app is built with. No endorsement
+              or affiliation is implied.
             </p>
           </div>
         </div>
@@ -269,8 +308,7 @@ const OmiClashPage: React.FC = () => {
           {cameFromPortfolio && (
             <Link
               to="/"
-              className="rounded-lg border border-white/10 px-4 py-2 text-xs font-extrabold text-white transition-colors hover:bg-white/10"
-            >
+              className="rounded-lg border border-white/10 px-4 py-2 text-xs font-extrabold text-white transition-colors hover:bg-white/10">
               Back to Portfolio
             </Link>
           )}

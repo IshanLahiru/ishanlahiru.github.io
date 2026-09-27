@@ -27,7 +27,12 @@ const locate = (pathInSrc) => {
   return { layer, unit: parts.slice(0, depth).join('/') };
 };
 
-const allowed = { app: ['app', 'core', 'shared', 'features'], features: ['core', 'shared'], shared: ['core', 'shared'], core: ['core'] };
+const allowed = {
+  app: ['app', 'core', 'shared', 'features'],
+  features: ['core', 'shared'],
+  shared: ['core', 'shared'],
+  core: ['core']
+};
 
 const violations = [];
 for (const file of files(src)) {

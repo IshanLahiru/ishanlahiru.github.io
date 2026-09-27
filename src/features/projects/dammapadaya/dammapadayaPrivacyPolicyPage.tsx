@@ -7,8 +7,7 @@ const DammapadayaPrivacyPolicyPage: React.FC = () => {
       title="Dammapadaya Privacy Policy"
       effectiveDate="2026-09-08"
       backTo="/projects/dammapadaya"
-      backLabel="Back to Dammapadaya"
-    >
+      backLabel="Back to Dammapadaya">
       <P>
         This privacy policy applies to the Dammapadaya app for mobile devices, together with any
         related services operated by Ishan Lahiru Sampath Kekulandala Vithanage (collectively, the
@@ -17,9 +16,9 @@ const DammapadayaPrivacyPolicyPage: React.FC = () => {
       </P>
       <P>
         Dammapadaya does not require an account, does not show advertising, does not include chat or
-        any other user-generated content, does not offer any purchases, and does not use analytics or
-        crash-reporting tools. This policy describes the small amount of information the Application
-        does process.
+        any other user-generated content, does not offer any purchases, and does not use analytics
+        or crash-reporting tools. This policy describes the small amount of information the
+        Application does process.
       </P>
 
       <H2>Information the Application Does Not Collect</H2>
@@ -37,12 +36,12 @@ const DammapadayaPrivacyPolicyPage: React.FC = () => {
 
       <H2>Application Content</H2>
       <P>
-        The Dhammapada text — its Pāli verses, English renderings, and chapter groupings — is fetched
-        from the Service Provider's Cloud Firestore database (part of Google's Firebase platform) and
-        cached on your device for offline reading, using Firestore's own built-in offline cache. This
-        is one-directional, public reference content — reading it does not transmit any information
-        about you. If Firestore is unreachable, the Application falls back to the same text bundled
-        inside the app itself, so it always has something to show.
+        The Dhammapada text — its Pāli verses, English renderings, and chapter groupings — is
+        fetched from the Service Provider's Cloud Firestore database (part of Google's Firebase
+        platform) and cached on your device for offline reading, using Firestore's own built-in
+        offline cache. This is one-directional, public reference content — reading it does not
+        transmit any information about you. If Firestore is unreachable, the Application falls back
+        to the same text bundled inside the app itself, so it always has something to show.
       </P>
       <P>
         A "save" toggle in the Application lets you mark a verse while you're reading; it currently
@@ -59,16 +58,15 @@ const DammapadayaPrivacyPolicyPage: React.FC = () => {
 
       <H2>Third-Party Services</H2>
       <P>
-        The Application integrates with the following third-party services in order to function, each
-        governed by its own privacy policy:
+        The Application integrates with the following third-party services in order to function,
+        each governed by its own privacy policy:
       </P>
       <UL
         items={[
           <>
             <a
               href="https://firebase.google.com/support/privacy"
-              className="text-np-accent hover:underline dark:text-np-accent-night"
-            >
+              className="text-np-accent hover:underline dark:text-np-accent-night">
               Firebase
             </a>{' '}
             (Google) — Cloud Firestore, for the Dhammapada text described above
@@ -76,8 +74,7 @@ const DammapadayaPrivacyPolicyPage: React.FC = () => {
           <>
             <a
               href="https://policies.google.com/privacy"
-              className="text-np-accent hover:underline dark:text-np-accent-night"
-            >
+              className="text-np-accent hover:underline dark:text-np-accent-night">
               Google Fonts
             </a>{' '}
             — the Application may download typeface files from Google's font servers the first time
@@ -90,15 +87,15 @@ const DammapadayaPrivacyPolicyPage: React.FC = () => {
       <H2>International Data Transfers</H2>
       <P>
         The third-party services above may process data (such as the request needed to fetch verse
-        content or a font file) in countries outside your country of residence, including outside the
-        European Economic Area (EEA), under those providers' own safeguards.
+        content or a font file) in countries outside your country of residence, including outside
+        the European Economic Area (EEA), under those providers' own safeguards.
       </P>
 
       <H2>Data Retention and Deletion</H2>
       <P>
         Because the Application doesn't collect personal data of its own, there is nothing on the
-        Service Provider's side to retain or delete. Firestore's local offline cache and the in-memory
-        "save" toggle are removed the moment you uninstall the Application.
+        Service Provider's side to retain or delete. Firestore's local offline cache and the
+        in-memory "save" toggle are removed the moment you uninstall the Application.
       </P>
 
       <H2>Children</H2>

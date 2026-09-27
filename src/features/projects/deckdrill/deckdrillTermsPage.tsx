@@ -9,21 +9,21 @@ const DeckDrillTermsPage: React.FC = () => {
       backTo="/projects/deckdrill"
       backLabel="Back to DeckDrill">
       <P>
-        These terms and conditions apply to the DeckDrill app for mobile devices, together with
-        any related services operated by Kekulandala Vithanage Ishan Lahiru Sampath (collectively,
-        the "Application"). Kekulandala Vithanage Ishan Lahiru Sampath is hereby referred to as the
+        These terms and conditions apply to the DeckDrill app for mobile devices, together with any
+        related services operated by Kekulandala Vithanage Ishan Lahiru Sampath (collectively, the
+        "Application"). Kekulandala Vithanage Ishan Lahiru Sampath is hereby referred to as the
         "Service Provider".
       </P>
       <P>
-        By downloading or using the Application, you agree to these Terms and Conditions. You
-        should read them carefully before using the Application.
+        By downloading or using the Application, you agree to these Terms and Conditions. You should
+        read them carefully before using the Application.
       </P>
 
       <H2>Age Requirement</H2>
       <P>
-        Given its blackjack/gambling-adjacent training content, the Application is rated 18+ and
-        is not intended for use by anyone under the age of 18, or such higher minimum age as
-        required in your jurisdiction. If you are below the applicable minimum age, do not use the
+        Given its blackjack/gambling-adjacent training content, the Application is rated 18+ and is
+        not intended for use by anyone under the age of 18, or such higher minimum age as required
+        in your jurisdiction. If you are below the applicable minimum age, do not use the
         Application.
       </P>
 
@@ -31,38 +31,37 @@ const DeckDrillTermsPage: React.FC = () => {
       <P>
         Subject to your compliance with these Terms, the Service Provider grants you a limited,
         non-exclusive, non-transferable, revocable license to install and use the Application on a
-        mobile device for personal or internal business purposes. You may not reproduce,
-        distribute, modify, create derivative works from, reverse engineer, decompile, or
-        disassemble the Application, except as and only to the extent that such activity is
-        expressly permitted by applicable law.
+        mobile device for personal or internal business purposes. You may not reproduce, distribute,
+        modify, create derivative works from, reverse engineer, decompile, or disassemble the
+        Application, except as and only to the extent that such activity is expressly permitted by
+        applicable law.
       </P>
 
       <H2>Intellectual Property</H2>
       <P>
-        The Service Provider retains all intellectual property rights in the Application,
-        including its code, design, trademarks, service marks, trade names, logos, and branding
-        (the "IP"). Nothing in these Terms grants you any license or right to use the Service
-        Provider's trademarks, logos, or branding for any purpose. You agree not to remove, alter,
-        or obscure any copyright, trademark, or other proprietary notices displayed in or on the
-        Application.
+        The Service Provider retains all intellectual property rights in the Application, including
+        its code, design, trademarks, service marks, trade names, logos, and branding (the "IP").
+        Nothing in these Terms grants you any license or right to use the Service Provider's
+        trademarks, logos, or branding for any purpose. You agree not to remove, alter, or obscure
+        any copyright, trademark, or other proprietary notices displayed in or on the Application.
       </P>
 
       <H2>Termination</H2>
       <P>
         The Service Provider may suspend your access to the Application or services if you
-        materially breach these Terms. The Service Provider will provide you with written notice
-        of the breach and, where the breach is capable of cure, you will have 14 days from receipt
-        of notice to remedy the breach. If you fail to cure the breach within that period, the
-        Service Provider may terminate your access.
+        materially breach these Terms. The Service Provider will provide you with written notice of
+        the breach and, where the breach is capable of cure, you will have 14 days from receipt of
+        notice to remedy the breach. If you fail to cure the breach within that period, the Service
+        Provider may terminate your access.
       </P>
       <P>
-        The Service Provider may suspend or terminate your access immediately without notice if
-        you violate applicable law, infringe intellectual property rights, or engage in activity
-        that could cause harm to other users or the Service Provider.
+        The Service Provider may suspend or terminate your access immediately without notice if you
+        violate applicable law, infringe intellectual property rights, or engage in activity that
+        could cause harm to other users or the Service Provider.
       </P>
       <P>
-        Upon termination, your right to use the Application will end and you must delete all
-        copies from your devices.
+        Upon termination, your right to use the Application will end and you must delete all copies
+        from your devices.
       </P>
       <P>
         Unauthorized copying, modification of the Application, any part of the Application, or the
@@ -103,10 +102,10 @@ const DeckDrillTermsPage: React.FC = () => {
         depending on how the Application functions.
       </P>
       <P>
-        If you believe content violates these Terms, infringes your rights, or is unlawful, you
-        may report it to the Service Provider at support.ishanvithanage@gmail.com. The report
-        should include enough information for the Service Provider to identify the content,
-        evaluate the complaint, and contact you if follow-up is required.
+        If you believe content violates these Terms, infringes your rights, or is unlawful, you may
+        report it to the Service Provider at support.ishanvithanage@gmail.com. The report should
+        include enough information for the Service Provider to identify the content, evaluate the
+        complaint, and contact you if follow-up is required.
       </P>
       <P>
         Where the Application provides such features, you may also report content, block other
@@ -117,17 +116,17 @@ const DeckDrillTermsPage: React.FC = () => {
         The Service Provider may review reported content, request additional information where
         necessary, remove or restrict access to content, and take action against the responsible
         account where appropriate. Users affected by moderation decisions may contact the Service
-        Provider at support.ishanvithanage@gmail.com to request further review. The Service
-        Provider will respond to appeals within a reasonable period and provide the reasons for any
-        upheld moderation decision, subject to applicable law.
+        Provider at support.ishanvithanage@gmail.com to request further review. The Service Provider
+        will respond to appeals within a reasonable period and provide the reasons for any upheld
+        moderation decision, subject to applicable law.
       </P>
       <P>
         By submitting User-Generated Content you grant the Service Provider a non-exclusive,
         worldwide, royalty-free license to use, reproduce, distribute, prepare derivative works of,
         display and perform the content in connection with the Application and the Service
         Provider's business. This license does not grant the Service Provider the right to sell or
-        sublicense your content to third parties independently of the Application. You represent
-        and warrant that you own or control all rights in the content you post and that use of the
+        sublicense your content to third parties independently of the Application. You represent and
+        warrant that you own or control all rights in the content you post and that use of the
         content does not violate these Terms or applicable law.
       </P>
       <P>
@@ -138,25 +137,24 @@ const DeckDrillTermsPage: React.FC = () => {
       <P>
         The Service Provider is dedicated to ensuring that the Application is as beneficial and
         efficient as possible. As such, they reserve the right to modify the Application or charge
-        for their services at any time and for any reason. The Service Provider assures you that
-        any charges for the Application or its services will be clearly communicated to you.
+        for their services at any time and for any reason. The Service Provider assures you that any
+        charges for the Application or its services will be clearly communicated to you.
       </P>
       <P>
         The Application stores and processes personal data that you have provided to the Service
-        Provider in order to provide the Service. It is your responsibility to maintain the
-        security of your phone and access to the Application. The Service Provider strongly
-        advises against jailbreaking or rooting your phone, which involves removing software
-        restrictions and limitations imposed by the official operating system of your device. Such
-        actions could expose your phone to malware, viruses, malicious programs, compromise your
-        phone's security features, and may result in the Application not functioning correctly or
-        at all.
+        Provider in order to provide the Service. It is your responsibility to maintain the security
+        of your phone and access to the Application. The Service Provider strongly advises against
+        jailbreaking or rooting your phone, which involves removing software restrictions and
+        limitations imposed by the official operating system of your device. Such actions could
+        expose your phone to malware, viruses, malicious programs, compromise your phone's security
+        features, and may result in the Application not functioning correctly or at all.
       </P>
       <P>
         Please be aware that the Service Provider does not assume responsibility for certain
-        aspects. Some functions of the Application require an active internet connection, which
-        can be Wi-Fi or provided by your mobile network provider. The Service Provider cannot be
-        held responsible if the Application does not function at full capacity due to lack of
-        access to Wi-Fi or if you have exhausted your data allowance.
+        aspects. Some functions of the Application require an active internet connection, which can
+        be Wi-Fi or provided by your mobile network provider. The Service Provider cannot be held
+        responsible if the Application does not function at full capacity due to lack of access to
+        Wi-Fi or if you have exhausted your data allowance.
       </P>
       <P>
         If you are using the application outside of a Wi-Fi area, please be aware that your mobile
@@ -182,9 +180,9 @@ const DeckDrillTermsPage: React.FC = () => {
       <H2>Limitation of Liability</H2>
       <P>
         To the fullest extent permitted by law, the Service Provider shall not be liable for any
-        indirect, incidental, special, consequential, or punitive damages, including but not
-        limited to lost profits, data loss, or business interruption, even if advised of the
-        possibility of such damages.
+        indirect, incidental, special, consequential, or punitive damages, including but not limited
+        to lost profits, data loss, or business interruption, even if advised of the possibility of
+        such damages.
       </P>
       <P>However, the Service Provider retains full liability for:</P>
       <UL
@@ -195,27 +193,25 @@ const DeckDrillTermsPage: React.FC = () => {
         ]}
       />
       <P>
-        To the fullest extent permitted by law, the total liability of the Service Provider for
-        any claim shall not exceed the amount paid by you to the Service Provider for the
-        Application in the 12 months preceding the claim, or the minimum amount that must be paid
-        under applicable law, whichever is greater. If the Application is provided free of charge,
-        this means the Service Provider's liability is limited to the minimum amount permitted by
-        applicable law.
+        To the fullest extent permitted by law, the total liability of the Service Provider for any
+        claim shall not exceed the amount paid by you to the Service Provider for the Application in
+        the 12 months preceding the claim, or the minimum amount that must be paid under applicable
+        law, whichever is greater. If the Application is provided free of charge, this means the
+        Service Provider's liability is limited to the minimum amount permitted by applicable law.
       </P>
       <P>
         The Service Provider accepts no liability for any loss, direct or indirect, that you
-        experience as a result of relying entirely on third-party information provided through
-        this Application, or for inaccuracies in content provided by third parties.
+        experience as a result of relying entirely on third-party information provided through this
+        Application, or for inaccuracies in content provided by third parties.
       </P>
 
       <H2>Indemnification</H2>
       <P>
-        To the fullest extent permitted by law, you agree to indemnify and hold harmless the
-        Service Provider, its affiliates, officers, directors, employees and agents from and
-        against any claims, liabilities, damages, losses and expenses, including reasonable legal
-        fees, arising out of or directly related to your breach of these Terms or your intentional
-        misuse of the Application, including User-Generated Content you submit in violation of
-        these Terms.
+        To the fullest extent permitted by law, you agree to indemnify and hold harmless the Service
+        Provider, its affiliates, officers, directors, employees and agents from and against any
+        claims, liabilities, damages, losses and expenses, including reasonable legal fees, arising
+        out of or directly related to your breach of these Terms or your intentional misuse of the
+        Application, including User-Generated Content you submit in violation of these Terms.
       </P>
       <P>
         This indemnification does not apply to claims arising from the Service Provider's own
@@ -225,37 +221,37 @@ const DeckDrillTermsPage: React.FC = () => {
       </P>
       <P>
         The Service Provider may wish to update the application at some point. The application is
-        currently available as per the requirements for the operating system (and for any
-        additional systems they decide to extend the availability of the application to) may
-        change, and you will need to download the updates if you want to continue using the
-        application. The Service Provider does not guarantee that it will always update the
-        application so that it is relevant to you and/or compatible with the particular operating
-        system version installed on your device. You should accept updates when offered; if you
-        choose not to, the Service Provider may cease to support earlier versions and the
-        Application may not function properly. The Service Provider may also wish to cease
-        providing the application and may terminate its use at any time without providing
-        termination notice to you. Unless they inform you otherwise, upon any termination, (a) the
-        rights and licenses granted to you in these terms will end; (b) you must cease using the
-        application, and (if necessary) delete it from your device.
+        currently available as per the requirements for the operating system (and for any additional
+        systems they decide to extend the availability of the application to) may change, and you
+        will need to download the updates if you want to continue using the application. The Service
+        Provider does not guarantee that it will always update the application so that it is
+        relevant to you and/or compatible with the particular operating system version installed on
+        your device. You should accept updates when offered; if you choose not to, the Service
+        Provider may cease to support earlier versions and the Application may not function
+        properly. The Service Provider may also wish to cease providing the application and may
+        terminate its use at any time without providing termination notice to you. Unless they
+        inform you otherwise, upon any termination, (a) the rights and licenses granted to you in
+        these terms will end; (b) you must cease using the application, and (if necessary) delete it
+        from your device.
       </P>
 
       <H2>Governing Law and Jurisdiction</H2>
       <P>
-        These Terms and Conditions are governed by the laws of the jurisdiction in which the
-        Service Provider is established, excluding conflict of law rules, except to the extent
-        mandatory consumer protection laws provide otherwise.
+        These Terms and Conditions are governed by the laws of the jurisdiction in which the Service
+        Provider is established, excluding conflict of law rules, except to the extent mandatory
+        consumer protection laws provide otherwise.
       </P>
       <P>
-        Any dispute arising out of or relating to these Terms will be brought before the courts
-        that have jurisdiction under applicable law. Nothing in this clause limits any rights you
-        may have to bring a claim in a court that is competent under mandatory law.
+        Any dispute arising out of or relating to these Terms will be brought before the courts that
+        have jurisdiction under applicable law. Nothing in this clause limits any rights you may
+        have to bring a claim in a court that is competent under mandatory law.
       </P>
 
       <H2>DSA Compliance (Digital Services Act)</H2>
       <P>
         If the Application is an intermediary service as defined under the Digital Services Act
-        (Regulation (EU) 2022/2065, "DSA"), the following provisions apply in addition to the
-        terms above.
+        (Regulation (EU) 2022/2065, "DSA"), the following provisions apply in addition to the terms
+        above.
       </P>
       <P>
         <strong>Point of Contact:</strong> The Service Provider maintains a single point of contact
@@ -268,9 +264,9 @@ const DeckDrillTermsPage: React.FC = () => {
         <strong>Content Moderation and Statement of Reasons:</strong> When the Service Provider
         restricts access to content, suspends or terminates an account, or otherwise limits the
         availability of the Application's features, a clear and specific statement of reasons will
-        be provided to the affected user. The statement will include the nature of the
-        restriction, the legal or contractual basis for the decision, and information on available
-        redress mechanisms, in accordance with Article 17 of the DSA.
+        be provided to the affected user. The statement will include the nature of the restriction,
+        the legal or contractual basis for the decision, and information on available redress
+        mechanisms, in accordance with Article 17 of the DSA.
       </P>
       <P>
         <strong>Notice and Action:</strong> Users and third parties may submit notices of allegedly
@@ -281,16 +277,16 @@ const DeckDrillTermsPage: React.FC = () => {
       </P>
       <P>
         <strong>Out-of-Court Dispute Settlement:</strong> Disputes regarding content moderation
-        decisions, including decisions to restrict content or suspend accounts, may be submitted
-        to an out-of-court dispute settlement body certified in accordance with Article 21 of the
-        DSA. The Service Provider will engage with such bodies in good faith. Use of out-of-court
-        dispute settlement does not affect your right to seek judicial remedy under applicable law.
+        decisions, including decisions to restrict content or suspend accounts, may be submitted to
+        an out-of-court dispute settlement body certified in accordance with Article 21 of the DSA.
+        The Service Provider will engage with such bodies in good faith. Use of out-of-court dispute
+        settlement does not affect your right to seek judicial remedy under applicable law.
       </P>
       <P>
         <strong>Transparency Reporting:</strong> The Service Provider publishes periodic
-        transparency reports covering content moderation activities, including the volume of
-        notices received, actions taken, and automated means used, in accordance with Article 24
-        of the DSA. Reports are made available upon request at support.ishanvithanage@gmail.com.
+        transparency reports covering content moderation activities, including the volume of notices
+        received, actions taken, and automated means used, in accordance with Article 24 of the DSA.
+        Reports are made available upon request at support.ishanvithanage@gmail.com.
       </P>
       <P>
         These DSA provisions apply to the extent that the Application qualifies as an intermediary
@@ -301,9 +297,9 @@ const DeckDrillTermsPage: React.FC = () => {
       <H2>Severability</H2>
       <P>
         If any provision of these Terms and Conditions is held to be invalid, illegal, or
-        unenforceable by a court of competent jurisdiction, such provision shall be modified to
-        the minimum extent necessary to make it valid and enforceable, and the remaining
-        provisions of these Terms shall remain in full force and effect.
+        unenforceable by a court of competent jurisdiction, such provision shall be modified to the
+        minimum extent necessary to make it valid and enforceable, and the remaining provisions of
+        these Terms shall remain in full force and effect.
       </P>
 
       <H2>Entire Agreement</H2>
@@ -315,9 +311,9 @@ const DeckDrillTermsPage: React.FC = () => {
 
       <H2>Changes to These Terms and Conditions</H2>
       <P>
-        The Service Provider may periodically update their Terms and Conditions. Therefore, you
-        are advised to review this page regularly for any changes. The Service Provider will
-        notify you of any changes by posting the new Terms and Conditions on this page.
+        The Service Provider may periodically update their Terms and Conditions. Therefore, you are
+        advised to review this page regularly for any changes. The Service Provider will notify you
+        of any changes by posting the new Terms and Conditions on this page.
       </P>
       <P>
         Previous versions of these Terms and Conditions will be maintained and made available upon

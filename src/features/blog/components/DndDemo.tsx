@@ -29,8 +29,7 @@ const Card: React.FC<{ card: CardData }> = ({ card }) => {
       ref={drag as unknown as React.Ref<HTMLDivElement>}
       className={`cursor-grab select-none rounded-lg border border-white/10 bg-zinc-800 px-4 py-3 text-sm text-white transition-opacity active:cursor-grabbing ${
         isDragging ? 'opacity-30' : 'opacity-100'
-      }`}
-    >
+      }`}>
       {card.text}
     </div>
   );
@@ -52,8 +51,7 @@ const Column: React.FC<{
       ref={drop as unknown as React.Ref<HTMLDivElement>}
       className={`min-h-[190px] flex-1 rounded-xl border p-4 transition-colors ${
         isOver ? 'border-orange-500/60 bg-orange-500/5' : 'border-white/10'
-      }`}
-    >
+      }`}>
       <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-slate-500">{title}</p>
       <div className="space-y-2">
         {cards.map((card) => (
@@ -86,7 +84,9 @@ const DndDemo: React.FC = () => {
           onDropCard={(id) => moveCard(id, 'done')}
         />
       </div>
-      <p className="mt-3 text-xs text-slate-500">Drag a card between columns with a mouse (desktop only).</p>
+      <p className="mt-3 text-xs text-slate-500">
+        Drag a card between columns with a mouse (desktop only).
+      </p>
     </DndProvider>
   );
 };

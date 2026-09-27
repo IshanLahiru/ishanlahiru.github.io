@@ -1,11 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import OmiClashLegalLayout, {
-  ContactCard,
-  Faq,
-  H2,
-  inlineLinkClass
-} from './legalLayout';
+import OmiClashLegalLayout, { ContactCard, Faq, H2, inlineLinkClass } from './legalLayout';
 
 const SUPPORT_EMAIL = 'support.ishanvithanage@gmail.com';
 
@@ -105,7 +100,10 @@ const faqs: { question: string; answer: React.ReactNode }[] = [
 
 const OmiClashSupportPage: React.FC = () => {
   return (
-    <OmiClashLegalLayout title="Omi Clash Support" backTo="/projects/omi-clash" backLabel="Back to Omi Clash">
+    <OmiClashLegalLayout
+      title="Omi Clash Support"
+      backTo="/projects/omi-clash"
+      backLabel="Back to Omi Clash">
       <p className="mb-2 text-sm leading-relaxed text-slate-400">
         Need help with Omi Clash? Browse the frequently asked questions below, or reach out to us
         directly and we'll get back to you as soon as we can.

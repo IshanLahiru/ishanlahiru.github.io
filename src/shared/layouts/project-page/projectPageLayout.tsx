@@ -134,7 +134,12 @@ const ProjectPageLayout: React.FC<ProjectPageLayoutProps> = ({
                 <div key={shot.src} className="overflow-hidden rounded-2xl shadow-sm">
                   <picture>
                     {shot.webp && <source srcSet={shot.webp} type="image/webp" />}
-                    <img src={shot.src} alt={shot.alt} className="h-full w-full object-cover" loading="lazy" />
+                    <img
+                      src={shot.src}
+                      alt={shot.alt}
+                      className="h-full w-full object-cover"
+                      loading="lazy"
+                    />
                   </picture>
                 </div>
               ))}

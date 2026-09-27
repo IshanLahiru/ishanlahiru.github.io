@@ -7,8 +7,7 @@ const OmiClashPrivacyPolicyPage: React.FC = () => {
       title="Omi Clash Privacy Policy"
       effectiveDate="2026-07-29"
       backTo="/projects/omi-clash"
-      backLabel="Back to Omi Clash"
-    >
+      backLabel="Back to Omi Clash">
       <P>
         This privacy policy applies to the Omi Clash app for mobile devices, together with any
         related services operated by Ishan Lahiru Sampath Kekulandala Vithanage (collectively, the
@@ -97,29 +96,20 @@ const OmiClashPrivacyPolicyPage: React.FC = () => {
       <UL
         items={[
           <>
-            <a
-              href="https://firebase.google.com/support/privacy"
-              className={inlineLinkClass}
-            >
+            <a href="https://firebase.google.com/support/privacy" className={inlineLinkClass}>
               Firebase
             </a>{' '}
             (Google) — authentication, database (Cloud Firestore and Realtime Database), backend
             functions, push notifications, crash reporting, and app analytics
           </>,
           <>
-            <a
-              href="https://policies.google.com/privacy"
-              className={inlineLinkClass}
-            >
+            <a href="https://policies.google.com/privacy" className={inlineLinkClass}>
               Google Sign-In
             </a>{' '}
             — optional sign-in method
           </>,
           <>
-            <a
-              href="https://www.apple.com/legal/privacy/"
-              className={inlineLinkClass}
-            >
+            <a href="https://www.apple.com/legal/privacy/" className={inlineLinkClass}>
               Sign in with Apple
             </a>{' '}
             — optional sign-in method
@@ -127,17 +117,13 @@ const OmiClashPrivacyPolicyPage: React.FC = () => {
           <>
             <a
               href="https://policies.google.com/technologies/partner-sites"
-              className={inlineLinkClass}
-            >
+              className={inlineLinkClass}>
               AdMob
             </a>{' '}
             (Google) — non-personalized advertising, see "Advertising" above
           </>,
           <>
-            <a
-              href="https://www.revenuecat.com/privacy"
-              className={inlineLinkClass}
-            >
+            <a href="https://www.revenuecat.com/privacy" className={inlineLinkClass}>
               RevenueCat
             </a>{' '}
             — subscription and purchase management
@@ -147,10 +133,7 @@ const OmiClashPrivacyPolicyPage: React.FC = () => {
             subscriptions
           </>,
           <>
-            <a
-              href="https://www.cloudflare.com/privacypolicy/"
-              className={inlineLinkClass}
-            >
+            <a href="https://www.cloudflare.com/privacypolicy/" className={inlineLinkClass}>
               Cloudflare
             </a>{' '}
             — relays voice-chat audio between players only when a direct connection isn't possible;

@@ -27,8 +27,8 @@ const faqs: { question: string; answer: React.ReactNode }[] = [
         <a className={inlineLinkClass} href={`mailto:${SUPPORT_EMAIL}`}>
           {SUPPORT_EMAIL}
         </a>{' '}
-        with a description of what happened, the steps to reproduce it, and your device model and
-        OS version if possible. Screenshots or screen recordings help a lot.
+        with a description of what happened, the steps to reproduce it, and your device model and OS
+        version if possible. Screenshots or screen recordings help a lot.
       </>
     )
   },
@@ -73,8 +73,8 @@ const faqs: { question: string; answer: React.ReactNode }[] = [
     question: 'Does DeckDrill work offline?',
     answer: (
       <>
-        Core training and simulation features are designed to work without an internet
-        connection. Some functionality may require connectivity, as noted in the app.
+        Core training and simulation features are designed to work without an internet connection.
+        Some functionality may require connectivity, as noted in the app.
       </>
     )
   }
@@ -82,7 +82,10 @@ const faqs: { question: string; answer: React.ReactNode }[] = [
 
 const DeckDrillSupportPage: React.FC = () => {
   return (
-    <LegalPageLayout title="DeckDrill Support" backTo="/projects/deckdrill" backLabel="Back to DeckDrill">
+    <LegalPageLayout
+      title="DeckDrill Support"
+      backTo="/projects/deckdrill"
+      backLabel="Back to DeckDrill">
       <p className="mb-2 font-body text-sm leading-relaxed text-np-600 dark:text-np-400-night">
         Need help with DeckDrill? Browse the frequently asked questions below, or reach out to us
         directly and we'll get back to you as soon as we can.

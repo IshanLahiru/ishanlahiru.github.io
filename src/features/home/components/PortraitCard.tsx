@@ -13,7 +13,7 @@ const PortraitCard: React.FC = () => (
           <img
             src="https://avatars.githubusercontent.com/u/50785933?v=4"
             alt="Ishan Lahiru"
-            className="h-full w-full object-cover grayscale contrast-125 transition-transform duration-300 group-hover:scale-105"
+            className="h-full w-full object-cover contrast-125 grayscale transition-transform duration-300 group-hover:scale-105"
           />
           <div className="absolute inset-0 bg-orange-600/50 mix-blend-multiply" />
         </div>
@@ -29,27 +29,38 @@ const PortraitCard: React.FC = () => (
       </div>
 
       <p className="mt-3 text-sm leading-relaxed text-gray-500">
-        A lifelong learner and creator, shipping mobile apps and backend platforms one project at
-        a time.
+        A lifelong learner and creator, shipping mobile apps and backend platforms one project at a
+        time.
       </p>
     </Link>
 
     <div className="mt-4 flex flex-wrap items-center justify-center gap-4 text-gray-700">
-      <a href="https://github.com/IshanLahiru" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+      <a
+        href="https://github.com/IshanLahiru"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="GitHub">
         <Github className="h-4.5 w-4.5 transition-all duration-150 hover:scale-110 hover:text-orange-600 active:scale-95" />
       </a>
-      <a href="https://www.linkedin.com/in/ishanlahiru" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+      <a
+        href="https://www.linkedin.com/in/ishanlahiru"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="LinkedIn">
         <Linkedin className="h-4.5 w-4.5 transition-all duration-150 hover:scale-110 hover:text-orange-600 active:scale-95" />
       </a>
       <a
         href="https://www.instagram.com/ishan_lahiru_sampath"
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Instagram"
-      >
+        aria-label="Instagram">
         <Instagram className="h-4.5 w-4.5 transition-all duration-150 hover:scale-110 hover:text-orange-600 active:scale-95" />
       </a>
-      <a href="https://medium.com/@ishanLahiruSampath" target="_blank" rel="noopener noreferrer" aria-label="Medium">
+      <a
+        href="https://medium.com/@ishanLahiruSampath"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Medium">
         <FontAwesomeIcon
           icon={faMedium}
           className="h-4.5 w-4.5 transition-all duration-150 hover:scale-110 hover:text-orange-600 active:scale-95"

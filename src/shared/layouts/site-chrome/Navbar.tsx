@@ -18,8 +18,7 @@ const Navbar: React.FC = () => (
           <a
             href={link.href}
             aria-label={link.label}
-            className="flex h-10 w-10 items-center justify-center rounded-full text-slate-300 transition-all duration-150 hover:scale-110 hover:bg-white/10 hover:text-white active:scale-95"
-          >
+            className="flex h-10 w-10 items-center justify-center rounded-full text-slate-300 transition-all duration-150 hover:scale-110 hover:bg-white/10 hover:text-white active:scale-95">
             <link.icon className="h-4.5 w-4.5" strokeWidth={1.75} />
           </a>
         </ToolTipWrapper>

@@ -28,8 +28,7 @@ const Reveal: React.FC<{
     <div
       ref={ref}
       style={visible ? { animationDelay: `${delay}ms` } : undefined}
-      className={`${visible ? 'animate-fade-in-up' : 'opacity-0'} ${className}`}
-    >
+      className={`${visible ? 'animate-fade-in-up' : 'opacity-0'} ${className}`}>
       {children}
     </div>
   );

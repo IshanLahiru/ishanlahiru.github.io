@@ -52,12 +52,11 @@ const UnderstandingReactDndPage: React.FC = () => (
     date="January 10, 2025"
     readTime="6 min read"
     description="Official docs, setup, code, and a live drag-and-drop demo built with React DnD."
-    path="/blog/understanding-react-dnd"
-  >
+    path="/blog/understanding-react-dnd">
     <p>
       Drag-and-drop feels simple to use and surprisingly fiddly to build: you need to track what's
-      being dragged, which target it's hovering over, and what should happen when it's dropped —
-      all while keeping the DOM and your component state in sync.{' '}
+      being dragged, which target it's hovering over, and what should happen when it's dropped — all
+      while keeping the DOM and your component state in sync.{' '}
       <DocLink href="https://react-dnd.github.io/react-dnd/about">React DnD</DocLink> solves this by
       splitting drag-and-drop into two hooks — <code>useDrag</code> for the thing being dragged, and{' '}
       <code>useDrop</code> for the thing it can be dropped on — connected through a backend that
@@ -66,7 +65,10 @@ const UnderstandingReactDndPage: React.FC = () => (
 
     <H2>Setup</H2>
     <p>
-      The <DocLink href="https://react-dnd.github.io/react-dnd/docs/backends/html5">HTML5 backend</DocLink>{' '}
+      The{' '}
+      <DocLink href="https://react-dnd.github.io/react-dnd/docs/backends/html5">
+        HTML5 backend
+      </DocLink>{' '}
       is the standard choice for desktop browsers. Everything using drag-and-drop needs to sit
       inside a single <code>DndProvider</code>:
     </p>
@@ -74,15 +76,16 @@ const UnderstandingReactDndPage: React.FC = () => (
 
     <H2>Making Something Draggable</H2>
     <p>
-      <code>useDrag</code> returns a connector function you attach to a DOM node via <code>ref</code>.
-      The <code>item</code> is the payload that will be handed to whatever it gets dropped on:
+      <code>useDrag</code> returns a connector function you attach to a DOM node via{' '}
+      <code>ref</code>. The <code>item</code> is the payload that will be handed to whatever it gets
+      dropped on:
     </p>
     <CodeBlock language="tsx" code={dragCode} />
 
     <H2>Making a Drop Target</H2>
     <p>
-      <code>useDrop</code> mirrors this on the receiving end — it declares which <code>type</code> of
-      item it accepts and what to do when one lands on it:
+      <code>useDrop</code> mirrors this on the receiving end — it declares which <code>type</code>{' '}
+      of item it accepts and what to do when one lands on it:
     </p>
     <CodeBlock language="tsx" code={dropCode} />
 

@@ -57,9 +57,7 @@ export const H2 = ({ children }: { children: React.ReactNode }) => (
 );
 
 export const P = ({ children }: { children: React.ReactNode }) => (
-  <p className="font-body text-sm leading-relaxed text-np-600 dark:text-np-400-night">
-    {children}
-  </p>
+  <p className="font-body text-sm leading-relaxed text-np-600 dark:text-np-400-night">{children}</p>
 );
 
 export const UL = ({ items }: { items: React.ReactNode[] }) => (
@@ -72,17 +70,9 @@ export const UL = ({ items }: { items: React.ReactNode[] }) => (
 
 export const inlineLinkClass = 'text-np-accent hover:underline dark:text-np-accent-night';
 
-export const ContactCard = ({
-  label,
-  children
-}: {
-  label: string;
-  children: React.ReactNode;
-}) => (
+export const ContactCard = ({ label, children }: { label: string; children: React.ReactNode }) => (
   <section className="mb-8 rounded-2xl border border-np-muted bg-np-100/60 p-6 dark:border-np-muted-night dark:bg-np-700/20">
-    <p className="text-xs font-medium text-np-500 dark:text-np-500-night">
-      {label}
-    </p>
+    <p className="text-xs font-medium text-np-500 dark:text-np-500-night">{label}</p>
     <p className="mt-2 font-body text-sm leading-relaxed text-np-600 dark:text-np-400-night">
       {children}
     </p>

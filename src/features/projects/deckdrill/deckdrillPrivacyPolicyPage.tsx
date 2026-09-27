@@ -10,9 +10,9 @@ const DeckDrillPrivacyPolicyPage: React.FC = () => {
       backLabel="Back to DeckDrill">
       <P>
         This privacy policy applies to the DeckDrill app for mobile devices, together with any
-        related services operated by Kekulandala Vithanage Ishan Lahiru Sampath (collectively,
-        the "Application"). Kekulandala Vithanage Ishan Lahiru Sampath is hereby referred to as
-        the "Service Provider".
+        related services operated by Kekulandala Vithanage Ishan Lahiru Sampath (collectively, the
+        "Application"). Kekulandala Vithanage Ishan Lahiru Sampath is hereby referred to as the
+        "Service Provider".
       </P>
 
       <H2>Information Collection and Use</H2>
@@ -33,15 +33,15 @@ const DeckDrillPrivacyPolicyPage: React.FC = () => {
       <P>
         The Application or its third-party SDKs may use cookies, SDKs, pixels, and similar
         technologies to support functionality, analytics, or service delivery. Where required by
-        applicable law, the Service Provider will obtain consent before using non-essential
-        tracking technologies.
+        applicable law, the Service Provider will obtain consent before using non-essential tracking
+        technologies.
       </P>
 
       <H2>Your Rights</H2>
       <P>
         You may request access to, correction of, or deletion of your personal data held by the
-        Service Provider. To exercise these rights, or to withdraw consent where processing is
-        based on consent, contact the Service Provider at support.ishanvithanage@gmail.com.
+        Service Provider. To exercise these rights, or to withdraw consent where processing is based
+        on consent, contact the Service Provider at support.ishanvithanage@gmail.com.
       </P>
 
       <H2>Your California privacy rights (CCPA/CPRA)</H2>
@@ -57,17 +57,17 @@ const DeckDrillPrivacyPolicyPage: React.FC = () => {
         required notices, and, where permitted by law, marketing communications.
       </P>
       <P>
-        For a better experience while using the Application, the Service Provider may require you
-        to provide certain personally identifiable information. The information the Service
-        Provider requests will be retained and used as described in this privacy policy.
+        For a better experience while using the Application, the Service Provider may require you to
+        provide certain personally identifiable information. The information the Service Provider
+        requests will be retained and used as described in this privacy policy.
       </P>
 
       <H2>Third Party Access</H2>
       <P>
-        Only aggregated, anonymized data is periodically transmitted to external services to aid
-        the Service Provider in improving the Application and their service. The Service Provider
-        may share your information with third parties in the ways that are described in this
-        privacy statement.
+        Only aggregated, anonymized data is periodically transmitted to external services to aid the
+        Service Provider in improving the Application and their service. The Service Provider may
+        share your information with third parties in the ways that are described in this privacy
+        statement.
       </P>
 
       <H2>International Data Transfers</H2>
@@ -102,10 +102,10 @@ const DeckDrillPrivacyPolicyPage: React.FC = () => {
 
       <H2>Opt-Out Rights</H2>
       <P>
-        You can stop further collection of information from your mobile device by uninstalling
-        the Application. Uninstalling will stop the Application from collecting data from your
-        device, but it does not automatically delete information that has already been
-        transmitted to the Service Provider or to third parties.
+        You can stop further collection of information from your mobile device by uninstalling the
+        Application. Uninstalling will stop the Application from collecting data from your device,
+        but it does not automatically delete information that has already been transmitted to the
+        Service Provider or to third parties.
       </P>
       <P>
         To request deletion of your personal data, to withdraw consent, or to exercise any of your
@@ -127,8 +127,8 @@ const DeckDrillPrivacyPolicyPage: React.FC = () => {
       <P>
         You may request deletion of your personal data, subject to any legal obligation to retain
         it. If you want the Service Provider to delete User Provided Data submitted through the
-        Application, please contact them at support.ishanvithanage@gmail.com. Please note that
-        some User Provided Data may be required for the Application to function properly.
+        Application, please contact them at support.ishanvithanage@gmail.com. Please note that some
+        User Provided Data may be required for the Application to function properly.
       </P>
 
       <H2>Children</H2>
@@ -143,19 +143,19 @@ const DeckDrillPrivacyPolicyPage: React.FC = () => {
         identifiable information through the Application and/or Services. The Service Provider
         encourages parents and legal guardians to monitor their children's Internet usage and to
         help enforce this Policy by instructing their children never to provide personally
-        identifiable information through the Application and/or Services without their
-        permission. If you have reason to believe that a child has provided personally
-        identifiable information to the Service Provider through the Application and/or Services,
-        please contact the Service Provider (support.ishanvithanage@gmail.com) so that they will
-        be able to take the necessary actions. If you are under 18 years of age, your parent or
-        guardian must provide consent on your behalf where permitted by law.
+        identifiable information through the Application and/or Services without their permission.
+        If you have reason to believe that a child has provided personally identifiable information
+        to the Service Provider through the Application and/or Services, please contact the Service
+        Provider (support.ishanvithanage@gmail.com) so that they will be able to take the necessary
+        actions. If you are under 18 years of age, your parent or guardian must provide consent on
+        your behalf where permitted by law.
       </P>
 
       <H2>Security</H2>
       <P>
         The Service Provider is concerned about safeguarding the confidentiality of your
-        information. The Service Provider provides physical, electronic, and procedural
-        safeguards to protect information the Service Provider processes and maintains.
+        information. The Service Provider provides physical, electronic, and procedural safeguards
+        to protect information the Service Provider processes and maintains.
       </P>
 
       <H2>Data Breach Notification</H2>
@@ -167,22 +167,22 @@ const DeckDrillPrivacyPolicyPage: React.FC = () => {
 
       <H2>Changes</H2>
       <P>
-        The Service Provider may update this Privacy Policy from time to time. The Service
-        Provider will notify you of material changes by posting the updated Privacy Policy with an
-        effective date. Where required by law, the Service Provider will seek your consent to
-        material changes before they take effect.
+        The Service Provider may update this Privacy Policy from time to time. The Service Provider
+        will notify you of material changes by posting the updated Privacy Policy with an effective
+        date. Where required by law, the Service Provider will seek your consent to material changes
+        before they take effect.
       </P>
       <P>
-        Previous versions of this Privacy Policy will be maintained and made available upon
-        request by contacting the Service Provider at support.ishanvithanage@gmail.com.
+        Previous versions of this Privacy Policy will be maintained and made available upon request
+        by contacting the Service Provider at support.ishanvithanage@gmail.com.
       </P>
 
       <H2>Your Consent</H2>
       <P>
-        Where processing is based on consent, you provide that consent by affirmatively opting in
-        to the relevant feature or action. You may withdraw consent at any time without affecting
-        processing carried out before withdrawal. Processing based on other lawful bases is
-        carried out as described above.
+        Where processing is based on consent, you provide that consent by affirmatively opting in to
+        the relevant feature or action. You may withdraw consent at any time without affecting
+        processing carried out before withdrawal. Processing based on other lawful bases is carried
+        out as described above.
       </P>
 
       <H2>Contact Us</H2>
