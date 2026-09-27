@@ -1,3 +1,17 @@
+# ishanlahiru.github.io
+
+Personal portfolio: React, TypeScript, Vite and Tailwind, deployed to GitHub Pages.
+
+```bash
+npm run dev      # local development
+npm run build    # boundary check, type check, production build
+npm run deploy   # build and publish to GitHub Pages
+```
+
+The code is organised into `app`, `core`, `shared` and `features` layers; see [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
+
+---
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.

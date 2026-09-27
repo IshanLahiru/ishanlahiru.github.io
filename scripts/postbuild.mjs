@@ -64,6 +64,11 @@ const routeMeta = {
     description:
       'DeckDrill is a Blackjack training and card-counting simulator app by Ishan Lahiru, built to help players learn basic strategy and practice counting.'
   },
+  '/projects/typal': {
+    title: 'TyPâl - Ishan Lahiru',
+    description:
+      'TyPâl is a private iPhone keyboard by Ishan Lahiru that rewrites your messages in the right voice for each person, with TyPâl AI or your own AI key.'
+  },
   '/blog/understanding-react-dnd': {
     title: 'Understanding React DnD - Ishan Lahiru',
     description: 'Official docs, setup, code, and a live drag-and-drop demo built with React DnD.'
@@ -95,7 +100,10 @@ const criticalRoutes = [
   '/projects/drift-and-direct/support',
   '/projects/deckdrill/privacy-policy',
   '/projects/deckdrill/terms',
-  '/projects/deckdrill/support'
+  '/projects/deckdrill/support',
+  '/projects/typal/privacy-policy',
+  '/projects/typal/terms',
+  '/projects/typal/support'
 ];
 
 const escapeHtml = (value) => value.replace(/&/g, '&amp;').replace(/"/g, '&quot;');

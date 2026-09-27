@@ -12,5 +12,14 @@ if (process.env.ANALYZE) {
 // https://vite.dev/config/
 export default defineConfig({
   plugins,
+  // Layer aliases; keep in sync with `paths` in tsconfig.app.json. See docs/ARCHITECTURE.md.
+  resolve: {
+    alias: {
+      '@app': '/src/app',
+      '@core': '/src/core',
+      '@shared': '/src/shared',
+      '@features': '/src/features'
+    }
+  },
   base: '/'
 });
