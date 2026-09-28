@@ -137,10 +137,17 @@ const withRouteMeta = (html, route) => {
   return result;
 };
 
+// App privacy policies, terms and support pages carry no ads: people read them to decide
+// what to trust, and they shouldn't load an ad network before any consent.
+const isLegalPage = (route) => /\/(privacy-policy|terms|support)$/.test(route);
+const withoutAds = (html) =>
+  html.replace(/\s*<!-- Google AdSense -->\s*<script[^>]*adsbygoogle[^>]*><\/script>/s, '');
+
 const template = readFileSync(indexHtml, 'utf8');
 
 for (const route of criticalRoutes) {
   const dir = join(distDir, ...route.split('/').filter(Boolean));
   if (!existsSync(dir)) mkdirSync(dir, { recursive: true });
-  writeFileSync(join(dir, 'index.html'), withRouteMeta(template, route));
+  const html = withRouteMeta(template, route);
+  writeFileSync(join(dir, 'index.html'), isLegalPage(route) ? withoutAds(html) : html);
 }

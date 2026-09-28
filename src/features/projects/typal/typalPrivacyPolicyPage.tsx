@@ -10,7 +10,7 @@ const TypalPrivacyPolicyPage: React.FC = () => {
   return (
     <LegalPageLayout
       title="TyPâl Privacy Policy"
-      effectiveDate="2026-09-27"
+      effectiveDate="2026-09-28"
       backTo="/projects/typal"
       backLabel="Back to TyPâl">
       <P>
@@ -64,11 +64,12 @@ const TypalPrivacyPolicyPage: React.FC = () => {
           </>,
           <>
             <strong>TyPâl AI:</strong> to TyPâl's server, which runs on Cloudflare, together with
-            your TyPâl ID. The server checks your TyPâl Token balance with RevenueCat, passes the
-            request to Google's Gemini API to write the reply, and deducts the tokens used. It does
-            not store or log the text of requests or replies; it records only token counts and cost,
-            without your TyPâl ID. On the paid Gemini API, Google does not use requests to train its
-            models and keeps them only for a limited time to detect abuse, as its terms allow.
+            your TyPâl ID. The server sets aside tokens for the request with RevenueCat, passes the
+            request (without your TyPâl ID) to Anthropic's Claude API to write the reply, and gives
+            back any tokens the reply didn't use. It does not store or log the text of requests or
+            replies; it records only token counts and cost, without your TyPâl ID. Anthropic does
+            not use API requests to train its models, and normally deletes them within 30 days
+            (longer only if a request is flagged for breaking its usage policy).
           </>
         ]}
       />
@@ -105,8 +106,8 @@ const TypalPrivacyPolicyPage: React.FC = () => {
             runs TyPâl's server for TyPâl AI requests
           </>,
           <>
-            <a href="https://policies.google.com/privacy" className={inlineLinkClass}>
-              Google (Gemini API)
+            <a href="https://www.anthropic.com/legal/privacy" className={inlineLinkClass}>
+              Anthropic (Claude API)
             </a>{' '}
             writes TyPâl AI replies
           </>,
@@ -135,7 +136,7 @@ const TypalPrivacyPolicyPage: React.FC = () => {
       <UL
         items={[
           'Data on your iPhone: until you delete it, or delete the Application',
-          "Text sent to TyPâl AI: not stored by TyPâl's server; kept by Google only as described above",
+          "Text sent to TyPâl AI: not stored by TyPâl's server; kept by Anthropic only as described above",
           'TyPâl AI usage totals (token counts and cost per day, not linked to you): up to 40 days',
           'Purchase records and token balances at RevenueCat: as long as needed to provide your purchases and meet legal obligations'
         ]}
@@ -168,17 +169,18 @@ const TypalPrivacyPolicyPage: React.FC = () => {
 
       <H2>International Transfers</H2>
       <P>
-        Cloudflare, Google and RevenueCat may process data in countries other than yours, including
-        the United States. Where the law requires safeguards for such transfers, they are covered by
-        those companies' standard data protection terms, such as the European Commission's Standard
-        Contractual Clauses.
+        Cloudflare, Anthropic and RevenueCat may process data in countries other than yours,
+        including the United States. Where the law requires safeguards for such transfers, they are
+        covered by those companies' standard data protection terms, such as the European
+        Commission's Standard Contractual Clauses.
       </P>
 
       <H2>Children</H2>
       <P>
-        TyPâl is not directed to children under 13, and TyPâl AI is only for people 18 or older. The
-        Service Provider does not knowingly collect personal data from children. If you believe a
-        child has provided personal data, contact the Service Provider and it will be deleted.
+        TyPâl is not for children under 13. TyPâl AI adds safety instructions to every request so
+        replies stay suitable for teenagers. The Service Provider does not knowingly collect
+        personal data from children under 13. If you believe a child has provided personal data,
+        contact the Service Provider and it will be deleted.
       </P>
 
       <H2>Security</H2>

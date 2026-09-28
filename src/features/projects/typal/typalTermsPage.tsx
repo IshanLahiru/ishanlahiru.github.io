@@ -11,7 +11,7 @@ const TypalTermsPage: React.FC = () => {
   return (
     <LegalPageLayout
       title="TyPâl Terms of Use"
-      effectiveDate="2026-09-27"
+      effectiveDate="2026-09-28"
       backTo="/projects/typal"
       backLabel="Back to TyPâl">
       <P>
@@ -26,9 +26,9 @@ const TypalTermsPage: React.FC = () => {
 
       <H2>Age</H2>
       <P>
-        You must be at least 13 years old to use the Application. TyPâl AI is available only to
-        people 18 or older, because its AI provider's terms require it; by using TyPâl AI you
-        confirm that you are 18 or older.
+        You must be at least 13 years old to use the Application. If you are under the age of
+        majority where you live, you may use it only with a parent's or guardian's permission, and
+        they agree to these terms for you.
       </P>
 
       <H2>Premium and Pro Subscriptions</H2>
@@ -80,11 +80,9 @@ const TypalTermsPage: React.FC = () => {
           'harm, deceive or impersonate others, or infringe their rights',
           "try to get around the Application's limits, spend another person's tokens, or misuse TyPâl's server",
           <>
-            break the AI provider's own rules; for TyPâl AI, Google's{' '}
-            <a
-              href="https://policies.google.com/terms/generative-ai/use-policy"
-              className={inlineLinkClass}>
-              Generative AI Prohibited Use Policy
+            break the AI provider's own rules; for TyPâl AI, Anthropic's{' '}
+            <a href="https://www.anthropic.com/legal/aup" className={inlineLinkClass}>
+              Usage Policy
             </a>
           </>
         ]}
@@ -134,6 +132,31 @@ const TypalTermsPage: React.FC = () => {
           'Apple and its subsidiaries are third-party beneficiaries of these terms and may enforce them against you'
         ]}
       />
+
+      <H2>Disputes</H2>
+      <P>
+        Please contact support.ishanvithanage@gmail.com first; most problems can be solved that way.
+        If a dispute isn't resolved within 60 days, the following applies.
+      </P>
+      <P>
+        <strong>If you live in the United States:</strong> any dispute about the Application or
+        these terms will be resolved by binding individual arbitration administered by JAMS under
+        its Streamlined Arbitration Rules, not in court, except that either party may bring an
+        individual claim in small claims court.{' '}
+        <strong>
+          You and the Service Provider each waive the right to a jury trial and to take part in a
+          class action, class arbitration or representative action.
+        </strong>{' '}
+        You can opt out of arbitration by emailing support.ishanvithanage@gmail.com within 30 days
+        of first accepting these terms. If the class-action waiver is found unenforceable for a
+        claim, that claim will be heard in court instead of arbitration.
+      </P>
+      <P>
+        <strong>Everywhere else:</strong> disputes are heard by the courts that have jurisdiction
+        under the law that applies to you. If you live in the European Union or the United Kingdom,
+        you keep the right to bring a claim in the courts where you live, and nothing here removes
+        rights your local consumer law gives you.
+      </P>
 
       <H2>Governing Law</H2>
       <P>
