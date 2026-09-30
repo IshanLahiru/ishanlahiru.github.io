@@ -63,6 +63,17 @@ export const projects: Project[] = [
     appStoreUrl: 'https://apps.apple.com/lk/app/omi-clash/id6793634949'
   },
   {
+    id: 7,
+    title: 'TyPal',
+    category: 'Mobile App',
+    badges: [{ label: 'Coming Soon to App Store', status: 'development' }],
+    description:
+      'A private iPhone keyboard that rewrites your messages in the right voice for each person, with TyPal AI or your own AI key.',
+    techStack: ['Swift', 'SwiftUI', 'CryptoKit', 'SQLite'],
+    internalLink: '/projects/typal',
+    logo: '/projects/typal/icon.png'
+  },
+  {
     id: 8,
     title: 'Scaly',
     category: 'Mobile Game',
@@ -117,17 +128,6 @@ export const projects: Project[] = [
     techStack: ['Flutter', 'Firebase', 'Cloud Firestore'],
     internalLink: '/projects/dammapadaya',
     logo: '/projects/dammapadaya/icon.png'
-  },
-  {
-    id: 7,
-    title: 'TyPâl',
-    category: 'Mobile App',
-    badges: [{ label: 'In Development', status: 'development' }],
-    description:
-      'A private iPhone keyboard that rewrites your messages in the right voice for each person, with TyPâl AI or your own AI key.',
-    techStack: ['Swift', 'SwiftUI', 'CryptoKit', 'SQLite'],
-    internalLink: '/projects/typal',
-    logo: '/projects/typal/icon.png'
   }
 ];
 

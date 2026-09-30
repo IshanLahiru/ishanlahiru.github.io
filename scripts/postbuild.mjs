@@ -71,9 +71,10 @@ const routeMeta = {
       'DeckDrill is a Blackjack training and card-counting simulator app by Ishan Lahiru, built to help players learn basic strategy and practice counting.'
   },
   '/projects/typal': {
-    title: 'TyPâl - Ishan Lahiru',
+    title: 'TyPal - The Private AI Keyboard for iPhone | Ishan Lahiru',
     description:
-      'TyPâl is a private iPhone keyboard by Ishan Lahiru that rewrites your messages in the right voice for each person, with TyPâl AI or your own AI key.'
+      'TyPal is a private iPhone keyboard by Ishan Lahiru that rewrites your messages in the right voice for each person, with TyPal AI or your own AI key.',
+    image: `${SITE_URL}/projects/typal/icon.png`
   },
   '/blog/understanding-react-dnd': {
     title: 'Understanding React DnD - Ishan Lahiru',

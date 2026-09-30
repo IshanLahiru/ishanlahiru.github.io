@@ -1,21 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import LegalPageLayout, {
-  H2,
-  P,
-  UL,
-  inlineLinkClass
-} from '@shared/layouts/legal-page/legalPageLayout';
+import TypalLegalLayout, { H2, P, UL, inlineLinkClass } from './legalLayout';
 
 const TypalTermsPage: React.FC = () => {
   return (
-    <LegalPageLayout
-      title="TyPâl Terms of Use"
-      effectiveDate="2026-09-28"
-      backTo="/projects/typal"
-      backLabel="Back to TyPâl">
+    <TypalLegalLayout
+      title="TyPal Terms of Use"
+      effectiveDate="30 September 2026"
+      summary={
+        <p>
+          Premium and Pro renew automatically until you cancel in your Apple Account settings. TyPal
+          Tokens never expire. Check AI-written text before you send it, and don't use TyPal to harm
+          anyone.
+        </p>
+      }>
       <P>
-        These terms apply to the TyPâl app and keyboard for iPhone (the "Application"), operated by
+        These terms apply to the TyPal app and keyboard for iPhone (the "Application"), operated by
         Kekulandala Vithanage Ishan Lahiru Sampath (the "Service Provider"). By using the
         Application, you agree to them and to the{' '}
         <Link to="/projects/typal/privacy-policy" className={inlineLinkClass}>
@@ -33,8 +33,8 @@ const TypalTermsPage: React.FC = () => {
 
       <H2>Premium and Pro Subscriptions</H2>
       <P>
-        TyPâl Premium and TyPâl Pro are optional auto-renewing subscriptions, billed monthly or
-        yearly. TyPâl Premium Lifetime is a one-time purchase. The price and billing period are
+        TyPal Premium and TyPal Pro are optional auto-renewing subscriptions, billed monthly or
+        yearly. TyPal Premium Lifetime is a one-time purchase. The price and billing period are
         shown before you buy. There are no free trials.
       </P>
       <UL
@@ -48,24 +48,24 @@ const TypalTermsPage: React.FC = () => {
         ]}
       />
 
-      <H2>TyPâl Tokens</H2>
+      <H2>TyPal Tokens</H2>
       <P>
-        TyPâl Tokens pay for TyPâl AI replies. You can buy them in packs, and TyPâl Pro adds a set
+        TyPal Tokens pay for TyPal AI replies. You can buy them in packs, and TyPal Pro adds a set
         amount at the start of each billing period. Each reply uses tokens according to its length,
         and the app shows your balance.
       </P>
       <UL
         items={[
-          'Tokens do not expire, including tokens added by TyPâl Pro, which stay after the subscription ends',
+          'Tokens do not expire, including tokens added by TyPal Pro, which stay after the subscription ends',
           "Tokens have no cash value. They cannot be exchanged for money, refunded outside Apple's refund process, or transferred to another person",
-          'Tokens belong to your TyPâl ID, which is kept in your iCloud Keychain. If the ID is lost (for example, iCloud Keychain is off and the app is deleted) or you ask for it to be deleted, the tokens tied to it cannot be recovered',
-          'TyPâl AI may occasionally be unavailable, for example during maintenance or if its provider is down. No tokens are used for a request that fails'
+          'Tokens belong to your TyPal ID, which is kept in your iCloud Keychain. If the ID is lost (for example, iCloud Keychain is off and the app is deleted) or you ask for it to be deleted, the tokens tied to it cannot be recovered',
+          'TyPal AI may occasionally be unavailable, for example during maintenance or if its provider is down. No tokens are used for a request that fails'
         ]}
       />
 
       <H2>AI Features</H2>
       <P>
-        TyPâl can rewrite and suggest text with AI, either through TyPâl AI or through an AI
+        TyPal can rewrite and suggest text with AI, either through TyPal AI or through an AI
         provider account you set up with your own key. If you use your own key, you are responsible
         for that account, its costs, and following that provider's terms.
       </P>
@@ -78,16 +78,18 @@ const TypalTermsPage: React.FC = () => {
         items={[
           'create or send anything illegal, including harassment, threats, hate speech, fraud or spam',
           'harm, deceive or impersonate others, or infringe their rights',
-          "try to get around the Application's limits, spend another person's tokens, or misuse TyPâl's server",
+          "try to get around the Application's limits, spend another person's tokens, or misuse TyPal's server",
           <>
-            break the AI provider's own rules; for TyPâl AI, Anthropic's{' '}
-            <a href="https://www.anthropic.com/legal/aup" className={inlineLinkClass}>
-              Usage Policy
+            break the AI provider's own rules; for TyPal AI, Google's{' '}
+            <a
+              href="https://policies.google.com/terms/generative-ai/use-policy"
+              className={inlineLinkClass}>
+              Generative AI Prohibited Use Policy
             </a>
           </>
         ]}
       />
-      <P>The Service Provider may limit or stop TyPâl AI for anyone who breaks these rules.</P>
+      <P>The Service Provider may limit or stop TyPal AI for anyone who breaks these rules.</P>
 
       <H2>License</H2>
       <P>
@@ -166,14 +168,14 @@ const TypalTermsPage: React.FC = () => {
 
       <H2>Changes</H2>
       <P>
-        These terms may be updated as TyPâl develops. Updates will be posted on this page with a new
+        These terms may be updated as TyPal develops. Updates will be posted on this page with a new
         effective date. Changes to the price of a subscription are announced by Apple before they
         apply to you.
       </P>
 
       <H2>Contact Us</H2>
-      <P>Questions about these terms, or TyPâl support: support.ishanvithanage@gmail.com.</P>
-    </LegalPageLayout>
+      <P>Questions about these terms, or TyPal support: support.ishanvithanage@gmail.com.</P>
+    </TypalLegalLayout>
   );
 };
 
