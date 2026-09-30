@@ -63,6 +63,17 @@ export const projects: Project[] = [
     appStoreUrl: 'https://apps.apple.com/lk/app/omi-clash/id6793634949'
   },
   {
+    id: 8,
+    title: 'Scaly',
+    category: 'Mobile Game',
+    badges: [{ label: 'In Development', status: 'development' }],
+    description:
+      'A 100-snake battle royale: eat to grow, cut rivals off, and outrun the shrinking zone until one snake is left.',
+    techStack: ['Flutter', 'Flame', 'Google Mobile Ads'],
+    internalLink: '/projects/scaly',
+    logo: '/projects/scaly/icon.png'
+  },
+  {
     id: 4,
     title: 'Drift & Direct',
     category: 'Mobile Game',

@@ -17,6 +17,10 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://ishanlahiru.github.io/projects/scaly</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://ishanlahiru.github.io/projects/drift-and-direct</loc>
     <priority>0.6</priority>
   </url>

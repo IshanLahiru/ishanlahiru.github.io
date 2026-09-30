@@ -54,6 +54,12 @@ const routeMeta = {
     description:
       'A daily-reading companion for the Dhammapada — all 423 verses across 26 chapters, in Pāli with English renderings, browsable by chapter or searchable by wording and theme.'
   },
+  '/projects/scaly': {
+    title: 'Scaly - 100-Snake Battle Royale | Ishan Lahiru',
+    description:
+      'Scaly is a 100-snake battle royale mobile game by Ishan Lahiru: eat to grow, cut rivals off, and outrun the shrinking zone until one snake is left.',
+    image: `${SITE_URL}/projects/scaly/icon.png`
+  },
   '/projects/drift-and-direct': {
     title: 'Drift & Direct - Ishan Lahiru',
     description:
@@ -96,6 +102,9 @@ const criticalRoutes = [
   '/projects/dammapadaya/privacy-policy',
   '/projects/dammapadaya/terms',
   '/projects/dammapadaya/support',
+  '/projects/scaly/privacy-policy',
+  '/projects/scaly/terms',
+  '/projects/scaly/support',
   '/projects/drift-and-direct/privacy-policy',
   '/projects/drift-and-direct/terms',
   '/projects/drift-and-direct/support',

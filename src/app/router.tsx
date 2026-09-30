@@ -13,6 +13,12 @@ const DeckDrillTermsPage = lazy(() => import('@features/projects/deckdrill/deckd
 const DeckDrillSupportPage = lazy(
   () => import('@features/projects/deckdrill/deckdrillSupportPage')
 );
+const ScalyPage = lazy(() => import('@features/projects/scaly/scalyPage'));
+const ScalyPrivacyPolicyPage = lazy(
+  () => import('@features/projects/scaly/scalyPrivacyPolicyPage')
+);
+const ScalyTermsPage = lazy(() => import('@features/projects/scaly/scalyTermsPage'));
+const ScalySupportPage = lazy(() => import('@features/projects/scaly/scalySupportPage'));
 const DriftAndDirectPage = lazy(
   () => import('@features/projects/drift-and-direct/driftAndDirectPage')
 );
@@ -98,6 +104,10 @@ const Router: React.FC<RouterProps> = ({ children }) => {
           />
           <Route path="/projects/deckdrill/terms" element={<DeckDrillTermsPage />} />
           <Route path="/projects/deckdrill/support" element={<DeckDrillSupportPage />} />
+          <Route path="/projects/scaly" element={<ScalyPage />} />
+          <Route path="/projects/scaly/privacy-policy" element={<ScalyPrivacyPolicyPage />} />
+          <Route path="/projects/scaly/terms" element={<ScalyTermsPage />} />
+          <Route path="/projects/scaly/support" element={<ScalySupportPage />} />
           <Route path="/projects/drift-and-direct" element={<DriftAndDirectPage />} />
           <Route
             path="/projects/drift-and-direct/privacy-policy"
