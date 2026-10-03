@@ -102,10 +102,57 @@
     ></script>
 
     <!-- Main Script -->
-    <script type="module" crossorigin src="/assets/index-B0CwaY2e.js"></script>
+    <script type="module" crossorigin src="/assets/index-C4d-5DzQ.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-BNaxLOXT.css">
   </head>
   <body>
+    <!-- The loading screen: here, not in the app, so it shows before any script arrives.
+         src/core/boot/boot.ts lifts it once the page under it is whole. -->
+    <style>
+      #boot {
+        position: fixed;
+        inset: 0;
+        z-index: 2147483647;
+        display: grid;
+        place-items: center;
+        background: #000;
+        transition: opacity 0.2s ease-out;
+      }
+      #boot.boot-done {
+        opacity: 0;
+        pointer-events: none;
+      }
+      #boot i {
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        border: 3px solid rgba(255, 255, 255, 0.14);
+        border-top-color: #f97316;
+        animation: boot-turn 0.8s linear infinite;
+      }
+      @keyframes boot-turn {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        #boot i {
+          animation-duration: 2.4s;
+        }
+      }
+    </style>
+    <div id="boot" role="status" aria-label="Loading"><i></i></div>
+    <script>
+      // TyPal's pages are navy, not black: the same colour behind the spinner.
+      if (location.pathname.indexOf('/projects/typal') === 0) {
+        document.getElementById('boot').style.background = '#16183A';
+      }
+      // If the app never starts (a script failed to load), don't sit on a spinner forever.
+      setTimeout(function () {
+        var boot = document.getElementById('boot');
+        if (boot) boot.remove();
+      }, 15000);
+    </script>
     <div id="root"></div>
   </body>
 </html>
