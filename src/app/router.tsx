@@ -1,5 +1,6 @@
 import React, { lazy, ReactNode, Suspense, useEffect } from 'react';
 import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
+import { pageMounted } from '@core/boot/boot';
 import RouteLoadingBar from '@core/design-system/routeLoadingBar';
 
 const PageNotFound = lazy(() => import('@features/not-found/pageNotFound'));
@@ -90,6 +91,12 @@ const ScrollToTop: React.FC = () => {
   return null;
 };
 
+// Rendered beside the routes, inside their Suspense: it mounts when the first page has.
+const FirstPageMounted: React.FC = () => {
+  useEffect(pageMounted, []);
+  return null;
+};
+
 const Router: React.FC<RouterProps> = ({ children }) => {
   return (
     <BrowserRouter>
@@ -159,6 +166,7 @@ const Router: React.FC<RouterProps> = ({ children }) => {
           <Route path="/blog/monorepo-management-with-turbo" element={<MonorepoManagementPage />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
+        <FirstPageMounted />
       </Suspense>
     </BrowserRouter>
   );

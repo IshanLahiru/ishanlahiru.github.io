@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
+import { holdBoot } from '@core/boot/boot';
 import {
   AnimatePresence,
   motion,
@@ -228,6 +229,17 @@ const KeyboardShowcase: React.FC<{ hero: React.ReactNode }> = ({ hero }) => {
   const turnedFor = useRef(HOME);
   const reduceMotion = useReducedMotion();
   const [phone, animatePhone] = useAnimate<HTMLDivElement>();
+
+  // The loading screen stays until the iPhone is drawn: the page isn't shown with a hole
+  // where it goes.
+  const phoneArrived = useRef<() => void>();
+  useEffect(() => {
+    phoneArrived.current = holdBoot();
+    return () => phoneArrived.current?.();
+  }, []);
+  useEffect(() => {
+    if (ready) phoneArrived.current?.();
+  }, [ready]);
 
   const tell = useCallback((message: Record<string, unknown>) => {
     frame.current?.contentWindow?.postMessage(message, window.location.origin);
