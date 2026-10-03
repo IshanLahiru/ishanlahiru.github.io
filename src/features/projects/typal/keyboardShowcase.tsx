@@ -29,6 +29,9 @@ const HAND_PATH =
 const HAND = { size: 520, tipX: 130, tipY: 56 };
 // The model's frame is the phone's screen (393 × 852) inside its 11 pt band and a 4 pt margin.
 const FRAME = { width: 423, height: 882, inset: 15 };
+// The close-up on a phone: 1.7 times the block's height, and never wider than the screen
+// (882 / 423 is the frame's height for its width).
+const CLOSE_UP_HEIGHT = 'h-[min(170%,calc((100vw-1.5rem)*2.085))]';
 
 // What the iPhone shows before the first chapter: the Home Screen beside the page's opening
 // lines, then the app opened from its icon, at rest, beside the demo's introduction.
@@ -226,6 +229,11 @@ const KeyboardShowcase: React.FC<{ hero: React.ReactNode }> = ({ hero }) => {
   const [wide, setWide] = useState(
     () => typeof window !== 'undefined' && window.matchMedia('(min-width: 1024px)').matches
   );
+  // On a phone the whole iPhone fits the pinned block at about 200 points wide, and nothing
+  // on its keys can be read. Once the demo starts it's shown close up instead: as wide as
+  // the screen, its top (empty in every demo) cut off above the block, the field and the
+  // keyboard in view.
+  const closeUp = !wide && active !== HOME;
   const turnedFor = useRef(HOME);
   const reduceMotion = useReducedMotion();
   const [phone, animatePhone] = useAnimate<HTMLDivElement>();
@@ -381,7 +389,11 @@ const KeyboardShowcase: React.FC<{ hero: React.ReactNode }> = ({ hero }) => {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         {/* One column, in two rows: the opening, then the slideshow. The iPhone lies over both,
             so it is beside the opening lines at the top and stays as the slides change. */}
-        <div className="relative lg:grid lg:grid-cols-1">
+        {/* On a phone the screen is split in two under the header: the slide's words get the
+            14rem they need at the bottom, whatever the screen's height, and the iPhone gets
+            the rest (--phone). A share of the height instead left a short screen with room
+            for the title and none for the description. */}
+        <div className="relative [--phone:max(15rem,calc(100svh-18rem))] lg:grid lg:grid-cols-1">
           <div
             ref={opening}
             data-index={HOME}
@@ -392,7 +404,7 @@ const KeyboardShowcase: React.FC<{ hero: React.ReactNode }> = ({ hero }) => {
           {/* The iPhone: pinned. On a wide screen it starts on the right, crosses to the left
               when the slideshow begins, and stays there. On a phone the hand is cut off at the
               bottom of this block, so it doesn't lie over the slide under it. */}
-          <div className="pointer-events-none sticky top-16 z-10 -mx-4 flex h-[62svh] flex-col overflow-clip bg-[#16183A] px-4 pb-2 pt-3 sm:-mx-6 lg:col-start-1 lg:row-span-2 lg:row-start-1 lg:mx-0 lg:h-[calc(100vh-4rem)] lg:self-start lg:overflow-visible lg:bg-transparent lg:px-0 lg:py-6">
+          <div className="pointer-events-none sticky top-16 z-10 -mx-4 flex h-[var(--phone)] flex-col overflow-clip bg-[#16183A] px-4 pb-2 pt-3 sm:-mx-6 lg:col-start-1 lg:row-span-2 lg:row-start-1 lg:mx-0 lg:h-[calc(100vh-4rem)] lg:self-start lg:overflow-visible lg:bg-transparent lg:px-0 lg:py-6">
             <motion.div
               initial={false}
               animate={{ x: wide ? (active === HOME ? '25%' : '-25%') : '0%' }}
@@ -400,14 +412,15 @@ const KeyboardShowcase: React.FC<{ hero: React.ReactNode }> = ({ hero }) => {
                 reduceMotion ? { duration: 0 } : { type: 'spring', duration: 1.1, bounce: 0 }
               }
               className="flex min-h-0 w-full flex-1 flex-col items-center lg:justify-center">
-              <div className="relative flex min-h-0 w-full flex-1 items-center justify-center lg:flex-none">
+              <div
+                className={`relative flex min-h-0 w-full flex-1 justify-center lg:flex-none ${closeUp ? 'items-end' : 'items-center'}`}>
                 <div
                   aria-hidden
                   className="absolute left-1/2 top-1/2 h-3/5 w-[130%] max-w-md -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#FF7A45]/20 blur-3xl"
                 />
                 <motion.div
                   style={reduceMotion ? undefined : { y: wide ? drift : 0 }}
-                  className="pointer-events-auto relative h-full [perspective:1400px] lg:h-[min(calc(100vh-8.5rem),882px)]">
+                  className={`pointer-events-auto relative transition-[height] duration-500 ease-out [perspective:1400px] motion-reduce:transition-none lg:h-[min(calc(100vh-8.5rem),882px)] ${closeUp ? CLOSE_UP_HEIGHT : 'h-full'}`}>
                   {/* The notes stuck around it, on a wide screen at the top of the page only. */}
                   <div
                     aria-hidden
@@ -532,7 +545,7 @@ const KeyboardShowcase: React.FC<{ hero: React.ReactNode }> = ({ hero }) => {
                 words for screen readers, in order. */}
             <div
               aria-hidden
-              className="sticky top-[calc(4rem+62svh)] flex h-[calc(38svh-4rem)] items-start overflow-hidden pt-4 lg:top-16 lg:h-[calc(100vh-4rem)] lg:items-center lg:justify-end lg:overflow-visible lg:pt-0">
+              className="sticky top-[calc(4rem+var(--phone))] flex h-[14rem] items-start overflow-hidden pt-3 lg:top-16 lg:h-[calc(100vh-4rem)] lg:items-center lg:justify-end lg:overflow-visible lg:pt-0">
               <div className="relative w-full lg:w-[calc(50%-3rem)]">
                 <AnimatePresence mode="wait" custom={direction} initial={false}>
                   {shown === HOME ? null : (
@@ -554,9 +567,11 @@ const KeyboardShowcase: React.FC<{ hero: React.ReactNode }> = ({ hero }) => {
                             <p className={`text-[#F3EFE7]/50 ${type.meta}`}>
                               {number} / {chapters.length}
                             </p>
-                            <h3 className={`mt-3 lg:mt-4 ${type.heading}`}>{chapter.title}</h3>
+                            <h3 className={`mt-2 max-lg:text-[1.625rem] lg:mt-4 ${type.heading}`}>
+                              {chapter.title}
+                            </h3>
                             <p
-                              className={`mt-3 text-[#F3EFE7]/70 lg:mt-4 ${type.small} lg:text-[1rem]`}>
+                              className={`mt-2 text-[#F3EFE7]/70 lg:mt-4 ${type.small} lg:text-[1rem]`}>
                               {chapter.body}
                             </p>
                             <ul
@@ -589,14 +604,14 @@ const KeyboardShowcase: React.FC<{ hero: React.ReactNode }> = ({ hero }) => {
                           <p className={`text-[#F3EFE7]/55 ${type.meta}`}>
                             Live demo · {chapters.length} parts
                           </p>
-                          <h2 className={`mt-4 lg:mt-5 ${type.title}`}>
+                          <h2 className={`mt-3 max-lg:text-[2rem] lg:mt-5 ${type.title}`}>
                             Watch it work.
                             <span className={`text-[#FF7A45] ${type.voice}`}>
                               Every part, playing.
                             </span>
                           </h2>
                           <p
-                            className={`mt-4 max-w-[34rem] text-[#F3EFE7]/70 lg:mt-6 ${type.body}`}>
+                            className={`mt-3 max-w-[34rem] text-[#F3EFE7]/70 lg:mt-6 ${type.body}`}>
                             This is the keyboard itself, drawn for the web from its own code. Keep
                             scrolling and it plays each part, with a hand doing the tapping.
                           </p>
@@ -610,7 +625,7 @@ const KeyboardShowcase: React.FC<{ hero: React.ReactNode }> = ({ hero }) => {
 
             {/* The steps: what the scroll is measured in. Each is as tall as it should take to
                 pass one slide, and holds that slide's words for screen readers. */}
-            <div className="-mt-[calc(38svh-4rem)] lg:-mt-[calc(100vh-4rem)]">
+            <div className="-mt-[14rem] lg:-mt-[calc(100vh-4rem)]">
               {/* On a phone the first step waits a little, so the Home Screen is seen whole
                   before the app opens. */}
               <div className="h-[30svh] lg:hidden" />
