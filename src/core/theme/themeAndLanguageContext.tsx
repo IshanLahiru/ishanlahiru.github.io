@@ -16,6 +16,16 @@ export const ThemeAndLanguageProvider: React.FC<{ children: ReactNode }> = ({ ch
   const [language, setLanguage] = useState('en');
 
   const toggleTheme = () => {
+    // Every colour on the page changes at once: let them snap rather than smear.
+    const style = document.createElement('style');
+    style.textContent = '*,*::before,*::after{transition:none !important}';
+    document.head.appendChild(style);
+    requestAnimationFrame(() =>
+      requestAnimationFrame(() => {
+        void document.body.offsetHeight;
+        style.remove();
+      })
+    );
     setIsDarkMode((prev) => {
       const newMode = !prev;
       localStorage.setItem('theme', newMode ? 'dark' : 'light');

@@ -8,7 +8,12 @@ export default {
         serif: ['Poppins', 'Inter', 'Helvetica Neue', 'Arial', 'sans-serif'],
         body: ['Inter', 'Helvetica Neue', 'Arial', 'sans-serif'],
         mono: ['Inter', 'Helvetica Neue', 'Arial', 'sans-serif'],
-        lora: ['Lora', 'Georgia', 'serif']
+        lora: ['Lora', 'Georgia', 'serif'],
+        // TyPal's pages (the fonts are loaded by src/features/projects/typal/type.ts)
+        grotesque: ['"Bricolage Grotesque Variable"', 'Poppins', 'sans-serif'],
+        voice: ['"Instrument Serif"', 'Lora', 'Georgia', 'serif'],
+        geist: ['"Geist Variable"', 'Inter', 'Helvetica Neue', 'Arial', 'sans-serif'],
+        'geist-mono': ['"Geist Mono Variable"', 'ui-monospace', 'SFMono-Regular', 'monospace']
       },
       colors: {
         np: {

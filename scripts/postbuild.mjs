@@ -33,8 +33,18 @@ copyFileSync(indexHtml, join(distDir, '404.html'));
 // path -> per-route <head> overrides. Keep these in sync with the `title`/
 // `description`/`image` passed to the <Seo> component on that route.
 const routeMeta = {
+  '/privacy-policy': {
+    title: 'Privacy Policy - Ishan Lahiru',
+    description:
+      'How ishanlahiru.github.io handles your information, including Google AdSense advertising.'
+  },
+  '/cookie-policy': {
+    title: 'Cookie Policy - Ishan Lahiru',
+    description:
+      'The cookies and browser storage used on ishanlahiru.github.io, and how to control them.'
+  },
   '/about': {
-    title: 'About Ishan Lahiru - Software Developer',
+    title: 'About Ishan Lahiru Sampath - Software Developer',
     description:
       'Ishan Lahiru is a software developer based in Kalutara District, Sri Lanka, building mobile apps and backend platforms with Flutter, TypeScript, and NestJS.'
   },
@@ -147,9 +157,9 @@ const withRouteMeta = (html, route) => {
   return result;
 };
 
-// App privacy policies, terms and support pages carry no ads: people read them to decide
+// Privacy and cookie policies, terms and support pages carry no ads: people read them to decide
 // what to trust, and they shouldn't load an ad network before any consent.
-const isLegalPage = (route) => /\/(privacy-policy|terms|support)$/.test(route);
+const isLegalPage = (route) => /\/(privacy-policy|cookie-policy|terms|support)$/.test(route);
 const withoutAds = (html) =>
   html.replace(/\s*<!-- Google AdSense -->\s*<script[^>]*adsbygoogle[^>]*><\/script>/s, '');
 

@@ -143,7 +143,7 @@ const TheravadaChantsPage: React.FC = () => {
                   src={`/projects/theravada-chants/screenshots/${shot.src}.png`}
                   alt={shot.alt}
                   loading="lazy"
-                  className="h-[360px] w-auto rounded-2xl border border-[#2B2118]/10 shadow-sm sm:h-[420px]"
+                  className="h-[360px] w-auto rounded-2xl shadow-sm outline outline-1 -outline-offset-1 outline-black/10 sm:h-[420px]"
                 />
               </picture>
             ))}

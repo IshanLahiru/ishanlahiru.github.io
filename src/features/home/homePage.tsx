@@ -15,8 +15,8 @@ const HomePage: React.FC = () => {
   return (
     <div id="top" className="min-h-screen bg-black font-sans text-slate-300">
       <Seo
-        title="Ishan Lahiru"
-        description="Ishan Lahiru's official portfolio - a Flutter and TypeScript developer building mobile apps, games, and backend platforms. Explore projects like Omi Clash, Theravāda Chants, and Dammapadaya."
+        title="Ishan Lahiru Sampath - Software Developer | Ishan Lahiru"
+        description="Ishan Lahiru (Ishan Lahiru Sampath) is a software developer from Kalutara, Sri Lanka, building mobile apps, games and backend platforms with Flutter and TypeScript. Explore Omi Clash, TyPal, Theravāda Chants and more."
         path="/"
       />
       <Navbar />

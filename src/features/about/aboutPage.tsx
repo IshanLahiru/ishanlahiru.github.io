@@ -140,7 +140,7 @@ const AboutPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-black font-sans text-slate-300">
       <Seo
-        title="About Ishan Lahiru - Software Developer"
+        title="About Ishan Lahiru Sampath - Software Developer"
         description="Ishan Lahiru is a software developer based in Kalutara District, Sri Lanka, building mobile apps and backend platforms with Flutter, TypeScript, and NestJS."
         path="/about"
       />
@@ -157,8 +157,8 @@ const AboutPage: React.FC = () => {
         <Reveal className="mt-8 flex flex-col gap-6 sm:flex-row sm:items-end">
           <div className="relative aspect-square w-28 flex-none overflow-hidden rounded-[2rem] shadow-xl shadow-black/40 sm:w-40 lg:w-48">
             <img
-              src="https://avatars.githubusercontent.com/u/50785933?v=4"
-              alt="Ishan Lahiru"
+              src="/avatar.jpg"
+              alt="Ishan Lahiru Sampath"
               className="h-full w-full object-cover contrast-125 grayscale"
             />
             <div className="absolute inset-0 bg-orange-600/50 mix-blend-multiply" />
@@ -168,7 +168,9 @@ const AboutPage: React.FC = () => {
             <h1 className="text-4xl font-extrabold uppercase tracking-tight text-white sm:text-5xl">
               Ishan Lahiru
             </h1>
-            <p className="mt-2 text-sm text-slate-500">A lifelong learner and creator.</p>
+            <p className="mt-2 text-sm text-slate-500">
+              Ishan Lahiru Sampath &mdash; a lifelong learner and creator.
+            </p>
 
             <p className="mt-6 max-w-xl text-base leading-relaxed text-slate-400">
               I'm based in Kalutara District, Sri Lanka. Currently freelancing, learning new
@@ -184,7 +186,7 @@ const AboutPage: React.FC = () => {
             <a
               href="/cv.pdf"
               download
-              className="mt-6 inline-flex min-h-[44px] items-center gap-2 rounded-full bg-lime-300 px-5 py-2.5 text-sm font-semibold text-black transition-all duration-150 hover:bg-lime-200 active:scale-[0.98]">
+              className="mt-6 inline-flex min-h-[44px] items-center gap-2 rounded-full bg-lime-300 px-5 py-2.5 text-sm font-semibold text-black transition-[background-color,transform] duration-150 hover:bg-lime-200 active:scale-[0.96]">
               <Download className="h-4 w-4" />
               Download CV
             </a>

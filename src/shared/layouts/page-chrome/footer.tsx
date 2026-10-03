@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const Footer = () => {
   return (
     <footer className="-mx-4 mt-16 flex flex-col gap-2 border-t border-np-muted bg-np-100 px-4 py-6 text-np-500 dark:border-np-muted-night dark:bg-np-700/10 dark:text-np-500-night sm:-mx-6 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:-mx-8 lg:px-8">
@@ -15,6 +17,18 @@ const Footer = () => {
             svg-maps
           </a>
           , licensed under CC BY 4.0.
+        </p>
+        <p className="flex gap-4 text-xs">
+          <Link
+            to="/privacy-policy"
+            className="text-np-accent hover:underline dark:text-np-accent-night">
+            Website privacy
+          </Link>
+          <Link
+            to="/cookie-policy"
+            className="text-np-accent hover:underline dark:text-np-accent-night">
+            Cookies
+          </Link>
         </p>
       </div>
       <a

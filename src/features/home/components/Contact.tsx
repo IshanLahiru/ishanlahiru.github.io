@@ -97,7 +97,7 @@ const Contact: React.FC = () => {
 
         <button
           type="submit"
-          className="min-h-[52px] w-full rounded-lg bg-orange-600 text-sm font-bold text-white transition-all duration-150 hover:bg-orange-500 active:scale-[0.98]">
+          className="min-h-[52px] w-full rounded-lg bg-orange-600 text-sm font-bold text-white transition-[background-color,transform] duration-150 hover:bg-orange-500 active:scale-[0.96]">
           Submit
         </button>
       </form>

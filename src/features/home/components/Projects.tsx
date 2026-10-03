@@ -60,7 +60,7 @@ const ProjectRow: React.FC<Project & { index: number }> = ({
         </p>
       </div>
 
-      <ArrowUpRight className="h-6 w-6 flex-none text-slate-500 transition-all group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-orange-500" />
+      <ArrowUpRight className="h-6 w-6 flex-none text-slate-500 transition-[transform,color] group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-orange-500" />
     </>
   );
 

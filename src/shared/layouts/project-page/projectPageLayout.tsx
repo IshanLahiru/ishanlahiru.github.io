@@ -64,7 +64,7 @@ const ProjectPageLayout: React.FC<ProjectPageLayoutProps> = ({
             <img
               src={icon}
               alt={`${title} logo`}
-              className="h-16 w-16 rounded-[22%] object-cover shadow-sm transition-all duration-300"
+              className="h-16 w-16 rounded-[22%] object-cover shadow-sm"
             />
           </picture>
           <div>

@@ -9,10 +9,10 @@ const PortraitCard: React.FC = () => (
   <Reveal className="mx-auto w-full max-w-xs overflow-hidden rounded-[2rem] bg-white p-5 text-center shadow-xl shadow-black/40 lg:mx-0">
     <Link to="/about" className="group block">
       <div className="relative aspect-[4/5]">
-        <div className="relative h-full w-full overflow-hidden rounded-2xl">
+        <div className="relative h-full w-full overflow-hidden rounded-xl">
           <img
-            src="https://avatars.githubusercontent.com/u/50785933?v=4"
-            alt="Ishan Lahiru"
+            src="/avatar.jpg"
+            alt="Ishan Lahiru Sampath"
             className="h-full w-full object-cover contrast-125 grayscale transition-transform duration-300 group-hover:scale-105"
           />
           <div className="absolute inset-0 bg-orange-600/50 mix-blend-multiply" />
@@ -40,21 +40,21 @@ const PortraitCard: React.FC = () => (
         target="_blank"
         rel="noopener noreferrer"
         aria-label="GitHub">
-        <Github className="h-4.5 w-4.5 transition-all duration-150 hover:scale-110 hover:text-orange-600 active:scale-95" />
+        <Github className="h-4.5 w-4.5 transition-[transform,color] duration-150 hover:scale-110 hover:text-orange-600 active:scale-[0.96]" />
       </a>
       <a
         href="https://www.linkedin.com/in/ishanlahiru"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="LinkedIn">
-        <Linkedin className="h-4.5 w-4.5 transition-all duration-150 hover:scale-110 hover:text-orange-600 active:scale-95" />
+        <Linkedin className="h-4.5 w-4.5 transition-[transform,color] duration-150 hover:scale-110 hover:text-orange-600 active:scale-[0.96]" />
       </a>
       <a
         href="https://www.instagram.com/ishan_lahiru_sampath"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Instagram">
-        <Instagram className="h-4.5 w-4.5 transition-all duration-150 hover:scale-110 hover:text-orange-600 active:scale-95" />
+        <Instagram className="h-4.5 w-4.5 transition-[transform,color] duration-150 hover:scale-110 hover:text-orange-600 active:scale-[0.96]" />
       </a>
       <a
         href="https://medium.com/@ishanLahiruSampath"
@@ -63,14 +63,14 @@ const PortraitCard: React.FC = () => (
         aria-label="Medium">
         <FontAwesomeIcon
           icon={faMedium}
-          className="h-4.5 w-4.5 transition-all duration-150 hover:scale-110 hover:text-orange-600 active:scale-95"
+          className="h-4.5 w-4.5 transition-[transform,color] duration-150 hover:scale-110 hover:text-orange-600 active:scale-[0.96]"
         />
       </a>
       <a href="mailto:ishanlahiru2002@gmail.com" aria-label="Email">
-        <Mail className="h-4.5 w-4.5 transition-all duration-150 hover:scale-110 hover:text-orange-600 active:scale-95" />
+        <Mail className="h-4.5 w-4.5 transition-[transform,color] duration-150 hover:scale-110 hover:text-orange-600 active:scale-[0.96]" />
       </a>
       <a href="/cv.pdf" download aria-label="Download CV">
-        <Download className="h-4.5 w-4.5 transition-all duration-150 hover:scale-110 hover:text-orange-600 active:scale-95" />
+        <Download className="h-4.5 w-4.5 transition-[transform,color] duration-150 hover:scale-110 hover:text-orange-600 active:scale-[0.96]" />
       </a>
     </div>
   </Reveal>

@@ -23,11 +23,14 @@ const Hero: React.FC = () => (
   <div>
     <Reveal>
       <h1 className="text-5xl font-extrabold uppercase leading-[0.95] tracking-tight sm:text-7xl lg:text-8xl">
+        <span className="mb-4 block text-sm font-semibold tracking-[0.3em] text-slate-400 sm:text-base">
+          Ishan Lahiru Sampath
+        </span>
         <span className="block text-white">Learner</span>
         <span className="block text-zinc-800">&amp; Creator</span>
       </h1>
 
-      <p className="mt-6 h-36 max-w-lg overflow-hidden text-base leading-relaxed text-slate-400 sm:text-lg">
+      <p className="mt-6 min-h-36 max-w-lg text-base leading-relaxed text-slate-400 sm:text-lg">
         <DecryptedText
           text="Based in Kalutara District, Sri Lanka, building mobile apps and backend systems — most recently "
           animateOn="view"
@@ -38,19 +41,20 @@ const Hero: React.FC = () => (
           encryptedClassName="font-mono text-slate-600"
           style={{ display: 'inline', whiteSpace: 'normal' }}
         />
-        <Reveal delay={2100} className="inline-block align-middle">
-          <Link
-            to="/projects/omi-clash"
-            state={{ from: 'portfolio' }}
-            className="group/omi relative -mt-1 inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 py-1 pl-1 pr-2.5 align-middle font-semibold text-white transition-all duration-200 hover:-translate-y-0.5 hover:border-lime-300/50 hover:bg-white/10">
-            <img
-              src="/projects/omi-clash/icon.png"
-              alt="Omi Clash icon"
-              className="h-5 w-5 rounded-[30%] object-cover transition-transform duration-200 group-hover/omi:rotate-6 group-hover/omi:scale-110"
-            />
-            Omi Clash
-          </Link>
-        </Reveal>
+        {/* Sized in ems so it fits inside the line it sits on: taller than the line, it
+            pushed the lines apart and its top edge covered the words above it. Shown from
+            the start, so the sentence never has a hole where it will be. */}
+        <Link
+          to="/projects/omi-clash"
+          state={{ from: 'portfolio' }}
+          className="group/omi inline-flex h-[1.5em] items-center gap-[0.3em] whitespace-nowrap rounded-full border border-white/10 bg-white/5 pl-[0.2em] pr-[0.55em] align-middle font-semibold leading-none text-white transition-[transform,border-color,background-color] duration-200 hover:-translate-y-0.5 hover:border-lime-300/50 hover:bg-white/10">
+          <img
+            src="/projects/omi-clash/icon.png"
+            alt=""
+            className="h-[1.1em] w-[1.1em] rounded-[30%] object-cover transition-transform duration-200 group-hover/omi:rotate-6 group-hover/omi:scale-110"
+          />
+          Omi Clash
+        </Link>
         <DecryptedText
           text=", a multiplayer card game packed with friend chat, live table voice chat, and global leaderboards."
           animateOn="view"
@@ -65,7 +69,7 @@ const Hero: React.FC = () => (
 
       <Link
         to="/#contact"
-        className="group relative mt-6 inline-flex w-fit items-center gap-2 overflow-hidden rounded-full border border-lime-300/30 bg-gradient-to-r from-lime-300/10 via-orange-500/10 to-lime-300/10 px-4 py-2 text-xs font-semibold uppercase tracking-widest text-lime-300 transition-all duration-300 hover:-translate-y-0.5 hover:border-lime-300/60 hover:shadow-[0_0_24px_-4px_rgba(163,230,53,0.6)] active:scale-95">
+        className="group relative mt-6 inline-flex w-fit items-center gap-2 overflow-hidden rounded-full border border-lime-300/30 bg-gradient-to-r from-lime-300/10 via-orange-500/10 to-lime-300/10 px-4 py-2 text-xs font-semibold uppercase tracking-widest text-lime-300 transition-[transform,border-color,box-shadow] duration-300 hover:-translate-y-0.5 hover:border-lime-300/60 hover:shadow-[0_0_24px_-4px_rgba(163,230,53,0.6)] active:scale-[0.96]">
         <span
           aria-hidden
           className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 ease-out group-hover:translate-x-full"
@@ -94,23 +98,23 @@ const Hero: React.FC = () => (
       <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
         <a
           href="/#tools"
-          className="group relative flex min-h-[9rem] flex-col justify-between overflow-hidden rounded-2xl bg-orange-600 p-5 text-black shadow-lg shadow-orange-950/0 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-orange-950/40 active:scale-[0.98]">
+          className="group relative flex min-h-[9rem] flex-col justify-between overflow-hidden rounded-2xl bg-orange-600 p-5 text-black shadow-lg shadow-orange-950/0 transition-[transform,box-shadow] duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-orange-950/40 active:scale-[0.96]">
           <TechWatermark icons={stackIcons} />
           <Layers className="relative h-6 w-6 text-black transition-transform duration-300 group-hover:-rotate-6 group-hover:scale-110" />
-          <span className="relative text-lg font-extrabold uppercase leading-tight">
+          <span className="relative pr-12 text-lg font-extrabold uppercase leading-tight">
             Flutter, TypeScript, Firebase, NestJS
           </span>
-          <ArrowUpRight className="absolute bottom-4 right-4 h-8 w-8 rounded-full border border-black/20 bg-black/0 p-1.5 transition-all duration-300 group-hover:rotate-45 group-hover:bg-black/10" />
+          <ArrowUpRight className="absolute bottom-4 right-4 h-8 w-8 rounded-full border border-black/20 bg-black/0 p-1.5 transition-[transform,background-color] duration-300 group-hover:rotate-45 group-hover:bg-black/10" />
         </a>
         <a
           href="/#experience"
-          className="group relative flex min-h-[9rem] flex-col justify-between overflow-hidden rounded-2xl bg-lime-300 p-5 text-black shadow-lg shadow-lime-950/0 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-lime-950/30 active:scale-[0.98]">
+          className="group relative flex min-h-[9rem] flex-col justify-between overflow-hidden rounded-2xl bg-lime-300 p-5 text-black shadow-lg shadow-lime-950/0 transition-[transform,box-shadow] duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-lime-950/30 active:scale-[0.96]">
           <TechWatermark icons={systemIcons} />
           <Wrench className="relative h-6 w-6 text-black transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110" />
-          <span className="relative text-lg font-extrabold uppercase leading-tight">
+          <span className="relative pr-12 text-lg font-extrabold uppercase leading-tight">
             Mobile Apps &amp; Backend Systems
           </span>
-          <ArrowUpRight className="absolute bottom-4 right-4 h-8 w-8 rounded-full border border-black/20 bg-black/0 p-1.5 transition-all duration-300 group-hover:rotate-45 group-hover:bg-black/10" />
+          <ArrowUpRight className="absolute bottom-4 right-4 h-8 w-8 rounded-full border border-black/20 bg-black/0 p-1.5 transition-[transform,background-color] duration-300 group-hover:rotate-45 group-hover:bg-black/10" />
         </a>
       </div>
     </Reveal>

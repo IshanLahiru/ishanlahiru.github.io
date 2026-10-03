@@ -172,55 +172,55 @@ export const experience = [
 export type Tool = { name: string; note: string; logo: string };
 
 export const tools: Tool[] = [
-  { name: 'Flutter', note: 'Cross-platform apps', logo: 'https://svgl.app/library/flutter.svg' },
+  { name: 'Flutter', note: 'Cross-platform apps', logo: '/tools/stack/flutter.svg' },
   {
     name: 'TypeScript',
     note: 'Type-safe systems',
-    logo: 'https://svgl.app/library/typescript.svg'
+    logo: '/tools/stack/typescript.svg'
   },
-  { name: 'NestJS', note: 'Backend APIs', logo: 'https://svgl.app/library/nestjs.svg' },
+  { name: 'NestJS', note: 'Backend APIs', logo: '/tools/stack/nestjs.svg' },
   {
     name: 'Firebase',
     note: 'Auth, data & functions',
-    logo: 'https://svgl.app/library/firebase.svg'
+    logo: '/tools/stack/firebase.svg'
   },
-  { name: 'Supabase', note: 'Postgres backends', logo: 'https://svgl.app/library/supabase.svg' },
-  { name: 'Figma', note: 'Interface design', logo: 'https://svgl.app/library/figma.svg' },
+  { name: 'Supabase', note: 'Postgres backends', logo: '/tools/stack/supabase.svg' },
+  { name: 'Figma', note: 'Interface design', logo: '/tools/stack/figma.svg' },
   { name: 'Rive', note: 'Interactive animation', logo: '/tools/rive.svg' },
   { name: 'FreeCAD', note: '3D & parametric design', logo: '/tools/freecad.svg' },
-  { name: 'Cloudflare', note: 'Edge & DNS', logo: 'https://svgl.app/library/cloudflare.svg' },
+  { name: 'Cloudflare', note: 'Edge & DNS', logo: '/tools/stack/cloudflare.svg' },
   {
     name: 'Claude',
     note: 'AI pair programming',
-    logo: 'https://svgl.app/library/claude-ai-icon.svg'
+    logo: '/tools/claude-ai-icon.svg'
   },
   { name: 'Gemini', note: 'AI research & ideation', logo: '/tools/gemini.svg' },
   {
     name: 'PostgreSQL',
     note: 'Relational databases',
-    logo: 'https://svgl.app/library/postgresql.svg'
+    logo: '/tools/postgresql.svg'
   },
-  { name: 'SQLite', note: 'Embedded databases', logo: 'https://svgl.app/library/sqlite.svg' },
-  { name: 'Redis', note: 'Caching & pub/sub', logo: 'https://svgl.app/library/redis.svg' },
+  { name: 'SQLite', note: 'Embedded databases', logo: '/tools/sqlite.svg' },
+  { name: 'Redis', note: 'Caching & pub/sub', logo: '/tools/redis.svg' },
   {
     name: 'Affinity Designer',
     note: 'Vector graphics',
-    logo: 'https://svgl.app/library/affinity_designer.svg'
+    logo: '/tools/affinity_designer.svg'
   },
   {
     name: 'n8n',
     note: 'Workflow automation',
-    logo: 'https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/n8n.svg'
+    logo: '/tools/n8n.svg'
   },
   {
     name: 'OpenRouter',
     note: 'LLM routing',
-    logo: 'https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/openrouter.svg'
+    logo: '/tools/openrouter.svg'
   },
-  { name: 'GitHub', note: 'Version control', logo: 'https://svgl.app/library/github_dark.svg' },
-  { name: 'PyCharm', note: 'Python IDE', logo: 'https://svgl.app/library/pycharm.svg' },
-  { name: 'VS Code', note: 'Code editor', logo: 'https://svgl.app/library/vscode.svg' },
-  { name: 'Postman', note: 'API testing', logo: 'https://svgl.app/library/postman.svg' }
+  { name: 'GitHub', note: 'Version control', logo: '/tools/github_dark.svg' },
+  { name: 'PyCharm', note: 'Python IDE', logo: '/tools/pycharm.svg' },
+  { name: 'VS Code', note: 'Code editor', logo: '/tools/vscode.svg' },
+  { name: 'Postman', note: 'API testing', logo: '/tools/postman.svg' }
 ];
 
 export type Interest = { name: string; note: string; logo: string };
@@ -231,12 +231,12 @@ export const interests: Interest[] = [
   {
     name: 'Artificial Intelligence',
     note: 'Exploring ML & agents',
-    logo: 'https://svgl.app/library/hugging_face.svg'
+    logo: '/tools/hugging_face.svg'
   },
   {
     name: 'RAG',
     note: 'Retrieval-augmented generation',
-    logo: 'https://svgl.app/library/langchain-logo.svg'
+    logo: '/tools/langchain-logo.svg'
   },
   { name: '3D Modeling', note: 'Designing in FreeCAD', logo: '/tools/freecad.svg' }
 ];

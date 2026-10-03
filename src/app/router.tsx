@@ -5,6 +5,8 @@ import RouteLoadingBar from '@core/design-system/routeLoadingBar';
 const PageNotFound = lazy(() => import('@features/not-found/pageNotFound'));
 const HomePage = lazy(() => import('@features/home/homePage'));
 const AboutPage = lazy(() => import('@features/about/aboutPage'));
+const PrivacyPolicyPage = lazy(() => import('@features/legal/privacyPolicyPage'));
+const CookiePolicyPage = lazy(() => import('@features/legal/cookiePolicyPage'));
 const DeckDrillPage = lazy(() => import('@features/projects/deckdrill/deckdrillPage'));
 const DeckDrillPrivacyPolicyPage = lazy(
   () => import('@features/projects/deckdrill/deckdrillPrivacyPolicyPage')
@@ -97,6 +99,8 @@ const Router: React.FC<RouterProps> = ({ children }) => {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+          <Route path="/cookie-policy" element={<CookiePolicyPage />} />
           <Route path="/projects/deckdrill" element={<DeckDrillPage />} />
           <Route
             path="/projects/deckdrill/privacy-policy"

@@ -50,7 +50,7 @@ const footerLinks = [
 const APP_STORE_URL = 'https://apps.apple.com/lk/app/omi-clash/id6793634949';
 
 const buttonBase =
-  'inline-flex items-center gap-2 rounded-lg font-extrabold uppercase tracking-wide transition-all duration-100 active:translate-y-1';
+  'inline-flex items-center gap-2 rounded-lg font-extrabold uppercase tracking-wide transition-[transform,background-color,color,box-shadow] duration-100 active:translate-y-1';
 
 const WaveTop: React.FC<{ color: string }> = ({ color }) => (
   <svg
