@@ -84,7 +84,11 @@ const routeMeta = {
     title: 'TyPal - The Private AI Keyboard for iPhone | Ishan Lahiru',
     description:
       'TyPal is a private iPhone keyboard by Ishan Lahiru that rewrites your messages in the right voice for each person, with TyPal AI or your own AI key.',
-    image: `${SITE_URL}/projects/typal/icon.png`
+    image: `${SITE_URL}/projects/typal/icon.png`,
+    // The iPhone on this page is one embedded file, asked for only once the page's own
+    // script has run. Fetched from the first byte instead, it's in the cache by then.
+    // The same address as MODEL_URL in keyboardShowcase.tsx.
+    preload: '/projects/typal/keyboard-model.html?embed=1&appearance=dark&home=1'
   },
   '/blog/understanding-react-dnd': {
     title: 'Understanding React DnD - Ishan Lahiru',
@@ -154,6 +158,12 @@ const withRouteMeta = (html, route) => {
   result = replaceAttr(result, 'name="twitter:title"', title);
   result = replaceAttr(result, 'name="twitter:description"', description);
   result = replaceAttr(result, 'name="twitter:image"', image);
+  if (meta.preload) {
+    result = result.replace(
+      '</title>',
+      `</title>\n    <link rel="preload" href="${escapeHtml(meta.preload)}" as="fetch" crossorigin />`
+    );
+  }
   return result;
 };
 

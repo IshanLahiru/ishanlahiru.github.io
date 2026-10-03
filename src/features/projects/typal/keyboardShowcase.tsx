@@ -431,11 +431,18 @@ const KeyboardShowcase: React.FC<{ hero: React.ReactNode }> = ({ hero }) => {
                     ))}
                   </div>
                   <div ref={phone} className="relative h-full" style={{ aspectRatio: PHONE_SHAPE }}>
+                    {/* The phone is drawn inside the frame below, which is a file of its own:
+                        until it arrives, its outline holds the place. */}
+                    {!ready && (
+                      <div
+                        aria-hidden
+                        className="pointer-events-none absolute inset-[1%] animate-pulse rounded-[15.9%/7.6%] border-[3px] border-[#F3EFE7]/15 bg-[#0F1130] motion-reduce:animate-none"
+                      />
+                    )}
                     <iframe
                       ref={frame}
                       src={MODEL_URL}
                       title="The TyPal keyboard, playing a demo"
-                      loading="lazy"
                       onLoad={() => setReady(true)}
                       className="block h-full w-full border-0 bg-transparent [@media(hover:none)]:pointer-events-none"
                     />
