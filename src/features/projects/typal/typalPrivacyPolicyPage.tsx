@@ -5,7 +5,7 @@ const TypalPrivacyPolicyPage: React.FC = () => {
   return (
     <TypalLegalLayout
       title="TyPal Privacy Policy"
-      effectiveDate="30 September 2026"
+      effectiveDate="4 October 2026"
       summary={
         <p>
           No accounts, analytics, tracking or ads. Everything you store is encrypted on your iPhone.
@@ -33,11 +33,13 @@ const TypalPrivacyPolicyPage: React.FC = () => {
 
       <H2>Your TyPal ID</H2>
       <P>
-        When TyPal first needs it, it creates a random identifier (your "TyPal ID") and keeps it in
-        your iCloud Keychain, so purchases and TyPal Tokens follow you to your other devices and
-        survive reinstalling. It is not linked to your name, email address or Apple Account, and is
-        sent only to RevenueCat and to TyPal's server, as described below. You can see it at the
-        bottom of AI › Premium & Tokens in the app.
+        When TyPal first needs it, it creates a random secret and keeps it in your iCloud Keychain,
+        so purchases and TyPal Tokens follow you to your other devices and survive reinstalling.
+        Your "TyPal ID" is worked out from that secret in a way that can't be reversed. Neither is
+        linked to your name, email address or Apple Account. The TyPal ID is sent to RevenueCat, and
+        the secret only to TyPal's server with TyPal AI requests, as described below. You can see
+        your TyPal ID at the bottom of AI › Premium & Tokens in the app. It identifies your
+        purchases for support, and can't be used to spend your tokens.
       </P>
 
       <H2>What Leaves Your iPhone</H2>
@@ -64,12 +66,13 @@ const TypalPrivacyPolicyPage: React.FC = () => {
           </>,
           <>
             <strong>TyPal AI:</strong> to TyPal's server, which runs on Cloudflare, together with
-            your TyPal ID. The server sets aside tokens for the request with RevenueCat, passes the
-            request (without your TyPal ID) to Google's Gemini API to write the reply, and gives
-            back any tokens the reply didn't use. It does not store or log the text of requests or
-            replies; it records only token counts and cost, without your TyPal ID. On the paid
-            Gemini API that TyPal uses, Google doesn't use requests to improve its products, and
-            keeps them only for a limited time to detect abuse of its usage policies.
+            the secret your TyPal ID comes from. The server sets aside tokens for the request with
+            RevenueCat, passes the request (without the secret or your TyPal ID) to Google's Gemini
+            API to write the reply, and gives back any tokens the reply didn't use. It does not
+            store or log the text of requests or replies; it records only token counts and cost,
+            without your TyPal ID. On the paid Gemini API that TyPal uses, Google doesn't use
+            requests to improve its products, and keeps them only for a limited time to detect abuse
+            of its usage policies.
           </>
         ]}
       />
