@@ -14,6 +14,13 @@ export const type = {
     'font-grotesque text-[clamp(2.75rem,12.5vw,8rem)] font-semibold leading-[0.92] tracking-[-0.055em]',
   title:
     'font-grotesque text-[clamp(2.5rem,6.4vw,4.75rem)] font-semibold leading-[0.96] tracking-[-0.045em]',
+  // A section's opening line and a page's title: as large as `title` on a wide screen, with a
+  // lower floor so a long line doesn't run to five rows on a phone.
+  section:
+    'font-grotesque text-[clamp(2rem,6.4vw,4.75rem)] font-semibold leading-[0.98] tracking-[-0.045em] text-balance',
+  // A question in a list: a size down from `subheading` on a phone.
+  question:
+    'font-grotesque text-[1.125rem] font-semibold leading-[1.25] tracking-[-0.03em] sm:text-[1.375rem]',
   heading:
     'font-grotesque text-[clamp(2rem,3.7vw,3.125rem)] font-semibold leading-[1] tracking-[-0.04em] text-balance',
   subheading: 'font-grotesque text-[1.375rem] font-semibold leading-[1.2] tracking-[-0.03em]',

@@ -1,14 +1,12 @@
 import React from 'react';
-import { Link, NavLink, useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
+import { SiteFooter, SiteHeader, docLinks } from './landingSections';
+import { edge, type } from './type';
 
 // TyPal brand colours (Design/logo-kit/GUIDELINES.md in the TyPal repo): Midnight, Coral, Warm White.
-// Coral text is darkened so links pass WCAG AA on Warm White.
-export const docLinks = [
-  { to: '/projects/typal/support', label: 'Support' },
-  { to: '/projects/typal/privacy-policy', label: 'Privacy Policy' },
-  { to: '/projects/typal/terms', label: 'Terms of Use' }
-];
+// Coral text is lightened so links pass WCAG AA on Midnight.
+export { docLinks };
 
 interface TypalLegalLayoutProps {
   title: string;
@@ -24,104 +22,71 @@ const TypalLegalLayout: React.FC<TypalLegalLayoutProps> = ({
   children
 }) => {
   const location = useLocation();
-  const cameFromPortfolio = (location.state as { from?: string } | null)?.from === 'portfolio';
 
   return (
-    <div className="min-h-screen bg-[#16183A] font-sans text-[#F3EFE7] antialiased">
-      <header className="sticky top-0 z-40 border-b border-white/10 bg-[#16183A]/90 backdrop-blur-xl">
-        <div className="mx-auto flex h-16 max-w-3xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
-          <Link to="/projects/typal" aria-label="TyPal home" className="shrink-0">
-            <img
-              src="/projects/typal/typal-horizontal-on-dark.svg"
-              alt="TyPal"
-              className="h-8 w-auto"
-            />
-          </Link>
-          <nav className="flex items-center gap-1 text-sm font-medium">
-            {docLinks.map((link) => (
-              <NavLink
-                key={link.to}
-                to={link.to}
-                className={({ isActive }) =>
-                  `hidden rounded-full px-3 py-1.5 transition-colors sm:block ${
-                    isActive
-                      ? 'bg-[#F3EFE7] text-[#16183A]'
-                      : 'text-[#F3EFE7]/70 hover:bg-white/5 hover:text-[#F3EFE7]'
-                  }`
-                }>
-                {link.label}
-              </NavLink>
-            ))}
-            {cameFromPortfolio && (
-              <Link
-                to="/"
-                className="flex min-h-[44px] items-center gap-1.5 px-2 text-[#F3EFE7]/70 transition-colors hover:text-[#F3EFE7] sm:hidden">
-                <ArrowLeft className="h-4 w-4" />
-                Portfolio
-              </Link>
+    <div className="min-h-screen bg-[#16183A] font-geist text-[#F3EFE7] antialiased">
+      <SiteHeader />
+
+      <main>
+        {/* The title, centred and large, as the landing page's sections open. */}
+        <div className="border-b border-[#F3EFE7]/10 bg-[#101231]">
+          <div className="mx-auto max-w-4xl px-4 py-12 text-center sm:px-6 sm:py-20 lg:px-8 lg:py-24">
+            <Link
+              to="/projects/typal"
+              className={`inline-flex items-center gap-1.5 text-[#F3EFE7]/70 transition-colors hover:text-[#FF9A70] ${type.label}`}>
+              <ArrowLeft className="h-4 w-4" strokeWidth={1.75} />
+              TyPal
+            </Link>
+            <h1 className={`mt-6 ${type.section}`}>{title}</h1>
+            {effectiveDate && (
+              <p className={`mt-5 text-[#F3EFE7]/55 ${type.meta}`}>Effective {effectiveDate}</p>
             )}
+          </div>
+        </div>
+
+        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-16 lg:px-8">
+          {summary && (
+            <div
+              className={`rounded-3xl bg-[#23264F] p-7 text-[#F3EFE7]/85 sm:p-8 ${edge.dark} ${type.lead}`}>
+              <p className={`mb-3 text-[#FF9A70] ${type.meta}`}>In short</p>
+              {summary}
+            </div>
+          )}
+          <article className={`space-y-5 ${summary ? 'mt-10' : ''}`}>{children}</article>
+
+          <nav
+            aria-label="More about TyPal"
+            className="mt-14 grid gap-3 border-t border-[#F3EFE7]/10 pt-8 sm:grid-cols-3">
+            {docLinks
+              .filter((link) => link.to !== location.pathname)
+              .map((link) => (
+                <Link
+                  key={link.to}
+                  to={link.to}
+                  className={`flex min-h-[52px] items-center justify-between rounded-2xl bg-[#23264F] px-5 py-3 transition-colors hover:text-[#FF9A70] ${edge.dark} ${type.label}`}>
+                  {link.label}
+                  <span aria-hidden>&rarr;</span>
+                </Link>
+              ))}
           </nav>
         </div>
-      </header>
-
-      <main className="mx-auto max-w-2xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
-        <Link
-          to="/projects/typal"
-          className="inline-flex items-center gap-1.5 text-sm text-[#F3EFE7]/70 transition-colors hover:text-[#FF7A45]">
-          <ArrowLeft className="h-4 w-4" />
-          TyPal
-        </Link>
-        <h1 className="mt-6 font-serif text-3xl font-bold tracking-tight sm:text-4xl">{title}</h1>
-        {effectiveDate && (
-          <p className="mt-2 text-xs font-medium uppercase tracking-wider text-[#F3EFE7]/70">
-            Effective {effectiveDate}
-          </p>
-        )}
-        {summary && (
-          <div className="mt-8 rounded-2xl bg-[#23264F] p-6 text-sm leading-relaxed text-[#F3EFE7]/85">
-            <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-[#FF7A45]">
-              In short
-            </p>
-            {summary}
-          </div>
-        )}
-        <article className="mt-8 space-y-4 border-t border-white/10 pt-6">{children}</article>
-
-        <nav className="mt-12 grid gap-3 border-t border-white/10 pt-8 sm:grid-cols-3">
-          {docLinks
-            .filter((link) => link.to !== location.pathname)
-            .map((link) => (
-              <Link
-                key={link.to}
-                to={link.to}
-                className="flex min-h-[44px] items-center justify-between rounded-xl border border-white/10 bg-[#23264F]/70 px-4 py-3 text-sm font-semibold transition-colors hover:border-[#FF7A45] hover:text-[#FF7A45]">
-                {link.label}
-                <span aria-hidden>&rarr;</span>
-              </Link>
-            ))}
-        </nav>
       </main>
 
-      <footer className="border-t border-white/10">
-        <div className="mx-auto flex max-w-2xl flex-col items-center gap-2 px-4 py-8 text-center text-xs text-[#F3EFE7]/70 sm:px-6 lg:px-8">
-          <img src="/projects/typal/typal-symbol.svg" alt="" className="h-8 w-8" />
-          <p>&copy; {new Date().getFullYear()} TyPal · Ishan Lahiru Sampath</p>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   );
 };
 
 export const H2: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-  <h2 className="mt-10 font-serif text-xl font-bold tracking-tight">{children}</h2>
+  <h2 className={`pt-8 ${type.subheading} sm:text-[1.625rem]`}>{children}</h2>
 );
 
 export const P: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-  <p className="text-[15px] leading-relaxed text-[#F3EFE7]/80">{children}</p>
+  <p className="font-geist text-[1.0625rem] leading-[1.75] text-[#F3EFE7]/75">{children}</p>
 );
 
 export const UL: React.FC<{ items: React.ReactNode[] }> = ({ items }) => (
-  <ul className="list-disc space-y-1.5 pl-5 text-[15px] leading-relaxed text-[#F3EFE7]/80 marker:text-[#FF7A45]">
+  <ul className="list-disc space-y-2 pl-5 font-geist text-[1.0625rem] leading-[1.75] text-[#F3EFE7]/75 marker:text-[#FF7A45]">
     {items.map((item, i) => (
       <li key={i}>{item}</li>
     ))}
